@@ -1,0 +1,3319 @@
+{
+  "phish_b88f96737279": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_b88f96737279\nURL: http://cskh-vib-ca-nhan.com\nDomain: cskh-vib-ca-nhan.com\nClassification: Phishing (Label 1)\nWebpage Title: Cá nhân – VIB Bank\nPhishing Evidence:\n- domain contains brand token 'vib'\n- listed in local eval_black_list....",
+    "content_length": 2094,
+    "created_at": "2026-06-12T07:56:51.069460+00:00",
+    "updated_at": "2026-06-12T07:57:36.579007+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145651_8fdf540a",
+    "content_hash": "877a71c94d6ca206fb23a51a82aa0113",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251056,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251056,
+      "process_end_time": 1781251056
+    },
+    "error_msg": "C[1/1]: phish_b88f96737279-chunk-000: ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\\nPlease retry in 23.696977206s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '23s'}]}}",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_b88f96737279-chunk-000"
+    ]
+  },
+  "phish_d2c7e6ec6d1f": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_d2c7e6ec6d1f\nURL: http://acb.chamsocthekhachhang-tructuyen-thang8.com.vn\nDomain: acb.chamsocthekhachhang-tructuyen-thang8.com.vn\nClassification: Phishing (Label 1)\nWebpage Title: Ngân hàng Thương Mại Cổ Phần Á Châu -  ACB\nWebpage Met...",
+    "content_length": 5394,
+    "created_at": "2026-06-12T07:56:51.069425+00:00",
+    "updated_at": "2026-06-12T07:57:36.582727+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145651_8fdf540a",
+    "content_hash": "54fa0b0d255fbd4c0f751536d0d09fdc",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251056,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251056,
+      "process_end_time": 1781251056
+    },
+    "error_msg": "C[1/2]: phish_d2c7e6ec6d1f-chunk-000: ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\\nPlease retry in 23.68930948s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '23s'}]}}",
+    "chunks_count": 2,
+    "chunks_list": [
+      "phish_d2c7e6ec6d1f-chunk-000",
+      "phish_d2c7e6ec6d1f-chunk-001"
+    ]
+  },
+  "phish_5a32a78040c4": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_5a32a78040c4\nURL: http://cskh-dienmay-xanh.com\nDomain: cskh-dienmay-xanh.com\nClassification: Phishing (Label 1)\nWebpage Title: Trang Chủ | Dien May Xanh\nPhishing Evidence:\n- domain contains brand token 'dienmayxanh'\n- listed in local...",
+    "content_length": 5536,
+    "created_at": "2026-06-12T07:56:51.069455+00:00",
+    "updated_at": "2026-06-12T07:57:36.327836+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145651_8fdf540a",
+    "content_hash": "6b1b27c9d43048648306e2a1a6f05891",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251056,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251056,
+      "process_end_time": 1781251056
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 2,
+    "chunks_list": [
+      "phish_5a32a78040c4-chunk-000",
+      "phish_5a32a78040c4-chunk-001"
+    ]
+  },
+  "phish_d81d2feb67fc": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_d81d2feb67fc\nURL: http://ctv.chungkhoanvpbank.com\nDomain: ctv.chungkhoanvpbank.com\nClassification: Phishing (Label 1)\nWebpage Title: CỘNG TÁC VIÊN CHỨNG KHOÁN - Cộng tác viên chứng khoán Online\nWebpage Meta Description: Tuyển CTV mở ...",
+    "content_length": 4828,
+    "created_at": "2026-06-12T07:56:51.069465+00:00",
+    "updated_at": "2026-06-12T07:57:36.382499+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145651_8fdf540a",
+    "content_hash": "1e72f1e94445ecd0ffd56842fd919e09",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251056,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251056,
+      "process_end_time": 1781251056
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 2,
+    "chunks_list": [
+      "phish_d81d2feb67fc-chunk-000",
+      "phish_d81d2feb67fc-chunk-001"
+    ]
+  },
+  "phish_dab9591361c4": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_dab9591361c4\nURL: http://canhantpb.com\nDomain: canhantpb.com\nClassification: Phishing (Label 1)\nWebpage Title: Cá nhân – TP Bank\nPhishing Evidence:\n- domain contains brand token 'tpb'\n- listed in local eval_black_list.txt\n- local cra...",
+    "content_length": 2851,
+    "created_at": "2026-06-12T07:56:51.069446+00:00",
+    "updated_at": "2026-06-12T07:57:36.424518+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145651_8fdf540a",
+    "content_hash": "2de9c89be2113e3fc4ed40201293847a",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251056,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251056,
+      "process_end_time": 1781251056
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_dab9591361c4-chunk-000"
+    ]
+  },
+  "phish_c7265691dd68": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_c7265691dd68\nURL: http://dichvu-dien-mayxanh.com\nDomain: dichvu-dien-mayxanh.com\nClassification: Phishing (Label 1)\nWebpage Title: Trang Chủ | Dien May Xanh\nPhishing Evidence:\n- domain contains brand token 'dienmayxanh'\n- listed in l...",
+    "content_length": 3064,
+    "created_at": "2026-06-12T07:56:52.290501+00:00",
+    "updated_at": "2026-06-12T07:57:36.465331+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145652_fd8da9f4",
+    "content_hash": "409b6ea2ca3040fbc6305b57cc0ad829",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251056,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251056,
+      "process_end_time": 1781251056
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_c7265691dd68-chunk-000"
+    ]
+  },
+  "phish_4f0a4aa3219a": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_4f0a4aa3219a\nURL: http://dienlanhdienmayxanh.com\nDomain: dienlanhdienmayxanh.com\nClassification: Phishing (Label 1)\nWebpage Title: Sữa chữa điện máy xanh – Chất lượng – Chuyên Nghiệp – Uy tín\nPhishing Evidence:\n- domain contains bran...",
+    "content_length": 7264,
+    "created_at": "2026-06-12T07:56:52.290515+00:00",
+    "updated_at": "2026-06-12T07:57:36.783543+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145652_fd8da9f4",
+    "content_hash": "e53a870cb69d19c2dd96cad6b33a1245",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251056,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251056,
+      "process_end_time": 1781251056
+    },
+    "error_msg": "C[1/3]: phish_4f0a4aa3219a-chunk-000: ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\\nPlease retry in 23.53600808s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '23s'}]}}",
+    "chunks_count": 3,
+    "chunks_list": [
+      "phish_4f0a4aa3219a-chunk-000",
+      "phish_4f0a4aa3219a-chunk-001",
+      "phish_4f0a4aa3219a-chunk-002"
+    ]
+  },
+  "phish_2a49f04d16c1": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_2a49f04d16c1\nURL: http://dienmayxanh263.com\nDomain: dienmayxanh263.com\nClassification: Phishing (Label 1)\nWebpage Title: dienmayxanh – Siêu thị Điện Máy 24H mua sắm thiết bị điện tử điện lạnh, gia dụng, sản phẩm công nghệ\nPhishing Ev...",
+    "content_length": 6743,
+    "created_at": "2026-06-12T07:56:52.290528+00:00",
+    "updated_at": "2026-06-12T07:57:36.635578+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145652_fd8da9f4",
+    "content_hash": "8cf44a47f0cf3d90724b6bf6f5243103",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251056,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251056,
+      "process_end_time": 1781251056
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 3,
+    "chunks_list": [
+      "phish_2a49f04d16c1-chunk-000",
+      "phish_2a49f04d16c1-chunk-001",
+      "phish_2a49f04d16c1-chunk-002"
+    ]
+  },
+  "phish_505ebf6e426f": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_505ebf6e426f\nURL: http://dienmay-xanh24h.online\nDomain: dienmay-xanh24h.online\nClassification: Phishing (Label 1)\nWebpage Title: TRANG CHỦ | Dien May Xanh\nPhishing Evidence:\n- domain contains brand token 'dienmayxanh'\n- listed in loc...",
+    "content_length": 6424,
+    "created_at": "2026-06-12T07:56:52.290520+00:00",
+    "updated_at": "2026-06-12T07:57:36.635818+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145652_fd8da9f4",
+    "content_hash": "de2214ca78eea2c0de891664ac3083fd",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251056,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251056,
+      "process_end_time": 1781251056
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 2,
+    "chunks_list": [
+      "phish_505ebf6e426f-chunk-000",
+      "phish_505ebf6e426f-chunk-001"
+    ]
+  },
+  "phish_6ba4f5230654": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_6ba4f5230654\nURL: http://dienmayxanh-services.com\nDomain: dienmayxanh-services.com\nClassification: Phishing (Label 1)\nWebpage Title: Dịch Vụ Điện Máy Xanh: Sửa chữa Đồ Gia Dụng: Tivi, Máy giặt, Tủ Lạnh..\nWebpage Meta Description: Dịc...",
+    "content_length": 8335,
+    "created_at": "2026-06-12T07:56:52.290524+00:00",
+    "updated_at": "2026-06-12T07:57:36.707860+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145652_fd8da9f4",
+    "content_hash": "dc2804bfdab8251a3cc5ca36fa598e3f",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251056,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251056,
+      "process_end_time": 1781251056
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 3,
+    "chunks_list": [
+      "phish_6ba4f5230654-chunk-000",
+      "phish_6ba4f5230654-chunk-001",
+      "phish_6ba4f5230654-chunk-002"
+    ]
+  },
+  "phish_3d7c4b031c0d": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_3d7c4b031c0d\nURL: http://dienmayxanhctv24.com\nDomain: dienmayxanhctv24.com\nClassification: Phishing (Label 1)\nWebpage Title: dienmayxanh – Siêu thị Điện Máy 24H mua sắm thiết bị điện tử điện lạnh, gia dụng, sản phẩm công nghệ\nPhishin...",
+    "content_length": 6747,
+    "created_at": "2026-06-12T07:56:52.984965+00:00",
+    "updated_at": "2026-06-12T07:57:36.918120+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145652_21cabdb6",
+    "content_hash": "0c73047a63a02d94894a8f160f2ae17f",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251056,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251056,
+      "process_end_time": 1781251056
+    },
+    "error_msg": "C[1/3]: phish_3d7c4b031c0d-chunk-000: ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\\nPlease retry in 23.34231145s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '23s'}]}}",
+    "chunks_count": 3,
+    "chunks_list": [
+      "phish_3d7c4b031c0d-chunk-000",
+      "phish_3d7c4b031c0d-chunk-001",
+      "phish_3d7c4b031c0d-chunk-002"
+    ]
+  },
+  "phish_0162ae3dcb33": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_0162ae3dcb33\nURL: http://dienmayxanh389.com\nDomain: dienmayxanh389.com\nClassification: Phishing (Label 1)\nWebpage Title: dienmayxanh – Siêu thị Điện Máy 24H mua sắm thiết bị điện tử điện lạnh, gia dụng, sản phẩm công nghệ\nPhishing Ev...",
+    "content_length": 8073,
+    "created_at": "2026-06-12T07:56:52.984945+00:00",
+    "updated_at": "2026-06-12T07:57:36.748163+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145652_21cabdb6",
+    "content_hash": "f27f9d1a41276e5d182c1c738ec726f1",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251056,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251056,
+      "process_end_time": 1781251056
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 3,
+    "chunks_list": [
+      "phish_0162ae3dcb33-chunk-000",
+      "phish_0162ae3dcb33-chunk-001",
+      "phish_0162ae3dcb33-chunk-002"
+    ]
+  },
+  "phish_7c95f1b780ba": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_7c95f1b780ba\nURL: http://goshare.vn\nDomain: goshare.vn\nClassification: Phishing (Label 1)\nWebpage Title: Trang chủ\nPhishing Evidence:\n- domain contains brand token 'evn'\n- listed in local eval_black_list.txt\n- local crawl has extract...",
+    "content_length": 2628,
+    "created_at": "2026-06-12T07:56:52.984999+00:00",
+    "updated_at": "2026-06-12T07:57:36.806804+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145652_21cabdb6",
+    "content_hash": "64f1ee1ac567d800ab992a6eb4106f74",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251056,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251056,
+      "process_end_time": 1781251056
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_7c95f1b780ba-chunk-000"
+    ]
+  },
+  "phish_953caac17181": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_953caac17181\nURL: http://korshoptiktok.com\nDomain: korshoptiktok.com\nClassification: Phishing (Label 1)\nWebpage Title: TikTok Shop Official Portal - A Full-Service Commerce Solution, Driven by TikTok's Unique Content \t\t\tEcosystem.\nWe...",
+    "content_length": 10329,
+    "created_at": "2026-06-12T07:56:52.985003+00:00",
+    "updated_at": "2026-06-12T07:57:36.835504+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145652_21cabdb6",
+    "content_hash": "199018b5b4e7bdb1d42f9c9776be6375",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251056,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251056,
+      "process_end_time": 1781251056
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 3,
+    "chunks_list": [
+      "phish_953caac17181-chunk-000",
+      "phish_953caac17181-chunk-001",
+      "phish_953caac17181-chunk-002"
+    ]
+  },
+  "phish_cde55cecf323": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_cde55cecf323\nURL: http://dienmayxanh542.com\nDomain: dienmayxanh542.com\nClassification: Phishing (Label 1)\nWebpage Title: dienmayxanh – Siêu thị Điện Máy 24H mua sắm thiết bị điện tử điện lạnh, gia dụng, sản phẩm công nghệ\nPhishing Ev...",
+    "content_length": 5215,
+    "created_at": "2026-06-12T07:56:52.984960+00:00",
+    "updated_at": "2026-06-12T07:57:36.872535+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145652_21cabdb6",
+    "content_hash": "1d5d536f76cd7b5554792306c4221972",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251056,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251056,
+      "process_end_time": 1781251056
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 2,
+    "chunks_list": [
+      "phish_cde55cecf323-chunk-000",
+      "phish_cde55cecf323-chunk-001"
+    ]
+  },
+  "phish_fea3e6a8af3c": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_fea3e6a8af3c\nURL: http://nang-hang-vvip-vib.com\nDomain: nang-hang-vvip-vib.com\nClassification: Phishing (Label 1)\nWebpage Title: DỊCH VỤ THẺ – Ngân hàng Thương mại cổ phần (TMCP) Quốc Tế Việt Nam (VIB) – Khách Hàng Cá Nhân – Ngân hàn...",
+    "content_length": 3061,
+    "created_at": "2026-06-12T07:56:53.687053+00:00",
+    "updated_at": "2026-06-12T07:57:36.884106+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145653_2b1bc550",
+    "content_hash": "67e753e9f8b7a20495007deaf5154387",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251056,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251056,
+      "process_end_time": 1781251056
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_fea3e6a8af3c-chunk-000"
+    ]
+  },
+  "phish_53309f3e7041": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_53309f3e7041\nURL: http://mitsubishixpanderhcm.com\nDomain: mitsubishixpanderhcm.com\nClassification: Phishing (Label 1)\nWebpage Title: Mitsubishi Xpander giá tốt nhất thị trường 2024\nPhishing Evidence:\n- domain contains brand token 'cm...",
+    "content_length": 1952,
+    "created_at": "2026-06-12T07:56:53.687048+00:00",
+    "updated_at": "2026-06-12T07:57:36.938174+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145653_2b1bc550",
+    "content_hash": "371cf3b782122deedfba43e8ab7d582a",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251056,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251056,
+      "process_end_time": 1781251056
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_53309f3e7041-chunk-000"
+    ]
+  },
+  "phish_7586c85933e3": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_7586c85933e3\nURL: http://shopee.vntheme.com\nDomain: shopee.vntheme.com\nClassification: Phishing (Label 1)\nWebpage Title: Mẫu Website Theme Shopee | Vntheme.com Wordpress Flatsome\nWebpage Meta Description: Theme Shopee được tùy chỉnh ...",
+    "content_length": 4201,
+    "created_at": "2026-06-12T07:56:53.687061+00:00",
+    "updated_at": "2026-06-12T07:57:36.963098+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145653_2b1bc550",
+    "content_hash": "e9888a023a360890744c75311c206144",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251056,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251056,
+      "process_end_time": 1781251056
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 2,
+    "chunks_list": [
+      "phish_7586c85933e3-chunk-000",
+      "phish_7586c85933e3-chunk-001"
+    ]
+  },
+  "phish_cc3ad6d04b33": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_cc3ad6d04b33\nURL: http://ocb.hotrokhachhang-tructuyenthe.com\nDomain: ocb.hotrokhachhang-tructuyenthe.com\nClassification: Phishing (Label 1)\nWebpage Title: Ngân hàng thương mại cổ phần Phương Đông | Cá Nhân\nWebpage Meta Description: N...",
+    "content_length": 2713,
+    "created_at": "2026-06-12T07:56:53.687057+00:00",
+    "updated_at": "2026-06-12T07:57:36.663669+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145653_2b1bc550",
+    "content_hash": "de619868781438f3ab6517626eb40840",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251056
+    },
+    "error_msg": "[WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251056657952700' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json'",
+    "chunks_list": []
+  },
+  "phish_0b4b1f79ceb5": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_0b4b1f79ceb5\nURL: http://magiamgiadienmayxanh.com\nDomain: magiamgiadienmayxanh.com\nClassification: Phishing (Label 1)\nWebpage Title: Mã giảm giá Điện Máy Xanh khuyến mãi DMX ưu đãi DienMayXanh online\nWebpage Meta Description: Mã giảm...",
+    "content_length": 23075,
+    "created_at": "2026-06-12T07:56:53.687034+00:00",
+    "updated_at": "2026-06-12T07:57:36.975527+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145653_2b1bc550",
+    "content_hash": "9ffedec898edee17f363aacf04b98919",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251056,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251056,
+      "process_end_time": 1781251056
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 7,
+    "chunks_list": [
+      "phish_0b4b1f79ceb5-chunk-000",
+      "phish_0b4b1f79ceb5-chunk-001",
+      "phish_0b4b1f79ceb5-chunk-002",
+      "phish_0b4b1f79ceb5-chunk-003",
+      "phish_0b4b1f79ceb5-chunk-004",
+      "phish_0b4b1f79ceb5-chunk-005",
+      "phish_0b4b1f79ceb5-chunk-006"
+    ]
+  },
+  "phish_ab0fb93f9df1": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_ab0fb93f9df1\nURL: http://tiktokshops-vn.com\nDomain: tiktokshops-vn.com\nClassification: Phishing (Label 1)\nWebpage Title: Tiktok\nWebpage Meta Description: TikTok Shop | buy, sell and discover on TikTok\nPhishing Evidence:\n- domain cont...",
+    "content_length": 6326,
+    "created_at": "2026-06-12T07:56:54.349333+00:00",
+    "updated_at": "2026-06-12T07:57:37.026349+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145654_d310e493",
+    "content_hash": "6f5e67a97b9dd4c428988b7571f9120e",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251056,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251056,
+      "process_end_time": 1781251057
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 2,
+    "chunks_list": [
+      "phish_ab0fb93f9df1-chunk-000",
+      "phish_ab0fb93f9df1-chunk-001"
+    ]
+  },
+  "phish_921f008971fc": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_921f008971fc\nURL: http://tiktok8s.com\nDomain: tiktok8s.com\nClassification: Phishing (Label 1)\nWebpage Title: Tiktok\nWebpage Meta Description: TikTok Shop | buy, sell and discover on TikTok\nPhishing Evidence:\n- domain contains brand t...",
+    "content_length": 6314,
+    "created_at": "2026-06-12T07:56:54.349306+00:00",
+    "updated_at": "2026-06-12T07:57:37.033925+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145654_d310e493",
+    "content_hash": "99d2bb6e271845d0870300ada0ddc633",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251056,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251056,
+      "process_end_time": 1781251057
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 2,
+    "chunks_list": [
+      "phish_921f008971fc-chunk-000",
+      "phish_921f008971fc-chunk-001"
+    ]
+  },
+  "phish_e62fc18d3407": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_e62fc18d3407\nURL: http://tiktokshop-trade.com\nDomain: tiktokshop-trade.com\nClassification: Phishing (Label 1)\nWebpage Title: TikTok Shop | Create joy and sell more\nPhishing Evidence:\n- domain contains brand token 'tiktok'\n- listed in...",
+    "content_length": 4137,
+    "created_at": "2026-06-12T07:56:54.349330+00:00",
+    "updated_at": "2026-06-12T07:57:37.043537+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145654_d310e493",
+    "content_hash": "ce53f12de64aa389847740ddaffeef26",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251056,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251056,
+      "process_end_time": 1781251057
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 2,
+    "chunks_list": [
+      "phish_e62fc18d3407-chunk-000",
+      "phish_e62fc18d3407-chunk-001"
+    ]
+  },
+  "phish_c35e16538f51": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_c35e16538f51\nURL: http://tiktokseller-shopping.com\nDomain: tiktokseller-shopping.com\nClassification: Phishing (Label 1)\nWebpage Title: TikTok Shop | Create joy and sell more\nPhishing Evidence:\n- domain contains brand token 'tiktok'\n-...",
+    "content_length": 4147,
+    "created_at": "2026-06-12T07:56:54.349321+00:00",
+    "updated_at": "2026-06-12T07:57:37.084086+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145654_d310e493",
+    "content_hash": "3b04979db67675cbdd1fca5bc92b15a9",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251056,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251057,
+      "process_end_time": 1781251057
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 2,
+    "chunks_list": [
+      "phish_c35e16538f51-chunk-000",
+      "phish_c35e16538f51-chunk-001"
+    ]
+  },
+  "phish_be767614d22d": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_be767614d22d\nURL: http://tiktokshop-market.com\nDomain: tiktokshop-market.com\nClassification: Phishing (Label 1)\nWebpage Title: TikTok Shop | Create joy and sell more\nPhishing Evidence:\n- domain contains brand token 'tiktok'\n- listed ...",
+    "content_length": 4234,
+    "created_at": "2026-06-12T07:56:54.349326+00:00",
+    "updated_at": "2026-06-12T07:57:37.103485+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145654_d310e493",
+    "content_hash": "632e4adf087cbbae591f5a6256ebf628",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251056,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251057,
+      "process_end_time": 1781251057
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 2,
+    "chunks_list": [
+      "phish_be767614d22d-chunk-000",
+      "phish_be767614d22d-chunk-001"
+    ]
+  },
+  "phish_d40241f8e8d0": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_d40241f8e8d0\nURL: http://vietnamairlinesgiare.vn\nDomain: vietnamairlinesgiare.vn\nClassification: Phishing (Label 1)\nWebpage Title: Trang chủ\nPhishing Evidence:\n- domain contains brand token 'evn'\n- domain contains brand token 'vietna...",
+    "content_length": 2796,
+    "created_at": "2026-06-12T07:56:54.990841+00:00",
+    "updated_at": "2026-06-12T07:57:37.112095+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145654_d28d52ee",
+    "content_hash": "96e77ff1a33187ba2ffe6336cb32a6b5",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251056,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251057,
+      "process_end_time": 1781251057
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_d40241f8e8d0-chunk-000"
+    ]
+  },
+  "phish_3f14d12832ff": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_3f14d12832ff\nURL: http://vieclamlazada.vn\nDomain: vieclamlazada.vn\nClassification: Phishing (Label 1)\nWebpage Title: lazada affiliate11\nPhishing Evidence:\n- domain contains brand token 'lazada'\n- listed in local eval_black_list.txt\n-...",
+    "content_length": 3262,
+    "created_at": "2026-06-12T07:56:54.990832+00:00",
+    "updated_at": "2026-06-12T07:57:37.399264+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145654_d28d52ee",
+    "content_hash": "7490f424fabacc0376461aa48b687fd8",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251056,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251057,
+      "process_end_time": 1781251057
+    },
+    "error_msg": "C[1/1]: phish_3f14d12832ff-chunk-000: ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\\nPlease retry in 22.867735868s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '22s'}]}}",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_3f14d12832ff-chunk-000"
+    ]
+  },
+  "phish_b9d4f24c4bfc": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_b9d4f24c4bfc\nURL: http://vib.truc-tuyen-cham-socthekhachhang.com\nDomain: vib.truc-tuyen-cham-socthekhachhang.com\nClassification: Phishing (Label 1)\nWebpage Title: Home - Dịch vụ Thẻ - Ngân hàng TMCP Quốc tế Việt Nam VIB\nWebpage Meta ...",
+    "content_length": 1713,
+    "created_at": "2026-06-12T07:56:54.990826+00:00",
+    "updated_at": "2026-06-12T07:57:37.182774+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145654_d28d52ee",
+    "content_hash": "9e1a4e1e28beb1b1144035bf628fe287",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251056,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251057,
+      "process_end_time": 1781251057
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: JsonDocStatusStorage[doc_status] index flush failed: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251057155479000' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_b9d4f24c4bfc-chunk-000"
+    ]
+  },
+  "phish_02c9295f223b": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_02c9295f223b\nURL: http://vietinbankamc.vn\nDomain: vietinbankamc.vn\nClassification: Phishing (Label 1)\nWebpage Title: Trang chủ - VIETINBANK AMC\nWebpage Meta Description: Vietinbank AMC - Quản lý nợ và Khai thác tài sản từ ngân hàng V...",
+    "content_length": 2423,
+    "created_at": "2026-06-12T07:56:54.990837+00:00",
+    "updated_at": "2026-06-12T07:57:37.199482+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145654_d28d52ee",
+    "content_hash": "509adbcd43733e9a153cb4592d8b3f44",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251056,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251057,
+      "process_end_time": 1781251057
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[entities] index flush failed: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\vdb_entities.json.tmp.14984.22432.1781251057181315200' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\vdb_entities.json'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_02c9295f223b-chunk-000"
+    ]
+  },
+  "phish_81f018d0d979": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_81f018d0d979\nURL: http://tpb-vayuudai.com\nDomain: tpb-vayuudai.com\nClassification: Phishing (Label 1)\nWebpage Title: Vay thế chấp TPBank -\nPhishing Evidence:\n- domain contains brand token 'tpb'\n- listed in local eval_black_list.txt\n-...",
+    "content_length": 4816,
+    "created_at": "2026-06-12T07:56:54.990809+00:00",
+    "updated_at": "2026-06-12T07:57:37.252791+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145654_d28d52ee",
+    "content_hash": "16c4c58f163002fa1fba089a8b605307",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251056,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251057,
+      "process_end_time": 1781251057
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 2,
+    "chunks_list": [
+      "phish_81f018d0d979-chunk-000",
+      "phish_81f018d0d979-chunk-001"
+    ]
+  },
+  "phish_69475c7c9365": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_69475c7c9365\nURL: http://viettelgroupvn.com\nDomain: viettelgroupvn.com\nClassification: Phishing (Label 1)\nWebpage Title: Trang chủ - VIETTEL GROUP - DỊCH VỤ VIETTEL\nPhishing Evidence:\n- domain contains brand token 'viettel'\n- listed ...",
+    "content_length": 1907,
+    "created_at": "2026-06-12T07:56:55.128725+00:00",
+    "updated_at": "2026-06-12T07:57:37.264301+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145655_b515be51",
+    "content_hash": "942599639d33dc125d7fa1576220251b",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251056,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251057,
+      "process_end_time": 1781251057
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_69475c7c9365-chunk-000"
+    ]
+  },
+  "phish_6ebc786881a7": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_6ebc786881a7\nURL: http://vn.congtygiaohangtietkiemvn.com\nDomain: vn.congtygiaohangtietkiemvn.com\nClassification: Phishing (Label 1)\nWebpage Title: GIAO HÀNG TIẾT KIỆM - Dịch vụ giao hàng trong ngày chuyên nghiệp\nWebpage Meta Descript...",
+    "content_length": 8724,
+    "created_at": "2026-06-12T07:56:55.128748+00:00",
+    "updated_at": "2026-06-12T07:57:37.314838+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145655_b515be51",
+    "content_hash": "c629e9835b921272178557931f8e7ad7",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251057,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251057,
+      "process_end_time": 1781251057
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 4,
+    "chunks_list": [
+      "phish_6ebc786881a7-chunk-000",
+      "phish_6ebc786881a7-chunk-001",
+      "phish_6ebc786881a7-chunk-002",
+      "phish_6ebc786881a7-chunk-003"
+    ]
+  },
+  "phish_58f3a7041976": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_58f3a7041976\nURL: http://vinfastspace.vingroupinvest.asia\nDomain: vinfastspace.vingroupinvest.asia\nClassification: Phishing (Label 1)\nWebpage Title: Trang Chủ | Vinfast\nWebpage Meta Description: Khám phá hạng mục đầu tư nội bộ của Vi...",
+    "content_length": 5308,
+    "created_at": "2026-06-12T07:56:55.128739+00:00",
+    "updated_at": "2026-06-12T07:57:37.324265+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145655_b515be51",
+    "content_hash": "f5a003992b39d8f56156063281c997fc",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251057,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251057,
+      "process_end_time": 1781251057
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 2,
+    "chunks_list": [
+      "phish_58f3a7041976-chunk-000",
+      "phish_58f3a7041976-chunk-001"
+    ]
+  },
+  "phish_4c2b226acea8": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_4c2b226acea8\nURL: http://winmartmasangroup.com\nDomain: winmartmasangroup.com\nClassification: Phishing (Label 1)\nWebpage Title: WinCommerce - Công ty Cổ phần Dịch vụ Thương mại Tổng hợp WinCommerce\nPhishing Evidence:\n- domain contains...",
+    "content_length": 3185,
+    "created_at": "2026-06-12T07:56:55.128751+00:00",
+    "updated_at": "2026-06-12T07:57:37.375302+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145655_b515be51",
+    "content_hash": "77f6bdef04adda7837763ec2525b19ee",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251057,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251057,
+      "process_end_time": 1781251057
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_4c2b226acea8-chunk-000"
+    ]
+  },
+  "phish_95bcfa925ce3": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_95bcfa925ce3\nURL: http://vinhomes.tech\nDomain: vinhomes.tech\nClassification: Phishing (Label 1)\nWebpage Title: Đầu tư\nWebpage Meta Description: Đầu tư\nPhishing Evidence:\n- domain contains brand token 'vinhomes'\n- listed in local eval...",
+    "content_length": 1823,
+    "created_at": "2026-06-12T07:56:55.128744+00:00",
+    "updated_at": "2026-06-12T07:57:37.387103+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145655_b515be51",
+    "content_hash": "5b4dcbbcfe3c2b47e80b529f1adf9dfb",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251057,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251057,
+      "process_end_time": 1781251057
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_95bcfa925ce3-chunk-000"
+    ]
+  },
+  "phish_8ecbccab1440": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_8ecbccab1440\nURL: http://acb.chamsocthe-uudaikhachhang.online\nDomain: acb.chamsocthe-uudaikhachhang.online\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'acb'\n- listed in local eval_black_list.tx...",
+    "content_length": 342,
+    "created_at": "2026-06-12T07:56:57.838702+00:00",
+    "updated_at": "2026-06-12T07:57:36.657553+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145657_7f41ced3",
+    "content_hash": "7509ef97f9dc83640a9049ec46067c1b",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "error_type": "file_extraction_error",
+      "error_stage": "parse"
+    },
+    "error_msg": "[WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251056651370100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json'",
+    "chunks_list": []
+  },
+  "phish_c2f930917603": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_c2f930917603\nURL: http://acb.chamsockhachhang-the-tructuyen-thang9.com.vn\nDomain: acb.chamsockhachhang-the-tructuyen-thang9.com.vn\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'acb'\n- listed in ...",
+    "content_length": 366,
+    "created_at": "2026-06-12T07:56:57.838673+00:00",
+    "updated_at": "2026-06-12T07:57:36.672697+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145657_7f41ced3",
+    "content_hash": "bb5c88be9ebede0a3c7c73cf90a1c830",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "error_type": "file_extraction_error",
+      "error_stage": "parse"
+    },
+    "error_msg": "[WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251056663756200' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json'",
+    "chunks_list": []
+  },
+  "phish_c46d946f3949": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_c46d946f3949\nURL: http://acb.chamsocthe-uudaikhachhang-thang10.com.vn\nDomain: acb.chamsocthe-uudaikhachhang-thang10.com.vn\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'acb'\n- listed in local ev...",
+    "content_length": 358,
+    "created_at": "2026-06-12T07:56:57.838694+00:00",
+    "updated_at": "2026-06-12T07:57:37.471664+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145657_7f41ced3",
+    "content_hash": "f64cd71c25dd03fc770c1409a1bcd7b4",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251057,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251057,
+      "process_end_time": 1781251057
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_c46d946f3949-chunk-000"
+    ]
+  },
+  "phish_6c02f96ff420": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_6c02f96ff420\nURL: http://acb.chamsockhachhangtructuyen-uudai-capnhatthe-thang10.com.vn\nDomain: acb.chamsockhachhangtructuyen-uudai-capnhatthe-thang10.com.vn\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains bran...",
+    "content_length": 392,
+    "created_at": "2026-06-12T07:56:57.838689+00:00",
+    "updated_at": "2026-06-12T07:57:37.476947+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145657_7f41ced3",
+    "content_hash": "b5336dda71c5e984c0b50a45bdd291ff",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251057,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251057,
+      "process_end_time": 1781251057
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_6c02f96ff420-chunk-000"
+    ]
+  },
+  "phish_7f73215e8549": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_7f73215e8549\nURL: http://acb.chamsocthe-uudaikhachhang-tructuyen.com\nDomain: acb.chamsocthe-uudaikhachhang-tructuyen.com\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'acb'\n- listed in local eval...",
+    "content_length": 356,
+    "created_at": "2026-06-12T07:56:57.838698+00:00",
+    "updated_at": "2026-06-12T07:57:37.481646+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145657_7f41ced3",
+    "content_hash": "e6848a16595f6ab7b1fab6cb05e8ecb4",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251057,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251057,
+      "process_end_time": 1781251057
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_7f73215e8549-chunk-000"
+    ]
+  },
+  "phish_48c33d73963b": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_48c33d73963b\nURL: http://acb.uudaikhachhang-tructuyen-the.com.vn\nDomain: acb.uudaikhachhang-tructuyen-the.com.vn\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'acb'\n- listed in local eval_black_l...",
+    "content_length": 348,
+    "created_at": "2026-06-12T07:56:58.213260+00:00",
+    "updated_at": "2026-06-12T07:57:37.545032+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145658_72dc18ef",
+    "content_hash": "ddf47a61493eac9c0597d0e51beff203",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251057,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251057,
+      "process_end_time": 1781251057
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_48c33d73963b-chunk-000"
+    ]
+  },
+  "phish_0059d8a7c03f": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_0059d8a7c03f\nURL: http://acb.hotrokhachhang-uudai-tructuyen.com.vn\nDomain: acb.hotrokhachhang-uudai-tructuyen.com.vn\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'acb'\n- listed in local eval_bla...",
+    "content_length": 352,
+    "created_at": "2026-06-12T07:56:58.213249+00:00",
+    "updated_at": "2026-06-12T07:57:37.556690+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145658_72dc18ef",
+    "content_hash": "7a0a7eeb77f3b5577bc53e3d25ad459d",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251057,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251057,
+      "process_end_time": 1781251057
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_0059d8a7c03f-chunk-000"
+    ]
+  },
+  "phish_f7096e5da3a3": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_f7096e5da3a3\nURL: http://acb.uudaikhachhang-chamsocthetructuyen.com\nDomain: acb.uudaikhachhang-chamsocthetructuyen.com\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'acb'\n- listed in local eval_b...",
+    "content_length": 354,
+    "created_at": "2026-06-12T07:56:58.213255+00:00",
+    "updated_at": "2026-06-12T07:57:37.560678+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145658_72dc18ef",
+    "content_hash": "68b4d6db229a0ac652ce79ec0770874c",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251057,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251057,
+      "process_end_time": 1781251057
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_f7096e5da3a3-chunk-000"
+    ]
+  },
+  "phish_d005bb99fa91": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_d005bb99fa91\nURL: http://acb.chamsocthekhachhang-thang10.com.vn\nDomain: acb.chamsocthekhachhang-thang10.com.vn\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'acb'\n- listed in local eval_black_lis...",
+    "content_length": 346,
+    "created_at": "2026-06-12T07:56:58.213242+00:00",
+    "updated_at": "2026-06-12T07:57:37.625504+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145658_72dc18ef",
+    "content_hash": "405aa2ad57c95b591e81513edc8eb492",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251057,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251057,
+      "process_end_time": 1781251057
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_d005bb99fa91-chunk-000"
+    ]
+  },
+  "phish_753aa73fc99e": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_753aa73fc99e\nURL: http://acb.chamsocthe-uudaitructuyen.com.vn\nDomain: acb.chamsocthe-uudaitructuyen.com.vn\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'acb'\n- listed in local eval_black_list.tx...",
+    "content_length": 342,
+    "created_at": "2026-06-12T07:56:58.213224+00:00",
+    "updated_at": "2026-06-12T07:57:37.643569+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145658_72dc18ef",
+    "content_hash": "6a811822a5aad6edf237e2d5d4959eaa",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251057,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251057,
+      "process_end_time": 1781251057
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_753aa73fc99e-chunk-000"
+    ]
+  },
+  "phish_d8040440952a": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_d8040440952a\nURL: http://affiliatetiktokvinamilks.com\nDomain: affiliatetiktokvinamilks.com\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'tiktok'\n- domain contains brand token 'vinamilk'\n- listed...",
+    "content_length": 458,
+    "created_at": "2026-06-12T07:56:58.730348+00:00",
+    "updated_at": "2026-06-12T07:57:37.849389+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145658_077ea086",
+    "content_hash": "847da94802ad8de4ca51aaa529d1011b",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251057,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251057,
+      "process_end_time": 1781251057
+    },
+    "error_msg": "C[1/1]: phish_d8040440952a-chunk-000: ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\\nPlease retry in 22.405543731s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '22s'}]}}",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_d8040440952a-chunk-000"
+    ]
+  },
+  "phish_02feb274eea4": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_02feb274eea4\nURL: http://af.tiktok25881.shop\nDomain: af.tiktok25881.shop\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'tiktok'\n- listed in local eval_black_list.txt\nBrand Matches:\n- Brand: TikTo...",
+    "content_length": 316,
+    "created_at": "2026-06-12T07:56:58.730337+00:00",
+    "updated_at": "2026-06-12T07:57:37.912308+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145658_077ea086",
+    "content_hash": "8945cbc9674edf08a44da8e459db2dea",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251057,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251057,
+      "process_end_time": 1781251057
+    },
+    "error_msg": "C[1/1]: phish_02feb274eea4-chunk-000: ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\\nPlease retry in 22.358916896s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '22s'}]}}",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_02feb274eea4-chunk-000"
+    ]
+  },
+  "phish_13f1ed18fed2": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_13f1ed18fed2\nURL: http://amzzcbe-vn.com\nDomain: amzzcbe-vn.com\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'evn'\n- listed in local eval_black_list.txt\nBrand Matches:\n- Brand: EVN (Sector: energ...",
+    "content_length": 297,
+    "created_at": "2026-06-12T07:56:58.730360+00:00",
+    "updated_at": "2026-06-12T07:57:37.705372+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145658_077ea086",
+    "content_hash": "a34c06c15f58b6b91de417f8b7483239",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251057,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251057,
+      "process_end_time": 1781251057
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_13f1ed18fed2-chunk-000"
+    ]
+  },
+  "phish_6bb7426f55d1": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_6bb7426f55d1\nURL: http://albbcbe-cme-vn.top\nDomain: albbcbe-cme-vn.top\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'evn'\n- listed in local eval_black_list.txt\nBrand Matches:\n- Brand: EVN (Secto...",
+    "content_length": 305,
+    "created_at": "2026-06-12T07:56:58.730356+00:00",
+    "updated_at": "2026-06-12T07:57:37.739337+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145658_077ea086",
+    "content_hash": "76cbb86df4bfa7c5e5174b0818516241",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251057,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251057,
+      "process_end_time": 1781251057
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_6bb7426f55d1-chunk-000"
+    ]
+  },
+  "phish_f016439b57d2": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_f016439b57d2\nURL: http://agribank.dangkyungtuyen.com\nDomain: agribank.dangkyungtuyen.com\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'agribank'\n- listed in local eval_black_list.txt\nBrand Match...",
+    "content_length": 339,
+    "created_at": "2026-06-12T07:56:58.730353+00:00",
+    "updated_at": "2026-06-12T07:57:37.787325+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145658_077ea086",
+    "content_hash": "9fa4ad0c518c40808c334c1997ec2877",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251057,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251057,
+      "process_end_time": 1781251057
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_f016439b57d2-chunk-000"
+    ]
+  },
+  "phish_428cd4dd9874": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_428cd4dd9874\nURL: http://bio.linkvibthetindung\nDomain: bio.linkvibthetindung\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'vib'\n- listed in local eval_black_list.txt\nBrand Matches:\n- Brand: VIB ...",
+    "content_length": 312,
+    "created_at": "2026-06-12T07:57:00.956366+00:00",
+    "updated_at": "2026-06-12T07:57:37.828706+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145700_d46550f8",
+    "content_hash": "87a5a87325b421be6685a1d65f2af6b3",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251057,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251057,
+      "process_end_time": 1781251057
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_428cd4dd9874-chunk-000"
+    ]
+  },
+  "phish_3f075f350cba": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_3f075f350cba\nURL: http://bafybeigdypfsltkfckfg72siuqsn47o2dckwegd27xtduwl5d3cazdvjgy.ipfs.inbrowser.link\nDomain: bafybeigdypfsltkfckfg72siuqsn47o2dckwegd27xtduwl5d3cazdvjgy.ipfs.inbrowser.link\nClassification: Phishing (Label 1)\nPhish...",
+    "content_length": 425,
+    "created_at": "2026-06-12T07:57:00.956359+00:00",
+    "updated_at": "2026-06-12T07:57:37.887793+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145700_d46550f8",
+    "content_hash": "b60f295598cbeed6fa0b20e34071af09",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251057,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251057,
+      "process_end_time": 1781251057
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_3f075f350cba-chunk-000"
+    ]
+  },
+  "phish_8fff8aee0a9d": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_8fff8aee0a9d\nURL: http://apple.support-find-my-iphone.com\nDomain: apple.support-find-my-iphone.com\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'apple'\n- listed in local eval_black_list.txt\nBran...",
+    "content_length": 337,
+    "created_at": "2026-06-12T07:57:00.956355+00:00",
+    "updated_at": "2026-06-12T07:57:37.919197+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145700_d46550f8",
+    "content_hash": "d153a78bc4b2ca2140ba2fa5f08115ab",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251057,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251057,
+      "process_end_time": 1781251057
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_8fff8aee0a9d-chunk-000"
+    ]
+  },
+  "phish_4c8b24c920d4": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_4c8b24c920d4\nURL: http://best-buy-vi.top\nDomain: best-buy-vi.top\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'stb'\n- listed in local eval_black_list.txt\nBrand Matches:\n- Brand: Sacombank (Secto...",
+    "content_length": 306,
+    "created_at": "2026-06-12T07:57:00.956363+00:00",
+    "updated_at": "2026-06-12T07:57:37.983736+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145700_d46550f8",
+    "content_hash": "cb5fe75f1fd78ea4c3ed5b65679a9b58",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251057,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251057,
+      "process_end_time": 1781251057
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_4c8b24c920d4-chunk-000"
+    ]
+  },
+  "phish_4fe092746b29": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_4fe092746b29\nURL: http://app.vingroup.vip\nDomain: app.vingroup.vip\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'vingroup'\n- listed in local eval_black_list.txt\nBrand Matches:\n- Brand: Vingroup ...",
+    "content_length": 321,
+    "created_at": "2026-06-12T07:57:00.956340+00:00",
+    "updated_at": "2026-06-12T07:57:38.003677+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145700_d46550f8",
+    "content_hash": "6e13e8f499e6c206dc69bc621788082b",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251057,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251057,
+      "process_end_time": 1781251057
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_4fe092746b29-chunk-000"
+    ]
+  },
+  "phish_244d9153c373": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_244d9153c373\nURL: http://cct-giaohangtietkiem.com\nDomain: cct-giaohangtietkiem.com\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'giaohangtietkiem'\n- listed in local eval_black_list.txt\nBrand Mat...",
+    "content_length": 347,
+    "created_at": "2026-06-12T07:57:01.553497+00:00",
+    "updated_at": "2026-06-12T07:57:38.008977+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145701_04b18a0e",
+    "content_hash": "1ef7b004130f192bf0e502aa58c5ff96",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251057,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251057,
+      "process_end_time": 1781251057
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_244d9153c373-chunk-000"
+    ]
+  },
+  "phish_108e30b5fc07": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_108e30b5fc07\nURL: http://corona.vinpearl-vingrouphms.com\nDomain: corona.vinpearl-vingrouphms.com\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'vingroup'\n- listed in local eval_black_list.txt\nBra...",
+    "content_length": 351,
+    "created_at": "2026-06-12T07:57:01.553520+00:00",
+    "updated_at": "2026-06-12T07:57:38.074575+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145701_04b18a0e",
+    "content_hash": "f898e54930e271412447887a37e07553",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251057,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251058,
+      "process_end_time": 1781251058
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_108e30b5fc07-chunk-000"
+    ]
+  },
+  "phish_63ec4cb45afe": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_63ec4cb45afe\nURL: http://ccty-ghtk.com\nDomain: ccty-ghtk.com\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'ghtk'\n- listed in local eval_black_list.txt\nBrand Matches:\n- Brand: GHTK (Sector: logis...",
+    "content_length": 301,
+    "created_at": "2026-06-12T07:57:01.553511+00:00",
+    "updated_at": "2026-06-12T07:57:38.084224+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145701_04b18a0e",
+    "content_hash": "6056740137d52b793db10c4cdc81af1b",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251057,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251058,
+      "process_end_time": 1781251058
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_63ec4cb45afe-chunk-000"
+    ]
+  },
+  "phish_969f6559c165": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_969f6559c165\nURL: http://cskh-ca-nhan-vpbank.com\nDomain: cskh-ca-nhan-vpbank.com\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'vpbank'\n- listed in local eval_black_list.txt\nBrand Matches:\n- Bran...",
+    "content_length": 325,
+    "created_at": "2026-06-12T07:57:01.553523+00:00",
+    "updated_at": "2026-06-12T07:57:38.084979+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145701_04b18a0e",
+    "content_hash": "6fc0457a87ed107466a440680d2d46d3",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251057,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251058,
+      "process_end_time": 1781251058
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_969f6559c165-chunk-000"
+    ]
+  },
+  "phish_ca587050f124": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_ca587050f124\nURL: http://chats-ghtkvn.com\nDomain: chats-ghtkvn.com\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'ghtk'\n- listed in local eval_black_list.txt\nBrand Matches:\n- Brand: GHTK (Sector:...",
+    "content_length": 307,
+    "created_at": "2026-06-12T07:57:01.553516+00:00",
+    "updated_at": "2026-06-12T07:57:38.341085+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145701_04b18a0e",
+    "content_hash": "1fd241dfb4c0a846319c36f2e72d58c4",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251057,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251058,
+      "process_end_time": 1781251058
+    },
+    "error_msg": "C[1/1]: phish_ca587050f124-chunk-000: ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\\nPlease retry in 21.916807745s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '21s'}]}}",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_ca587050f124-chunk-000"
+    ]
+  },
+  "phish_6f6a51abfcfd": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_6f6a51abfcfd\nURL: http://cskh-vib-canhan.com\nDomain: cskh-vib-canhan.com\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'vib'\n- listed in local eval_black_list.txt\nBrand Matches:\n- Brand: VIB (Sec...",
+    "content_length": 308,
+    "created_at": "2026-06-12T07:57:02.100237+00:00",
+    "updated_at": "2026-06-12T07:57:38.160027+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145702_e8fec2ad",
+    "content_hash": "5546eda2d64e3fb92a3bc87eee4080dd",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251057,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251058,
+      "process_end_time": 1781251058
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_6f6a51abfcfd-chunk-000"
+    ]
+  },
+  "phish_8754c03a9b57": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_8754c03a9b57\nURL: http://cskh-vib.ho-tro-tin-dung-ca-nhan.com\nDomain: cskh-vib.ho-tro-tin-dung-ca-nhan.com\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'vib'\n- listed in local eval_black_list.tx...",
+    "content_length": 342,
+    "created_at": "2026-06-12T07:57:02.100241+00:00",
+    "updated_at": "2026-06-12T07:57:38.178051+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145702_e8fec2ad",
+    "content_hash": "c5709700fb6317a6014917fc6178a421",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251057,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251058,
+      "process_end_time": 1781251058
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: JsonDocStatusStorage[doc_status] index flush failed: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058164237900' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_8754c03a9b57-chunk-000"
+    ]
+  },
+  "phish_0a12b11ef013": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_0a12b11ef013\nURL: http://cskh-the-vpbank.com\nDomain: cskh-the-vpbank.com\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'vpbank'\n- listed in local eval_black_list.txt\nBrand Matches:\n- Brand: VPBan...",
+    "content_length": 317,
+    "created_at": "2026-06-12T07:57:02.100232+00:00",
+    "updated_at": "2026-06-12T07:57:38.239496+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145702_e8fec2ad",
+    "content_hash": "136ca0cf3072ec2f807836e81801213d",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251057,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251058,
+      "process_end_time": 1781251058
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_0a12b11ef013-chunk-000"
+    ]
+  },
+  "phish_a064c8dbe62c": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_a064c8dbe62c\nURL: http://cskh-vib.nang-han-muc-the-visa.com\nDomain: cskh-vib.nang-han-muc-the-visa.com\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'vib'\n- listed in local eval_black_list.txt\nBr...",
+    "content_length": 338,
+    "created_at": "2026-06-12T07:57:02.100244+00:00",
+    "updated_at": "2026-06-12T07:57:38.243806+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145702_e8fec2ad",
+    "content_hash": "bd97a58e8ec648d8986c562ba4926754",
+    "metadata": {
+      "parse_start_time": 1781251056,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251057,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251058,
+      "process_end_time": 1781251058
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_a064c8dbe62c-chunk-000"
+    ]
+  },
+  "phish_1697efcbe552": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_1697efcbe552\nURL: http://cskh-techcombank.com\nDomain: cskh-techcombank.com\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'techcombank'\n- listed in local eval_black_list.txt\nBrand Matches:\n- Brand...",
+    "content_length": 334,
+    "created_at": "2026-06-12T07:57:02.100214+00:00",
+    "updated_at": "2026-06-12T07:57:38.312228+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145702_e8fec2ad",
+    "content_hash": "ca3cca292dc828ef6d6c47c98298e4ec",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251057,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251058,
+      "process_end_time": 1781251058
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_1697efcbe552-chunk-000"
+    ]
+  },
+  "phish_38ac9f20bf94": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_38ac9f20bf94\nURL: http://dailyssshopee.com\nDomain: dailyssshopee.com\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'shopee'\n- listed in local eval_black_list.txt\nBrand Matches:\n- Brand: Shopee (S...",
+    "content_length": 315,
+    "created_at": "2026-06-12T07:57:05.724654+00:00",
+    "updated_at": "2026-06-12T07:57:38.329821+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145705_56044b70",
+    "content_hash": "04283647efce1a254b0f972ced45a858",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251058,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251058,
+      "process_end_time": 1781251058
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_38ac9f20bf94-chunk-000"
+    ]
+  },
+  "phish_82cf64e9d630": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_82cf64e9d630\nURL: http://dich-vu-dien-mayxanh.com\nDomain: dich-vu-dien-mayxanh.com\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'dienmayxanh'\n- listed in local eval_black_list.txt\nBrand Matches:...",
+    "content_length": 346,
+    "created_at": "2026-06-12T07:57:05.724658+00:00",
+    "updated_at": "2026-06-12T07:57:38.844318+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145705_56044b70",
+    "content_hash": "547da82573a94b269a257fb0816675e7",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251058,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251058,
+      "process_end_time": 1781251058
+    },
+    "error_msg": "C[1/1]: phish_82cf64e9d630-chunk-000: ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\\nPlease retry in 21.66465605s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '21s'}]}}",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_82cf64e9d630-chunk-000"
+    ]
+  },
+  "phish_4baca34634ad": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_4baca34634ad\nURL: http://dich-vu-kh-vip-vpbank.com\nDomain: dich-vu-kh-vip-vpbank.com\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'vpbank'\n- listed in local eval_black_list.txt\nBrand Matches:\n- ...",
+    "content_length": 329,
+    "created_at": "2026-06-12T07:57:05.724665+00:00",
+    "updated_at": "2026-06-12T07:57:37.159458+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145705_56044b70",
+    "content_hash": "cf8adb4497b357439d3f62d87245bf86",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "error_type": "file_extraction_error",
+      "error_stage": "parse"
+    },
+    "error_msg": "[WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251057149163400' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json'",
+    "chunks_list": []
+  },
+  "phish_49f10ca80e30": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_49f10ca80e30\nURL: http://dich-vu-k9-vib.com\nDomain: dich-vu-k9-vib.com\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'vib'\n- listed in local eval_black_list.txt\nBrand Matches:\n- Brand: VIB (Secto...",
+    "content_length": 306,
+    "created_at": "2026-06-12T07:57:05.724661+00:00",
+    "updated_at": "2026-06-12T07:57:38.404586+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145705_56044b70",
+    "content_hash": "19ac5ae9a21e7e56302ce4a3e110c96b",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251058,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251058,
+      "process_end_time": 1781251058
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_49f10ca80e30-chunk-000"
+    ]
+  },
+  "phish_37504556120f": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_37504556120f\nURL: http://ctygiaohangtietkiemm1.com\nDomain: ctygiaohangtietkiemm1.com\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'giaohangtietkiem'\n- listed in local eval_black_list.txt\nBrand M...",
+    "content_length": 349,
+    "created_at": "2026-06-12T07:57:05.724639+00:00",
+    "updated_at": "2026-06-12T07:57:38.419059+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145705_56044b70",
+    "content_hash": "70ba505093fb9c3a45ab8cedd3139b65",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251058,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251058,
+      "process_end_time": 1781251058
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_37504556120f-chunk-000"
+    ]
+  },
+  "phish_02858f61641c": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_02858f61641c\nURL: http://dich-vu-the-ai-vpbank.com\nDomain: dich-vu-the-ai-vpbank.com\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'vpbank'\n- listed in local eval_black_list.txt\nBrand Matches:\n- ...",
+    "content_length": 329,
+    "created_at": "2026-06-12T07:57:06.581235+00:00",
+    "updated_at": "2026-06-12T07:57:38.169229+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145706_7e073987",
+    "content_hash": "45affacf5beee11eadf8285eb4313966",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251058,
+      "analyzing_stage_skipped": true
+    },
+    "error_msg": "[WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058160057500' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json'",
+    "chunks_list": []
+  },
+  "phish_466eef3c3a95": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_466eef3c3a95\nURL: http://dich-vu-the-ez-vpbank.com\nDomain: dich-vu-the-ez-vpbank.com\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'vpbank'\n- listed in local eval_black_list.txt\nBrand Matches:\n- ...",
+    "content_length": 329,
+    "created_at": "2026-06-12T07:57:06.581242+00:00",
+    "updated_at": "2026-06-12T07:57:38.468852+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145706_7e073987",
+    "content_hash": "18cf5f74627ad5e0076c8e666ff38430",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251058,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251058,
+      "process_end_time": 1781251058
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_466eef3c3a95-chunk-000"
+    ]
+  },
+  "phish_4c03ab128507": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_4c03ab128507\nURL: http://dich-vu-online-vpbank.com\nDomain: dich-vu-online-vpbank.com\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'vpbank'\n- listed in local eval_black_list.txt\nBrand Matches:\n- ...",
+    "content_length": 329,
+    "created_at": "2026-06-12T07:57:06.581230+00:00",
+    "updated_at": "2026-06-12T07:57:38.483359+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145706_7e073987",
+    "content_hash": "dcd7c660bd3e0ef83e09271a3fb6de1c",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251058,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251058,
+      "process_end_time": 1781251058
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_4c03ab128507-chunk-000"
+    ]
+  },
+  "phish_6d63cc33b3ff": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_6d63cc33b3ff\nURL: http://dich-vu-khcn-vvip-vib.com\nDomain: dich-vu-khcn-vvip-vib.com\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'vib'\n- listed in local eval_black_list.txt\nBrand Matches:\n- Bra...",
+    "content_length": 320,
+    "created_at": "2026-06-12T07:57:06.581216+00:00",
+    "updated_at": "2026-06-12T07:57:38.518013+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145706_7e073987",
+    "content_hash": "ff1c5f38cc321d893d741f01ff896ceb",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251058,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251058,
+      "process_end_time": 1781251058
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_6d63cc33b3ff-chunk-000"
+    ]
+  },
+  "phish_15a2bb63140a": {
+    "status": "failed",
+    "content_summary": "Record ID: phish_15a2bb63140a\nURL: http://dich-vu-the-cashback-vib.com\nDomain: dich-vu-the-cashback-vib.com\nClassification: Phishing (Label 1)\nPhishing Evidence:\n- domain contains brand token 'shb'\n- domain contains brand token 'vib'\n- listed in loca...",
+    "content_length": 438,
+    "created_at": "2026-06-12T07:57:06.581239+00:00",
+    "updated_at": "2026-06-12T07:57:38.526947+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145706_7e073987",
+    "content_hash": "3d2500c102f6d73c7d627eb4fe2f45b2",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251058,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251058,
+      "process_end_time": 1781251058
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "phish_15a2bb63140a-chunk-000"
+    ]
+  },
+  "legit_0fb3d39c129b": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_0fb3d39c129b\nURL: http://bancong.bathuoc.thanhhoa.gov.vn\nDomain: bancong.bathuoc.thanhhoa.gov.vn\nClassification: Legitimate (Label 0)\nWebpage Title: Trang thông tin điện tử xã Ban Công - Bá Thước\nPhishing Evidence:\n- official domain ...",
+    "content_length": 5535,
+    "created_at": "2026-06-12T07:57:07.162050+00:00",
+    "updated_at": "2026-06-12T07:57:38.568553+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145707_17605037",
+    "content_hash": "7ab09480110c6449b288e1af6056374f",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251058,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251058,
+      "process_end_time": 1781251058
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 2,
+    "chunks_list": [
+      "legit_0fb3d39c129b-chunk-000",
+      "legit_0fb3d39c129b-chunk-001"
+    ]
+  },
+  "legit_1c71ee51fdb4": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_1c71ee51fdb4\nURL: http://baotangdanang.vn\nDomain: baotangdanang.vn\nClassification: Legitimate (Label 0)\nWebpage Title: Bảo tàng Đà Nẵng - Museum of DaNang\nWebpage Meta Description: Museum of DaNang\nPhishing Evidence:\n- official domai...",
+    "content_length": 4306,
+    "created_at": "2026-06-12T07:57:07.162054+00:00",
+    "updated_at": "2026-06-12T07:57:38.583555+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145707_17605037",
+    "content_hash": "b66e703f4eb8ba5ab0091052d90672ca",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251058,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251058,
+      "process_end_time": 1781251058
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 2,
+    "chunks_list": [
+      "legit_1c71ee51fdb4-chunk-000",
+      "legit_1c71ee51fdb4-chunk-001"
+    ]
+  },
+  "legit_08ccf29ab27f": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_08ccf29ab27f\nURL: http://admintruong.haiphong.edu.vn\nDomain: admintruong.haiphong.edu.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 198,
+    "created_at": "2026-06-12T07:57:07.162027+00:00",
+    "updated_at": "2026-06-12T07:57:38.615752+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145707_17605037",
+    "content_hash": "b85d987038e4bd96667c545066e7472a",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251058,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251058,
+      "process_end_time": 1781251058
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "legit_08ccf29ab27f-chunk-000"
+    ]
+  },
+  "legit_5d814b4b839b": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_5d814b4b839b\nURL: http://aithuong.bathuoc.thanhhoa.gov.vn\nDomain: aithuong.bathuoc.thanhhoa.gov.vn\nClassification: Legitimate (Label 0)\nWebpage Title: Trang thông tin điện tử xã Ái Thượng - Bá Thước\nPhishing Evidence:\n- official doma...",
+    "content_length": 6749,
+    "created_at": "2026-06-12T07:57:07.162042+00:00",
+    "updated_at": "2026-06-12T07:57:38.637171+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145707_17605037",
+    "content_hash": "17efb979861625d2b343dd6f34b8124d",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251058,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251058,
+      "process_end_time": 1781251058
+    },
+    "error_msg": "Failed to persist pre-rebuild changes: NanoVectorDBStorage[chunks] index flush failed: main.<locals>.embedding_func() got an unexpected keyword argument 'embedding_dim'",
+    "chunks_count": 3,
+    "chunks_list": [
+      "legit_5d814b4b839b-chunk-000",
+      "legit_5d814b4b839b-chunk-001",
+      "legit_5d814b4b839b-chunk-002"
+    ]
+  },
+  "legit_1f2e33832ea7": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_1f2e33832ea7\nURL: http://ats.vietnamtourism.gov.vn\nDomain: ats.vietnamtourism.gov.vn\nClassification: Legitimate (Label 0)\nWebpage Title: Trang chủ - Tiêu chuẩn du lịch ASEAN\nPhishing Evidence:\n- official domain from brand catalog\n\nWe...",
+    "content_length": 2783,
+    "created_at": "2026-06-12T07:57:07.162046+00:00",
+    "updated_at": "2026-06-12T07:57:38.663798+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145707_17605037",
+    "content_hash": "246f9d678a64c6ec0f9d1f8f0fc6dfe8",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251058,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251058,
+      "process_end_time": 1781251058
+    },
+    "error_msg": "[WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058649328100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json'",
+    "chunks_count": 1,
+    "chunks_list": [
+      "legit_1f2e33832ea7-chunk-000"
+    ]
+  },
+  "legit_2e8ca7eb4071": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_2e8ca7eb4071\nURL: http://battrang.gialam.hanoi.gov.vn\nDomain: battrang.gialam.hanoi.gov.vn\nClassification: Legitimate (Label 0)\nWebpage Title: Trang chủ - Xã Bát Tràng\nPhishing Evidence:\n- official domain from brand catalog\nBrand ...",
+    "content_length": 5492,
+    "created_at": "2026-06-12T07:57:09.252432+00:00",
+    "updated_at": "2026-06-12T07:57:38.668399+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145709_28a35c7f",
+    "content_hash": "92d4360f5795468efdcb1121343dd2e9",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251058,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251058,
+      "process_end_time": 1781251058
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json'",
+    "chunks_count": 0,
+    "chunks_list": []
+  },
+  "legit_2d459cddfb84": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_2d459cddfb84\nURL: http://benennp.com.vn\nDomain: benennp.com.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 172,
+    "created_at": "2026-06-12T07:57:09.252444+00:00",
+    "updated_at": "2026-06-12T07:57:38.680481+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145709_28a35c7f",
+    "content_hash": "b5d1bc2fd47ff18cdb14f473b5afec52",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251058,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251058,
+      "process_end_time": 1781251058
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json'",
+    "chunks_count": 0,
+    "chunks_list": []
+  },
+  "legit_0add8372f79e": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_0add8372f79e\nURL: http://benhviendakhoathachthanh.com.vn\nDomain: benhviendakhoathachthanh.com.vn\nClassification: Legitimate (Label 0)\nWebpage Title: Bệnh viện đa khoa Huyện Thạch Thành - Thanh Hóa\nPhishing Evidence:\n- official domain...",
+    "content_length": 4156,
+    "created_at": "2026-06-12T07:57:09.252450+00:00",
+    "updated_at": "2026-06-12T07:57:38.690788+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145709_28a35c7f",
+    "content_hash": "d41ab2bd2522c6b8b363a1110948f485",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251058,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251058,
+      "process_end_time": 1781251058
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json'",
+    "chunks_count": 0,
+    "chunks_list": []
+  },
+  "legit_442d45571f18": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_442d45571f18\nURL: http://baotonpuluong.vn\nDomain: baotonpuluong.vn\nClassification: Legitimate (Label 0)\nWebpage Title: Trung tâm Bảo tồn khu thiên nhiên Pù Luông\nPhishing Evidence:\n- official domain from brand catalog\nBrand Matches:\n...",
+    "content_length": 3620,
+    "created_at": "2026-06-12T07:57:09.252407+00:00",
+    "updated_at": "2026-06-12T07:57:38.702509+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145709_28a35c7f",
+    "content_hash": "b70aad9dda08ead266ef6e50a7c94669",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251058,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251058,
+      "process_end_time": 1781251058
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json'",
+    "chunks_count": 0,
+    "chunks_list": []
+  },
+  "legit_5d2feccec84f": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_5d2feccec84f\nURL: http://bdt.dienbien.gov.vn\nDomain: bdt.dienbien.gov.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 182,
+    "created_at": "2026-06-12T07:57:09.252438+00:00",
+    "updated_at": "2026-06-12T07:57:38.717238+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145709_28a35c7f",
+    "content_hash": "78af4ffa5091fd18dccec900ed2ae6d5",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251058,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251058,
+      "process_end_time": 1781251058
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json'",
+    "chunks_count": 0,
+    "chunks_list": []
+  },
+  "legit_19c58e240935": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_19c58e240935\nURL: http://benhvienungbuouthanhhoa.vn\nDomain: benhvienungbuouthanhhoa.vn\nClassification: Legitimate (Label 0)\nWebpage Title: Bệnh viện ung bướu tỉnh Thanh Hoá\nPhishing Evidence:\n- official domain from brand catalog\nBran...",
+    "content_length": 4667,
+    "created_at": "2026-06-12T07:57:10.112917+00:00",
+    "updated_at": "2026-06-12T07:57:38.733148+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145710_c6fe404f",
+    "content_hash": "e0c1957801ebc7d3a1b91a1e37bfa107",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251058,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251058,
+      "process_end_time": 1781251058
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json'",
+    "chunks_count": 0,
+    "chunks_list": []
+  },
+  "legit_3bae1bf089f1": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_3bae1bf089f1\nURL: http://benhvientimhanoi.vn\nDomain: benhvientimhanoi.vn\nClassification: Legitimate (Label 0)\nWebpage Title: Trang chủ - Bệnh viện Tim Hà Nội\nWebpage Meta Description: Bệnh viện Tim Hà Nội - Bệnh viện Tim Hà Nội là bệ...",
+    "content_length": 5652,
+    "created_at": "2026-06-12T07:57:10.112913+00:00",
+    "updated_at": "2026-06-12T07:57:38.751063+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145710_c6fe404f",
+    "content_hash": "2bf5b4bf9ac7387cb313eaa8baa42819",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251058,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251058,
+      "process_end_time": 1781251058
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json'",
+    "chunks_count": 0,
+    "chunks_list": []
+  },
+  "legit_85977d5890fe": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_85977d5890fe\nURL: http://benhvienthoxuan.vn\nDomain: benhvienthoxuan.vn\nClassification: Legitimate (Label 0)\nWebpage Title: Bệnh viện đa khoa huyện Thọ Xuân\nPhishing Evidence:\n- official domain from brand catalog\nBrand Matches:\n- Bran...",
+    "content_length": 7320,
+    "created_at": "2026-06-12T07:57:10.112909+00:00",
+    "updated_at": "2026-06-12T07:57:38.761518+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145710_c6fe404f",
+    "content_hash": "71b56e44ad98ab38311ba529ce519849",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251058,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251058,
+      "process_end_time": 1781251058
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json'",
+    "chunks_count": 0,
+    "chunks_list": []
+  },
+  "legit_35a51991f8b5": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_35a51991f8b5\nURL: http://benhviendalieuhanoi.com\nDomain: benhviendalieuhanoi.com\nClassification: Legitimate (Label 0)\nWebpage Title: Bệnh viện Da liễu Hà Nội\nWebpage Meta Description: Bệnh Viện Da Liễu Hà Nội là một bệnh viện chuyên ...",
+    "content_length": 6294,
+    "created_at": "2026-06-12T07:57:10.112892+00:00",
+    "updated_at": "2026-06-12T07:57:38.783334+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145710_c6fe404f",
+    "content_hash": "49e2ea74dba3f3f5ae9641f64ae0e7f5",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1781251058,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1781251058,
+      "process_end_time": 1781251058
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json'",
+    "chunks_count": 0,
+    "chunks_list": []
+  },
+  "legit_e121535d1890": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_e121535d1890\nURL: http://benhvientamthanthanhhoa.org.vn\nDomain: benhvientamthanthanhhoa.org.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 204,
+    "created_at": "2026-06-12T07:57:10.112904+00:00",
+    "updated_at": "2026-06-12T07:57:38.668279+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145710_c6fe404f",
+    "content_hash": "915d669b39e1b84ab0648e67c50afa6a",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_7df0556c7f2d": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_7df0556c7f2d\nURL: http://benhvienyduoccotruyenphutho.com\nDomain: benhvienyduoccotruyenphutho.com\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 206,
+    "created_at": "2026-06-12T07:57:11.121838+00:00",
+    "updated_at": "2026-06-12T07:57:38.674600+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145711_2be6c55c",
+    "content_hash": "e9bf5fa846f4deadcfcad7744214bf6c",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_0a0e1317d451": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_0a0e1317d451\nURL: http://binhminh.thixanghison.thanhhoa.gov.vn\nDomain: binhminh.thixanghison.thanhhoa.gov.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 218,
+    "created_at": "2026-06-12T07:57:11.121862+00:00",
+    "updated_at": "2026-06-12T07:57:38.685467+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145711_2be6c55c",
+    "content_hash": "8e79cf7d1828d2031b39ddc95c427233",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_cc2bdaf91146": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_cc2bdaf91146\nURL: http://binhan-dian.gov.vn\nDomain: binhan-dian.gov.vn\nClassification: Legitimate (Label 0)\nWebpage Title: UBND PHƯỜNG BÌNH AN - DĨ AN - BÌNH DƯƠNG\nWebpage Meta Description: Trang thông tin điện tử của UBND Phường Bìn...",
+    "content_length": 8101,
+    "created_at": "2026-06-12T07:57:11.121857+00:00",
+    "updated_at": "2026-06-12T07:57:38.685627+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145711_2be6c55c",
+    "content_hash": "6e67deb61fb8129ec06c05211543469b",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_2287bdb8372e": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_2287bdb8372e\nURL: http://bvdkkvnhkt.org.vn\nDomain: bvdkkvnhkt.org.vn\nClassification: Legitimate (Label 0)\nWebpage Title: Bệnh viện đa khoa khu vực Ngọc Hồi\nWebpage Meta Description: Bệnh viện đa khoa khu vực Ngọc Hồi\nPhishing Evidenc...",
+    "content_length": 8519,
+    "created_at": "2026-06-12T07:57:11.121866+00:00",
+    "updated_at": "2026-06-12T07:57:38.697084+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145711_2be6c55c",
+    "content_hash": "4a733cf38d045555d388c56e0ea4a336",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_c7daecf4d45b": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_c7daecf4d45b\nURL: http://bvdkmelinh.vn\nDomain: bvdkmelinh.vn\nClassification: Legitimate (Label 0)\nWebpage Title: Bệnh viện Đa Khoa Mê Linh\nWebpage Meta Description: Bệnh Viện Đa Khoa Mê Linh được thành lập theo Quyết định số 33/QĐ – ...",
+    "content_length": 8756,
+    "created_at": "2026-06-12T07:57:11.121870+00:00",
+    "updated_at": "2026-06-12T07:57:38.702235+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145711_2be6c55c",
+    "content_hash": "bb78c059b9a6a486fe3a03ca63063115",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_bf39695fbd7a": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_bf39695fbd7a\nURL: http://bvdkquanson.com.vn\nDomain: bvdkquanson.com.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 180,
+    "created_at": "2026-06-12T07:57:14.166237+00:00",
+    "updated_at": "2026-06-12T07:57:38.707603+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145714_f8fb4ba0",
+    "content_hash": "f49eb8014f28ae21e8c2ff40ee66d82c",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_1aa2386fe009": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_1aa2386fe009\nURL: http://bvdongson.ytethanhhoa.gov.vn\nDomain: bvdongson.ytethanhhoa.gov.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 200,
+    "created_at": "2026-06-12T07:57:14.166265+00:00",
+    "updated_at": "2026-06-12T07:57:38.712501+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145714_f8fb4ba0",
+    "content_hash": "a4aa926e4e1ad3a1132303c7faf4763b",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_499022d5ada0": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_499022d5ada0\nURL: http://bvdksamson.vn\nDomain: bvdksamson.vn\nClassification: Legitimate (Label 0)\nWebpage Title: Bệnh viện đa khoa Sầm Sơn - Thanh Hoá\nPhishing Evidence:\n- official domain from brand catalog\nBrand Matches:\n- Brand: VN...",
+    "content_length": 3374,
+    "created_at": "2026-06-12T07:57:14.166252+00:00",
+    "updated_at": "2026-06-12T07:57:38.712679+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145714_f8fb4ba0",
+    "content_hash": "06d5f36e1c2395795611daf2d744def5",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_5bca3b67e430": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_5bca3b67e430\nURL: http://bvdktinh.vinhlong.gov.vn\nDomain: bvdktinh.vinhlong.gov.vn\nClassification: Legitimate (Label 0)\nWebpage Title: Trang thông tin điện tử Bệnh viện đa khoa tỉnh Vĩnh Long\nPhishing Evidence:\n- official domain from...",
+    "content_length": 7822,
+    "created_at": "2026-06-12T07:57:14.166257+00:00",
+    "updated_at": "2026-06-12T07:57:37.649609+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145714_f8fb4ba0",
+    "content_hash": "2467cd60977908169b7130c669e2a308",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "error_type": "file_extraction_error",
+      "error_stage": "parse",
+      "parse_engine": "native"
+    },
+    "error_msg": "[WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251057645068900' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json'",
+    "chunks_list": []
+  },
+  "legit_84bfb57c17ff": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_84bfb57c17ff\nURL: http://bvdkvinhloc.gov.vn\nDomain: bvdkvinhloc.gov.vn\nClassification: Legitimate (Label 0)\nWebpage Title: Bệnh Viện Đa Khoa Huyện Vĩnh Lộc\nWebpage Meta Description: Bệnh Viện Đa Khoa Huyện Vĩnh Lộc\nPhishing Evidence:...",
+    "content_length": 4619,
+    "created_at": "2026-06-12T07:57:14.166261+00:00",
+    "updated_at": "2026-06-12T07:57:37.654175+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145714_f8fb4ba0",
+    "content_hash": "effd6592079cf1e118b702f43fff624e",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "error_type": "file_extraction_error",
+      "error_stage": "parse",
+      "parse_engine": "native"
+    },
+    "error_msg": "[WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251057649651800' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json'",
+    "chunks_list": []
+  },
+  "legit_b919b19ef888": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_b919b19ef888\nURL: http://bvkvnghison.vn\nDomain: bvkvnghison.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog\nBrand Matches:\n- Brand: VNG (Sector: tech), Evidence: domain contains brand t...",
+    "content_length": 260,
+    "created_at": "2026-06-12T07:57:15.509505+00:00",
+    "updated_at": "2026-06-12T07:57:38.722065+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145715_0c8538cc",
+    "content_hash": "1f6edc5ec78e04697cdcdf9385125425",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_2d293012141a": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_2d293012141a\nURL: http://bvnhuxuan.ytethanhhoa.gov.vn\nDomain: bvnhuxuan.ytethanhhoa.gov.vn\nClassification: Legitimate (Label 0)\nWebpage Title: Bệnh viện đa khoa Như Xuân\nPhishing Evidence:\n- official domain from brand catalog\nBrand M...",
+    "content_length": 1956,
+    "created_at": "2026-06-12T07:57:15.509517+00:00",
+    "updated_at": "2026-06-12T07:57:38.727892+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145715_0c8538cc",
+    "content_hash": "1169877044e94eecb210087387d0b8ed",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_624739212464": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_624739212464\nURL: http://bvnongcong.ytethanhhoa.gov.vn\nDomain: bvnongcong.ytethanhhoa.gov.vn\nClassification: Legitimate (Label 0)\nWebpage Title: Bệnh viện đa khoa Nông Cống\nPhishing Evidence:\n- official domain from brand catalog\nBran...",
+    "content_length": 2829,
+    "created_at": "2026-06-12T07:57:15.509523+00:00",
+    "updated_at": "2026-06-12T07:57:38.733367+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145715_0c8538cc",
+    "content_hash": "2d17ae85b71f7213ba3dbc6cd177fc21",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_751fbbd87a9d": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_751fbbd87a9d\nURL: http://bvnamlienchieu.com\nDomain: bvnamlienchieu.com\nClassification: Legitimate (Label 0)\nWebpage Title: BỆNH VIỆN ĐA KHOA NAM LIÊN CHIỂU – Sở Y tế TP Đà Nẵng\nPhishing Evidence:\n- official domain from brand catalog\n...",
+    "content_length": 2685,
+    "created_at": "2026-06-12T07:57:15.509510+00:00",
+    "updated_at": "2026-06-12T07:57:38.739244+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145715_0c8538cc",
+    "content_hash": "1bdd1a079ca3f9512606300c9f8bcc75",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_81fde2736191": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_81fde2736191\nURL: http://bvhoaphu.vinhlong.gov.vn\nDomain: bvhoaphu.vinhlong.gov.vn\nClassification: Legitimate (Label 0)\nWebpage Title: Trang thông tin điện tử Bệnh viện đa khoa khu vực Hòa Phú\nPhishing Evidence:\n- official domain fro...",
+    "content_length": 6257,
+    "created_at": "2026-06-12T07:57:15.509490+00:00",
+    "updated_at": "2026-06-12T07:57:38.745991+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145715_0c8538cc",
+    "content_hash": "a09166a5c1e31618a797374d645e8b0a",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_e72e421b295a": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_e72e421b295a\nURL: http://bvqdy.vinhlong.gov.vn\nDomain: bvqdy.vinhlong.gov.vn\nClassification: Legitimate (Label 0)\nWebpage Title: Trang thông tin điện tử Bệnh viện đa khoa khu vực kết hợp Quân Dân Y\nPhishing Evidence:\n- official domai...",
+    "content_length": 8294,
+    "created_at": "2026-06-12T07:57:17.032944+00:00",
+    "updated_at": "2026-06-12T07:57:38.750693+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145717_1958b5d4",
+    "content_hash": "2412fd8e78efbd5fab2ab5eafca630b3",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_e41055a0aca0": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_e41055a0aca0\nURL: http://bvquanhoa.ytethanhhoa.gov.vn\nDomain: bvquanhoa.ytethanhhoa.gov.vn\nClassification: Legitimate (Label 0)\nWebpage Title: Bệnh viện đa khoa huyện Quan Hóa - Thanh Hóa\nPhishing Evidence:\n- official domain from bra...",
+    "content_length": 4760,
+    "created_at": "2026-06-12T07:57:17.032949+00:00",
+    "updated_at": "2026-06-12T07:57:38.756172+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145717_1958b5d4",
+    "content_hash": "393b0976c4d3c40f9717adca39155be0",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_12a868e7d5f9": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_12a868e7d5f9\nURL: http://bvtamthan.vinhlong.gov.vn\nDomain: bvtamthan.vinhlong.gov.vn\nClassification: Legitimate (Label 0)\nWebpage Title: Trang thông tin điện tử Bệnh viện Tâm Thần Vĩnh Long\nPhishing Evidence:\n- official domain from b...",
+    "content_length": 6605,
+    "created_at": "2026-06-12T07:57:17.032953+00:00",
+    "updated_at": "2026-06-12T07:57:38.766385+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145717_1958b5d4",
+    "content_hash": "7ee0d8187a2f7886fcaad7c891c9aa1f",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_63379e186e8d": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_63379e186e8d\nURL: http://bvydct.vinhlong.gov.vn\nDomain: bvydct.vinhlong.gov.vn\nClassification: Legitimate (Label 0)\nWebpage Title: Trang thông tin điện tử Bệnh viện Y dược cổ truyền tỉnh Vĩnh Long\nPhishing Evidence:\n- official domain...",
+    "content_length": 8640,
+    "created_at": "2026-06-12T07:57:17.032957+00:00",
+    "updated_at": "2026-06-12T07:57:38.766603+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145717_1958b5d4",
+    "content_hash": "5bcbb729724b26901a3973ca147431ae",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_6d03c874b444": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_6d03c874b444\nURL: http://bvp.vinhlong.gov.vn\nDomain: bvp.vinhlong.gov.vn\nClassification: Legitimate (Label 0)\nWebpage Title: Trang thông tin điện tử Bệnh viện Phổi Vĩnh Long\nPhishing Evidence:\n- official domain from brand catalog\nBra...",
+    "content_length": 11627,
+    "created_at": "2026-06-12T07:57:17.032929+00:00",
+    "updated_at": "2026-06-12T07:57:38.772573+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145717_1958b5d4",
+    "content_hash": "f8fdf8593194cd27d3ab404f7c896034",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_c2ed5a11ed95": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_c2ed5a11ed95\nURL: http://canhsatpccc.gov.vn\nDomain: canhsatpccc.gov.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 180,
+    "created_at": "2026-06-12T07:57:18.072201+00:00",
+    "updated_at": "2026-06-12T07:57:38.778277+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145718_e928c075",
+    "content_hash": "822c1c416bfbe71c97a196bc8c8b69d5",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_1cb886c4367f": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_1cb886c4367f\nURL: http://c1vthang-nt.khanhhoa.edu.vn\nDomain: c1vthang-nt.khanhhoa.edu.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 198,
+    "created_at": "2026-06-12T07:57:18.072178+00:00",
+    "updated_at": "2026-06-12T07:57:38.778401+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145718_e928c075",
+    "content_hash": "a218c922dc5d5783f98d4d19f9f53f82",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_2c252b8c426e": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_2c252b8c426e\nURL: http://cauloc.hauloc.thanhhoa.gov.vn\nDomain: cauloc.hauloc.thanhhoa.gov.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 202,
+    "created_at": "2026-06-12T07:57:18.072213+00:00",
+    "updated_at": "2026-06-12T07:57:38.789525+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145718_e928c075",
+    "content_hash": "96618ff1a5261cd02e247ac98d92da7f",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_62ff4b917cb2": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_62ff4b917cb2\nURL: http://canhantmdt.gdt.gov.vn\nDomain: canhantmdt.gdt.gov.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 186,
+    "created_at": "2026-06-12T07:57:18.072195+00:00",
+    "updated_at": "2026-06-12T07:57:38.789730+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145718_e928c075",
+    "content_hash": "d4a7f596341b87e6da3e9231a0676add",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_c6762ef07dc9": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_c6762ef07dc9\nURL: http://canhuu-quocoai.thudo.gov.vn\nDomain: canhuu-quocoai.thudo.gov.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 198,
+    "created_at": "2026-06-12T07:57:18.072207+00:00",
+    "updated_at": "2026-06-12T07:57:38.794318+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145718_e928c075",
+    "content_hash": "835c784f9bb3855086b81c6f58556841",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_bb4c19846ac0": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_bb4c19846ac0\nURL: http://ccatvstp.vinhlong.gov.vn\nDomain: ccatvstp.vinhlong.gov.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 192,
+    "created_at": "2026-06-12T07:57:19.123344+00:00",
+    "updated_at": "2026-06-12T07:57:38.794578+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145719_6f9f3491",
+    "content_hash": "f05f87fb987c99797acc7f6400541aba",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_42b73fbfabe5": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_42b73fbfabe5\nURL: http://cddl.edu.vn\nDomain: cddl.edu.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 166,
+    "created_at": "2026-06-12T07:57:19.123368+00:00",
+    "updated_at": "2026-06-12T07:57:38.794639+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145719_6f9f3491",
+    "content_hash": "64665f9df5c508f8b6e6e2a9634b3367",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_6e223cc0b175": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_6e223cc0b175\nURL: http://cdhue.edu.vn\nDomain: cdhue.edu.vn\nClassification: Legitimate (Label 0)\nWebpage Title: Trường Cao đẳng Huế\nPhishing Evidence:\n- official domain from brand catalog\nBrand Matches:\n- Brand: FPT (Sector: tech), Ev...",
+    "content_length": 12498,
+    "created_at": "2026-06-12T07:57:19.123376+00:00",
+    "updated_at": "2026-06-12T07:57:38.799475+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145719_6f9f3491",
+    "content_hash": "136a682c714028b6595fddb036dbd6d4",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_6d8489bb3937": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_6d8489bb3937\nURL: http://cds.ninhbinh.gov.vn\nDomain: cds.ninhbinh.gov.vn\nClassification: Legitimate (Label 0)\nWebpage Title: Chuyển đổi số tỉnh Ninh Bình\nWebpage Meta Description: Chuyển đổi số tỉnh Ninh Bình\nPhishing Evidence:\n- off...",
+    "content_length": 8578,
+    "created_at": "2026-06-12T07:57:19.123382+00:00",
+    "updated_at": "2026-06-12T07:57:38.805022+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145719_6f9f3491",
+    "content_hash": "f423c423e523d13063d7d71bce91ee82",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_3a39d99ece90": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_3a39d99ece90\nURL: http://chicucdansothanhhoa.vn\nDomain: chicucdansothanhhoa.vn\nClassification: Legitimate (Label 0)\nWebpage Title: Chi cục dân số tỉnh Thanh Hóa\nWebpage Meta Description: Chi cục dân số tỉnh Thanh Hóa\nPhishing Evidenc...",
+    "content_length": 3142,
+    "created_at": "2026-06-12T07:57:19.123386+00:00",
+    "updated_at": "2026-06-12T07:57:38.815539+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145719_6f9f3491",
+    "content_hash": "5e6b7c2c0ecee204a4cf241370e900ea",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_3f3bbf2a8ffe": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_3f3bbf2a8ffe\nURL: http://codong.sontay.hanoi.gov.vn\nDomain: codong.sontay.hanoi.gov.vn\nClassification: Legitimate (Label 0)\nWebpage Title: Trang chủ\nPhishing Evidence:\n- official domain from brand catalog\nBrand Matches:\n- Brand: VNG ...",
+    "content_length": 4910,
+    "created_at": "2026-06-12T07:57:21.260317+00:00",
+    "updated_at": "2026-06-12T07:57:38.829772+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145721_92a8bf4e",
+    "content_hash": "7439971f6e14985e74d126817515dba6",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_5ad1216b4a9e": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_5ad1216b4a9e\nURL: http://chora.babe.gov.vn\nDomain: chora.babe.gov.vn\nClassification: Legitimate (Label 0)\nWebpage Title: Thị Trấn Chợ Rã | Một trang web mới của Cổng thông tin UBND Huyện Ba Bể Trang\nPhishing Evidence:\n- official doma...",
+    "content_length": 3371,
+    "created_at": "2026-06-12T07:57:21.260307+00:00",
+    "updated_at": "2026-06-12T07:57:38.838902+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145721_92a8bf4e",
+    "content_hash": "764555e20789732c89e92a89bf067049",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_a4b0712c5d64": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_a4b0712c5d64\nURL: http://chiengsinh.tuangiao.gov.vn\nDomain: chiengsinh.tuangiao.gov.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 196,
+    "created_at": "2026-06-12T07:57:21.260301+00:00",
+    "updated_at": "2026-06-12T07:57:38.851113+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145721_92a8bf4e",
+    "content_hash": "1d4f55e4bd934bb1f2c835fe72e5cc32",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_9c72fdd5c5cc": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_9c72fdd5c5cc\nURL: http://chicucqlclnltsthanhhoa.gov.vn\nDomain: chicucqlclnltsthanhhoa.gov.vn\nClassification: Legitimate (Label 0)\nWebpage Title: PAPERLAB - PAPER STRAW, PARAFFIN PAPER, SILICONE PAPER\nPhishing Evidence:\n- official dom...",
+    "content_length": 1727,
+    "created_at": "2026-06-12T07:57:21.260283+00:00",
+    "updated_at": "2026-06-12T07:57:38.851471+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145721_92a8bf4e",
+    "content_hash": "fccbb8b7c218ee08b2699f29b22c08e7",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_c354e24b9a63": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_c354e24b9a63\nURL: http://cobi.gialam.hanoi.gov.vn\nDomain: cobi.gialam.hanoi.gov.vn\nClassification: Legitimate (Label 0)\nWebpage Title: Trang chủ - Xã Cổ Bi\nPhishing Evidence:\n- official domain from brand catalog\nBrand Matches:\n- Bran...",
+    "content_length": 6727,
+    "created_at": "2026-06-12T07:57:21.260312+00:00",
+    "updated_at": "2026-06-12T07:57:38.856653+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145721_92a8bf4e",
+    "content_hash": "72ec0aa593af02f133123dfd91dab1d7",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_0c5e3a442c47": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_0c5e3a442c47\nURL: http://congbao.quangtri.gov.vn\nDomain: congbao.quangtri.gov.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 190,
+    "created_at": "2026-06-12T07:57:21.270850+00:00",
+    "updated_at": "2026-06-12T07:57:38.863921+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145721_3959f9b8",
+    "content_hash": "a5b5a994d901da597733f1a03ec36784",
+    "metadata": {
+      "parse_start_time": 1781251057,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_f6b25afd4754": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_f6b25afd4754\nURL: http://congchinh.nongcong.thanhhoa.gov.vn\nDomain: congchinh.nongcong.thanhhoa.gov.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 212,
+    "created_at": "2026-06-12T07:57:21.270854+00:00",
+    "updated_at": "2026-06-12T07:57:38.864182+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145721_3959f9b8",
+    "content_hash": "a1bb147629472ca7fa0617edc742c2e6",
+    "metadata": {
+      "parse_start_time": 1781251058,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_f8cda2de08a5": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_f8cda2de08a5\nURL: http://congdoandienbien.org.vn\nDomain: congdoandienbien.org.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 190,
+    "created_at": "2026-06-12T07:57:21.270863+00:00",
+    "updated_at": "2026-06-12T07:57:38.870602+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145721_3959f9b8",
+    "content_hash": "eda8ac7a93dc6f7e90dfb9e3aef71bd8",
+    "metadata": {
+      "parse_start_time": 1781251058,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_416a090e42ae": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_416a090e42ae\nURL: http://congantp.thainguyen.gov.vn\nDomain: congantp.thainguyen.gov.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 196,
+    "created_at": "2026-06-12T07:57:21.270827+00:00",
+    "updated_at": "2026-06-12T07:57:38.876247+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145721_3959f9b8",
+    "content_hash": "a91b8d0663a7fb8eca9dbe04c278c5e1",
+    "metadata": {
+      "parse_start_time": 1781251058,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_165f29eb5721": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_165f29eb5721\nURL: http://congdoanbrvt.org.vn\nDomain: congdoanbrvt.org.vn\nClassification: Legitimate (Label 0)\nWebpage Title: Trung tâm Internet Việt Nam (VNNIC)\nPhishing Evidence:\n- official domain from brand catalog\n\nWebpage Crawled...",
+    "content_length": 1699,
+    "created_at": "2026-06-12T07:57:21.270860+00:00",
+    "updated_at": "2026-06-12T07:57:38.876605+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145721_3959f9b8",
+    "content_hash": "6dbe29efdde8f9108ae7e0aeaac50e25",
+    "metadata": {
+      "parse_start_time": 1781251058,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_3087591f53b1": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_3087591f53b1\nURL: http://conghoa-quocoai.thudo.gov.vn\nDomain: conghoa-quocoai.thudo.gov.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 200,
+    "created_at": "2026-06-12T07:57:28.684082+00:00",
+    "updated_at": "2026-06-12T07:57:38.883133+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145728_fcbb5570",
+    "content_hash": "97c5e4c9131c860405397c9af724e8b7",
+    "metadata": {
+      "parse_start_time": 1781251058,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_e00bcbd7f6b6": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_e00bcbd7f6b6\nURL: http://congdoantphochiminh.org.vn\nDomain: congdoantphochiminh.org.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 196,
+    "created_at": "2026-06-12T07:57:28.684068+00:00",
+    "updated_at": "2026-06-12T07:57:38.883294+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145728_fcbb5570",
+    "content_hash": "75b00aecb9f0bd5703d8c038b8130723",
+    "metadata": {
+      "parse_start_time": 1781251058,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_ffbe37980842": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_ffbe37980842\nURL: http://congtacxahoi.thanhhoa.gov.vn\nDomain: congtacxahoi.thanhhoa.gov.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 200,
+    "created_at": "2026-06-12T07:57:28.684090+00:00",
+    "updated_at": "2026-06-12T07:57:38.883387+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145728_fcbb5570",
+    "content_hash": "96a75692f29637b398fd2b01f6876c20",
+    "metadata": {
+      "parse_start_time": 1781251058,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_43ea65aaefaa": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_43ea65aaefaa\nURL: http://congliem.nongcong.thanhhoa.gov.vn\nDomain: congliem.nongcong.thanhhoa.gov.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 210,
+    "created_at": "2026-06-12T07:57:28.684086+00:00",
+    "updated_at": "2026-06-12T07:57:38.894916+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145728_fcbb5570",
+    "content_hash": "0398770992c8dc97cb27dab99077452d",
+    "metadata": {
+      "parse_start_time": 1781251058,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_9ec8488769fc": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_9ec8488769fc\nURL: http://consosukien.vn\nDomain: consosukien.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 172,
+    "created_at": "2026-06-12T07:57:28.684093+00:00",
+    "updated_at": "2026-06-12T07:57:38.895057+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145728_fcbb5570",
+    "content_hash": "79bdfa9a3b6d40495675066261f50a72",
+    "metadata": {
+      "parse_start_time": 1781251058,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_06885cfed6f5": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_06885cfed6f5\nURL: http://csdlpctt.quangngai.gov.vn\nDomain: csdlpctt.quangngai.gov.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 194,
+    "created_at": "2026-06-12T07:57:30.981567+00:00",
+    "updated_at": "2026-06-12T07:57:38.908233+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145730_6a225eb3",
+    "content_hash": "ade727f1797238db577018a4f3abee42",
+    "metadata": {
+      "parse_start_time": 1781251058,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_8300b166e99f": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_8300b166e99f\nURL: http://ctk.bacninh.gov.vn\nDomain: ctk.bacninh.gov.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 180,
+    "created_at": "2026-06-12T07:57:30.981575+00:00",
+    "updated_at": "2026-06-12T07:57:38.915451+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145730_6a225eb3",
+    "content_hash": "7a06154ab2d632998f13ccbd707966ac",
+    "metadata": {
+      "parse_start_time": 1781251058,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_7cece3335db1": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_7cece3335db1\nURL: http://csdlsxd.danang.gov.vn\nDomain: csdlsxd.danang.gov.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 186,
+    "created_at": "2026-06-12T07:57:30.981571+00:00",
+    "updated_at": "2026-06-12T07:57:38.915704+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145730_6a225eb3",
+    "content_hash": "131196b4ca472e08f6967ab175e321c2",
+    "metadata": {
+      "parse_start_time": 1781251058,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_2f34c967d92f": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_2f34c967d92f\nURL: http://csdlbcvt.quangngai.gov.vn\nDomain: csdlbcvt.quangngai.gov.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 194,
+    "created_at": "2026-06-12T07:57:30.981548+00:00",
+    "updated_at": "2026-06-12T07:57:38.921396+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145730_6a225eb3",
+    "content_hash": "eb31ec3a2030239b002dc305248efc4c",
+    "metadata": {
+      "parse_start_time": 1781251058,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_68b405d72306": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_68b405d72306\nURL: http://csdldpi.danang.gov.vn\nDomain: csdldpi.danang.gov.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 186,
+    "created_at": "2026-06-12T07:57:30.981563+00:00",
+    "updated_at": "2026-06-12T07:57:38.927434+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145730_6a225eb3",
+    "content_hash": "4fd54e13760ebedce11ee1dd810a46de",
+    "metadata": {
+      "parse_start_time": 1781251058,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_bce0240d036b": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_bce0240d036b\nURL: http://ctkyenbai.gso.gov.vn\nDomain: ctkyenbai.gso.gov.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 184,
+    "created_at": "2026-06-12T07:57:33.029887+00:00",
+    "updated_at": "2026-06-12T07:57:38.927823+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145733_022c10fa",
+    "content_hash": "15b718eb4d66571ba905015882edff7a",
+    "metadata": {
+      "parse_start_time": 1781251058,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_aab2fad61b15": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_aab2fad61b15\nURL: http://cucthongke.quangtri.gov.vn\nDomain: cucthongke.quangtri.gov.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 196,
+    "created_at": "2026-06-12T07:57:33.029899+00:00",
+    "updated_at": "2026-06-12T07:57:38.933596+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145733_022c10fa",
+    "content_hash": "e18b20a3d69e7e11882977f214da953a",
+    "metadata": {
+      "parse_start_time": 1781251058,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_1a068571d191": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_1a068571d191\nURL: http://cucthongkehanam.gso.gov.vn\nDomain: cucthongkehanam.gso.gov.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 196,
+    "created_at": "2026-06-12T07:57:33.029907+00:00",
+    "updated_at": "2026-06-12T07:57:38.933955+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145733_022c10fa",
+    "content_hash": "b7911d68cffde9f8787734a6e5935d36",
+    "metadata": {
+      "parse_start_time": 1781251058,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_3fc160c76dfe": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_3fc160c76dfe\nURL: http://cucthongkedaklak.gso.gov.vn\nDomain: cucthongkedaklak.gso.gov.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 198,
+    "created_at": "2026-06-12T07:57:33.029904+00:00",
+    "updated_at": "2026-06-12T07:57:38.934172+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145733_022c10fa",
+    "content_hash": "8eef5a92e7a2862f047b7ee0aca81370",
+    "metadata": {
+      "parse_start_time": 1781251058,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_bc0dfdc4b31d": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_bc0dfdc4b31d\nURL: http://cucthongkehanoi.gso.gov.vn\nDomain: cucthongkehanoi.gso.gov.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 196,
+    "created_at": "2026-06-12T07:57:33.029910+00:00",
+    "updated_at": "2026-06-12T07:57:38.946991+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145733_022c10fa",
+    "content_hash": "a12da6dd4aa63e233430ba7e2b9f4159",
+    "metadata": {
+      "parse_start_time": 1781251058,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_e726424d7b51": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_e726424d7b51\nURL: http://cucthongkequangninh.gso.gov.vn\nDomain: cucthongkequangninh.gso.gov.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 204,
+    "created_at": "2026-06-12T07:57:36.173714+00:00",
+    "updated_at": "2026-06-12T07:57:38.947102+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145736_5edd9b9e",
+    "content_hash": "157bf7438d2ceaac0e45ab984db47105",
+    "metadata": {
+      "parse_start_time": 1781251058,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_733e4b0ca411": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_733e4b0ca411\nURL: http://cucthongkethainguyen.gso.gov.vn\nDomain: cucthongkethainguyen.gso.gov.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 206,
+    "created_at": "2026-06-12T07:57:36.173720+00:00",
+    "updated_at": "2026-06-12T07:57:38.959436+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145736_5edd9b9e",
+    "content_hash": "8a43ddec5179d6de421a77e646d768c3",
+    "metadata": {
+      "parse_start_time": 1781251058,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_5aff392870ac": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_5aff392870ac\nURL: http://cucthongkethuathienhue.gso.gov.vn\nDomain: cucthongkethuathienhue.gso.gov.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 210,
+    "created_at": "2026-06-12T07:57:36.173725+00:00",
+    "updated_at": "2026-06-12T07:57:38.964896+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145736_5edd9b9e",
+    "content_hash": "c99cfc64bd75d503ed879121008321d1",
+    "metadata": {
+      "parse_start_time": 1781251058,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_24a2155ca054": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_24a2155ca054\nURL: http://cucthongkelangson.gov.vn\nDomain: cucthongkelangson.gov.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 192,
+    "created_at": "2026-06-12T07:57:36.173707+00:00",
+    "updated_at": "2026-06-12T07:57:38.965109+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145736_5edd9b9e",
+    "content_hash": "7bf4695750647e66ff542cf053f6cff6",
+    "metadata": {
+      "parse_start_time": 1781251058,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  },
+  "legit_b2c081e3a0d5": {
+    "status": "failed",
+    "content_summary": "Record ID: legit_b2c081e3a0d5\nURL: http://cucthongkehatinh.gso.gov.vn\nDomain: cucthongkehatinh.gso.gov.vn\nClassification: Legitimate (Label 0)\nPhishing Evidence:\n- official domain from brand catalog",
+    "content_length": 198,
+    "created_at": "2026-06-12T07:57:36.173688+00:00",
+    "updated_at": "2026-06-12T07:57:38.970333+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260612_145736_5edd9b9e",
+    "content_hash": "bc55d2093f9159b2262111948719fd62",
+    "metadata": {
+      "parse_start_time": 1781251058,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy"
+    },
+    "error_msg": "Cancelled by internal error: process worker unhandled error: [WinError 5] Access is denied: 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json.tmp.14984.22432.1781251058642230100' -> 'D:/phishing/llm-phishing-KG\\\\data/processed/lightrag_docs\\\\kv_store_doc_status.json' during analyze: unknown_source",
+    "chunks_list": []
+  }
+}

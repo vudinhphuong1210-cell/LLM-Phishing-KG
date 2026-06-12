@@ -1,0 +1,49 @@
+blacklist:
+  - name: local_eval_black_list
+    path: data/eval_black_list.txt
+    label: 1
+    source_type: local_blacklist
+  - name: openphish
+    url: https://openphish.com/feed.txt
+    label: 1
+    source_type: public_phishing_url_feed
+    enabled_by_default: true
+  - name: phishtank
+    url: https://data.phishtank.com/data/online-valid.csv
+    fallback_url: http://data.phishtank.com/data/online-valid.csv
+    label: 1
+    source_type: public_verified_phishing_csv
+    enabled_by_default: true
+  - name: phishing_database_domains
+    url: https://raw.githubusercontent.com/Phishing-Database/Phishing.Database/master/phishing-domains-ACTIVE.txt
+    label: 1
+    source_type: public_active_phishing_domain_feed
+    enabled_by_default: true
+  - name: phishing_database_links
+    url: https://raw.githubusercontent.com/Phishing-Database/Phishing.Database/master/phishing-links-ACTIVE.txt
+    label: 1
+    source_type: public_active_phishing_url_feed
+    enabled_by_default: true
+legitimate:
+  - name: brand_catalog_official_domains
+    path: crawl_python/brand_catalog.json
+    label: 0
+    source_type: curated_brand_catalog
+  - name: tranco_top
+    url: https://tranco-list.eu/top-1m.csv.zip
+    label: 0
+    source_type: public_top_domain_ranking
+    enabled_by_default: true
+auxiliary_malicious:
+  - name: urlhaus_malware
+    url: https://urlhaus.abuse.ch/downloads/text/
+    label: -1
+    source_type: public_malware_url_feed_not_phishing
+    enabled_by_default: false
+fallback:
+  firecrawl:
+    enabled: false
+    mode: snapshot_only
+  playwright:
+    enabled: false
+    mode: snapshot_only

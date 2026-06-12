@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """
 Step 1: Fetch HTML from domain lists (blacklist + whitelist).
 
@@ -16,11 +16,13 @@ import sys
 import json
 import time
 import logging
+import re
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import requests
 import dns.resolver
+from bs4 import BeautifulSoup
 
 # Fix console encoding
 if sys.platform == "win32":
@@ -47,6 +49,7 @@ HEADERS = {
 HTTP_TIMEOUT = 15          # seconds per HTTP request
 MAX_WORKERS = 20           # concurrent fetches
 DNS_TIMEOUT = 4            # seconds per DNS query
+MIN_WORDS = 50             # phishing login pages are often short
 
 DNS_SERVERS = [
     "8.8.8.8",              # Google
@@ -109,12 +112,12 @@ def decode_html(r: requests.Response) -> str:
     try:
         import chardet
         detected = chardet.detect(raw)
-        if detected and detected["encoding"]:
+        if detected and detected.get("encoding"):
             try:
                 return raw.decode(detected["encoding"])
             except (UnicodeDecodeError, LookupError):
                 pass
-    except ImportError:
+    except Exception:
         pass
 
     # 4. Common CP
@@ -213,9 +216,35 @@ def fetch_wayback(domain: str) -> tuple[str | None, int | None]:
 
 
 # ═══════════════════════════════════════════════════
+#  Helper: Word count check
+# ═══════════════════════════════════════════════════
+def count_words(html_content: str) -> int:
+    """Extract visible text and return the word count."""
+    if not html_content:
+        return 0
+    try:
+        soup = BeautifulSoup(html_content, "html.parser")
+        # Strip script, style, and other noise tags
+        strip_tags = [
+            "script", "style", "nav", "footer", "header", "aside",
+            "noscript", "iframe", "svg", "canvas", "button"
+        ]
+        for tag in soup(strip_tags):
+            tag.decompose()
+        text = soup.get_text(separator=" ", strip=True)
+        # Split by whitespace to count words
+        words = text.split()
+        return len(words)
+    except Exception:
+        # Fallback if parsing fails
+        clean_text = re.sub(r'<[^>]+>', ' ', html_content)
+        return len(clean_text.split())
+
+
+# ═══════════════════════════════════════════════════
 #  Fetch a single url (called concurrently)
 # ═══════════════════════════════════════════════════
-def fetch_one(domain: str) -> dict:
+def fetch_one(domain: str, min_words: int = MIN_WORDS) -> dict:
     """
     Fetch HTML for one domain.
 
@@ -291,8 +320,18 @@ def fetch_one(domain: str) -> dict:
             result["method"] = "wayback"
             result["status_code"] = code
 
+    # Keep compact login/form pages. Many phishing pages are much shorter than
+    # normal content pages, so a hard 500-word cutoff drops useful evidence.
+    if result["html"] is not None:
+        word_count = count_words(result["html"])
+        has_form_signal = bool(re.search(r"<form\b|type=[\"']?password", result["html"], re.IGNORECASE))
+        if word_count < min_words and not has_form_signal:
+            result["html"] = None
+            result["method"] = "failed"
+            result["error"] = f"HTML content too short ({word_count} words, minimum required is {min_words})"
+
     # ── Mark as failed ──
-    if result["html"] is None:
+    if result["html"] is None and result["error"] is None:
         result["method"] = "failed"
         result["error"] = "DNS fail + no Wayback snapshot"
 
@@ -333,6 +372,10 @@ def main():
     parser.add_argument(
         "--fix-mojibake", action="store_true",
         help="Force fix mojibake on already-fetched JSONL files"
+    )
+    parser.add_argument(
+        "--min-words", type=int, default=MIN_WORDS,
+        help=f"Minimum visible words for pages without form/login evidence (default: {MIN_WORDS})"
     )
 
     args = parser.parse_args()
@@ -387,53 +430,68 @@ def main():
 
         log.info(f"[{label}] Start fetching {len(domains)} domains...")
 
-        results = []
-        with ThreadPoolExecutor(max_workers=args.workers) as pool:
-            futures = {pool.submit(fetch_one, d): d for d in domains}
-            done = 0
-            total = len(futures)
-            start_time = time.time()
+        # Tạo đường dẫn lưu file trước khi chạy
+        date_str = datetime.now().strftime("%Y%m%d_%H%M%S")
+        out_path = os.path.join(RAW_DIR, f"{label}list_{date_str}.jsonl")
 
-            for future in as_completed(futures):
-                done += 1
-                domain = futures[future]
+        done = 0
+        successes = 0
+        start_time = time.time()
+
+        # Mở file ghi trực tiếp từng dòng (incremental checkpoint)
+        with open(out_path, "w", encoding="utf-8") as f_out:
+            with ThreadPoolExecutor(max_workers=args.workers) as pool:
+                futures = {pool.submit(fetch_one, d, args.min_words): d for d in domains}
+                total = len(futures)
+
                 try:
-                    res = future.result()
-                    res["source"] = label
-                    results.append(res)
-                except Exception as e:
-                    results.append({
-                        "url": domain,
-                        "source": label,
-                        "html": None,
-                        "fetched_at": datetime.utcnow().isoformat(),
-                        "method": "failed",
-                        "status_code": None,
-                        "error": str(e),
-                    })
+                    for future in as_completed(futures):
+                        done += 1
+                        domain = futures[future]
+                        try:
+                            res = future.result()
+                            res["source"] = label
+                        except Exception as e:
+                            res = {
+                                "url": domain,
+                                "source": label,
+                                "html": None,
+                                "fetched_at": datetime.utcnow().isoformat(),
+                                "method": "failed",
+                                "status_code": None,
+                                "error": str(e),
+                            }
 
-                if done % 50 == 0 or done == total:
-                    elapsed = time.time() - start_time
-                    rate = done / elapsed if elapsed > 0 else 0
-                    successes = sum(1 for r in results if r.get("html"))
-                    log.info(
-                        f"  [{label}] {done}/{total} "
-                        f"({successes} OK, {rate:.1f} dom/s)"
-                    )
+                        if res.get("html"):
+                            successes += 1
 
-        successes = sum(1 for r in results if r.get("html"))
+                        # Ghi thẳng xuống đĩa
+                        f_out.write(json.dumps(res, ensure_ascii=False) + "\n")
+
+                        # Flush dữ liệu định kỳ sau mỗi 10 tên miền để đảm bảo an toàn
+                        if done % 10 == 0 or done == total:
+                            f_out.flush()
+
+                        if done % 50 == 0 or done == total:
+                            elapsed = time.time() - start_time
+                            rate = done / elapsed if elapsed > 0 else 0
+                            log.info(
+                                f"  [{label}] {done}/{total} "
+                                f"({successes} OK, {rate:.1f} dom/s)"
+                            )
+                except KeyboardInterrupt:
+                    log.warning(f"\n[KeyboardInterrupt] Đã dừng giữa chừng! Tiến trình lưu tại: {out_path}")
+                    try:
+                        pool.shutdown(wait=False, cancel_futures=True)
+                    except TypeError:
+                        pool.shutdown(wait=False)
+                    log.info(f"Đã lưu thành công {done} tên miền đầu tiên.")
+                    sys.exit(0)
+
         log.info(
             f"[{label}] Done: {successes}/{len(domains)} fetched "
             f"({len(domains) - successes} failed)"
         )
-
-        # ── Write JSONL ──
-        date_str = datetime.now().strftime("%Y%m%d_%H%M%S")
-        out_path = os.path.join(RAW_DIR, f"{label}list_{date_str}.jsonl")
-        with open(out_path, "w", encoding="utf-8") as f:
-            for rec in results:
-                f.write(json.dumps(rec, ensure_ascii=False) + "\n")
-
         log.info(f"  Saved → {out_path}")
 
     log.info("Done.")

@@ -1,0 +1,48 @@
+2026-06-12 09:28:07,898 [INFO] [black] Processing: D:\phishing\llm-phishing-KG\crawl_python\html\raw\blacklist_20260612_080839.jsonl
+2026-06-12 09:28:07,976 [INFO]   Records: 1649
+2026-06-12 09:28:08,248 [INFO]   [black] 100/1649 (100 OK, 87 errors, 0 mojibake)
+2026-06-12 09:28:08,552 [INFO]   [black] 200/1649 (200 OK, 176 errors, 0 mojibake)
+2026-06-12 09:28:08,686 [INFO]   [black] 300/1649 (300 OK, 268 errors, 0 mojibake)
+2026-06-12 09:28:09,565 [INFO]   [black] 400/1649 (400 OK, 347 errors, 0 mojibake)
+2026-06-12 09:28:09,840 [INFO]   [black] 500/1649 (500 OK, 438 errors, 0 mojibake)
+2026-06-12 09:28:10,205 [INFO]   [black] 600/1649 (600 OK, 522 errors, 0 mojibake)
+2026-06-12 09:28:10,630 [INFO]   [black] 700/1649 (700 OK, 602 errors, 0 mojibake)
+2026-06-12 09:28:10,885 [INFO]   [black] 800/1649 (800 OK, 692 errors, 0 mojibake)
+2026-06-12 09:28:11,076 [INFO]   [black] 900/1649 (900 OK, 780 errors, 0 mojibake)
+2026-06-12 09:28:11,287 [INFO]   [black] 1000/1649 (1000 OK, 872 errors, 0 mojibake)
+2026-06-12 09:28:11,625 [INFO]   [black] 1100/1649 (1100 OK, 959 errors, 0 mojibake)
+2026-06-12 09:28:11,805 [INFO]   [black] 1200/1649 (1200 OK, 1047 errors, 0 mojibake)
+2026-06-12 09:28:12,048 [INFO]   [black] 1300/1649 (1300 OK, 1135 errors, 0 mojibake)
+2026-06-12 09:28:12,439 [INFO]   [black] 1400/1649 (1400 OK, 1217 errors, 0 mojibake)
+2026-06-12 09:28:12,729 [INFO]   [black] 1500/1649 (1500 OK, 1298 errors, 0 mojibake)
+2026-06-12 09:28:12,853 [INFO]   [black] 1600/1649 (1600 OK, 1389 errors, 0 mojibake)
+2026-06-12 09:28:13,314 [INFO]   [black] 1649/1649 (1649 OK, 1432 errors, 0 mojibake)
+2026-06-12 09:28:13,315 [INFO] [black] Done: 1649 processed, 1432 errors, 0 mojibake fixed
+2026-06-12 09:28:13,315 [INFO]   Saved → D:\phishing\llm-phishing-KG\crawl_python\html\processed\blacklist_text_20260612_092807.jsonl
+2026-06-12 09:28:13,315 [INFO] [black] Processing: D:\phishing\llm-phishing-KG\crawl_python\html\raw\blacklist_20260612_080839_cleaned.jsonl
+2026-06-12 09:28:13,388 [INFO]   Records: 151
+2026-06-12 09:28:16,986 [INFO]   [black] 100/151 (100 OK, 0 errors, 0 mojibake)
+2026-06-12 09:28:18,613 [INFO]   [black] 151/151 (151 OK, 0 errors, 0 mojibake)
+2026-06-12 09:28:18,613 [INFO] [black] Done: 151 processed, 0 errors, 0 mojibake fixed
+2026-06-12 09:28:18,613 [INFO]   Saved → D:\phishing\llm-phishing-KG\crawl_python\html\processed\blacklist_text_20260612_092813.jsonl
+2026-06-12 09:28:18,614 [INFO] Done.
+2026-06-12 10:29:43,141 [INFO] [white] Processing: D:\phishing\llm-phishing-KG\crawl_python\html\raw\whitelist_20260612_095057.jsonl
+2026-06-12 10:29:43,240 [INFO]   Records: 812
+2026-06-12 10:29:45,091 [INFO]   [white] 100/812 (100 OK, 58 errors, 0 mojibake)
+2026-06-12 10:29:46,022 [INFO]   [white] 200/812 (200 OK, 131 errors, 0 mojibake)
+2026-06-12 10:29:46,404 [INFO]   [white] 300/812 (300 OK, 211 errors, 0 mojibake)
+2026-06-12 10:29:46,762 [INFO]   [white] 400/812 (400 OK, 292 errors, 0 mojibake)
+2026-06-12 10:29:47,874 [INFO]   [white] 500/812 (500 OK, 361 errors, 0 mojibake)
+2026-06-12 10:29:48,154 [INFO]   [white] 600/812 (600 OK, 442 errors, 0 mojibake)
+2026-06-12 10:29:48,483 [INFO]   [white] 700/812 (700 OK, 514 errors, 0 mojibake)
+2026-06-12 10:29:49,583 [INFO]   [white] 800/812 (800 OK, 578 errors, 0 mojibake)
+2026-06-12 10:29:49,681 [INFO]   [white] 812/812 (812 OK, 587 errors, 0 mojibake)
+2026-06-12 10:29:49,682 [INFO] [white] Done: 812 processed, 587 errors, 0 mojibake fixed
+2026-06-12 10:29:49,682 [INFO]   Saved → D:\phishing\llm-phishing-KG\crawl_python\html\processed\whitelist_text_20260612_102943.jsonl
+2026-06-12 10:29:49,682 [INFO] [white] Processing: D:\phishing\llm-phishing-KG\crawl_python\html\raw\whitelist_20260612_095057_cleaned.jsonl
+2026-06-12 10:29:49,762 [INFO]   Records: 155
+2026-06-12 10:29:53,938 [INFO]   [white] 100/155 (100 OK, 0 errors, 0 mojibake)
+2026-06-12 10:29:55,793 [INFO]   [white] 155/155 (155 OK, 0 errors, 0 mojibake)
+2026-06-12 10:29:55,794 [INFO] [white] Done: 155 processed, 0 errors, 0 mojibake fixed
+2026-06-12 10:29:55,794 [INFO]   Saved → D:\phishing\llm-phishing-KG\crawl_python\html\processed\whitelist_text_20260612_102949.jsonl
+2026-06-12 10:29:55,794 [INFO] Done.

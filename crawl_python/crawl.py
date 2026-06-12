@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """
 Crawl phishing/scam URLs tu cac nguon:
   - tinnhiemmang.vn  -> website-lua-dao (scam), website-tin-nhiem (legit)

@@ -1,0 +1,49 @@
+2026-06-12 09:26:04,070 [INFO] Tìm thấy 1 file cần xử lý:
+2026-06-12 09:26:04,070 [INFO]   blacklist_20260612_080839.jsonl  (30.0 MB)
+2026-06-12 09:26:04,071 [INFO] 
+──────────────────────────────────────────────────────
+2026-06-12 09:26:04,071 [INFO] Đang xử lý: blacklist_20260612_080839.jsonl
+2026-06-12 09:26:04,071 [INFO] ──────────────────────────────────────────────────────
+2026-06-12 09:26:04,071 [INFO] Input  : D:\phishing\llm-phishing-KG\crawl_python\html\raw\blacklist_20260612_080839.jsonl
+2026-06-12 09:26:04,071 [INFO] Output : D:\phishing\llm-phishing-KG\crawl_python\html\raw\blacklist_20260612_080839_cleaned.jsonl
+2026-06-12 09:26:07,565 [INFO]   Đã ghi 151 bản ghi → D:\phishing\llm-phishing-KG\crawl_python\html\raw\blacklist_20260612_080839_cleaned.jsonl
+2026-06-12 09:26:07,565 [INFO] 
+======================================================
+2026-06-12 09:26:07,565 [INFO]   KẾT QUẢ LỌC: blacklist_20260612_080839.jsonl
+2026-06-12 09:26:07,565 [INFO] ======================================================
+2026-06-12 09:26:07,565 [INFO]   Tổng bản ghi đọc       :   1,649
+2026-06-12 09:26:07,566 [INFO]   Giữ lại (sạch)         :     151  (9.2%)
+2026-06-12 09:26:07,566 [INFO]   Loại bỏ (tổng)         :   1,498
+2026-06-12 09:26:07,566 [INFO]     ├─ HTML null/lỗi     :   1,432
+2026-06-12 09:26:07,566 [INFO]     ├─ URL trùng lặp     :       0
+2026-06-12 09:26:07,566 [INFO]     ├─ HTML quá lớn      :       0
+2026-06-12 09:26:07,566 [INFO]     ├─ Parking/Error page:      14
+2026-06-12 09:26:07,566 [INFO]     └─ Ít từ (< 200 từ) :      52
+2026-06-12 09:26:07,566 [INFO] ======================================================
+2026-06-12 09:26:07,566 [INFO] 
+Hoàn thành. Bước tiếp theo: chạy extract_text.py trên file *_cleaned.jsonl
+2026-06-12 10:28:39,009 [INFO] Tìm thấy 1 file cần xử lý:
+2026-06-12 10:28:39,010 [INFO]   whitelist_20260612_095057.jsonl  (22.2 MB)
+2026-06-12 10:28:39,010 [INFO] 
+──────────────────────────────────────────────────────
+2026-06-12 10:28:39,010 [INFO] Đang xử lý: whitelist_20260612_095057.jsonl
+2026-06-12 10:28:39,010 [INFO] ──────────────────────────────────────────────────────
+2026-06-12 10:28:39,011 [INFO] Input  : D:\phishing\llm-phishing-KG\crawl_python\html\raw\whitelist_20260612_095057.jsonl
+2026-06-12 10:28:39,011 [INFO] Output : D:\phishing\llm-phishing-KG\crawl_python\html\raw\whitelist_20260612_095057_cleaned.jsonl
+2026-06-12 10:28:42,063 [INFO]   Đã xử lý 500 | giữ 107 | loại 393
+2026-06-12 10:28:43,307 [INFO]   Đã ghi 155 bản ghi → D:\phishing\llm-phishing-KG\crawl_python\html\raw\whitelist_20260612_095057_cleaned.jsonl
+2026-06-12 10:28:43,307 [INFO] 
+======================================================
+2026-06-12 10:28:43,308 [INFO]   KẾT QUẢ LỌC: whitelist_20260612_095057.jsonl
+2026-06-12 10:28:43,308 [INFO] ======================================================
+2026-06-12 10:28:43,308 [INFO]   Tổng bản ghi đọc       :     812
+2026-06-12 10:28:43,308 [INFO]   Giữ lại (sạch)         :     155  (19.1%)
+2026-06-12 10:28:43,308 [INFO]   Loại bỏ (tổng)         :     657
+2026-06-12 10:28:43,309 [INFO]     ├─ HTML null/lỗi     :     587
+2026-06-12 10:28:43,309 [INFO]     ├─ URL trùng lặp     :       0
+2026-06-12 10:28:43,309 [INFO]     ├─ HTML quá lớn      :       0
+2026-06-12 10:28:43,310 [INFO]     ├─ Parking/Error page:       0
+2026-06-12 10:28:43,310 [INFO]     └─ Ít từ (< 200 từ) :      70
+2026-06-12 10:28:43,310 [INFO] ======================================================
+2026-06-12 10:28:43,310 [INFO] 
+Hoàn thành. Bước tiếp theo: chạy extract_text.py trên file *_cleaned.jsonl

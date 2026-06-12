@@ -1,0 +1,19 @@
+project_root: D:\phishing\llm-phishing-KG
+primary_crawler: crawl_python
+policy:
+  snapshot_only: true
+  submit_forms: false
+  enter_credentials: false
+  bypass_login: false
+fetch:
+  timeout_seconds: 15
+  workers: 10
+  min_words: 50
+  use_wayback_fallback: true
+outputs:
+  raw_dir: data/raw
+  html_dir: data/html
+  screenshots_dir: data/screenshots
+  features_dir: data/features
+  processed_dir: data/processed
+  reports_dir: reports

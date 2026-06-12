@@ -1,0 +1,803 @@
+{
+  "_meta": {
+    "description": "Big brand catalog for Vietnamese phishing KG",
+    "version": "1.0"
+  },
+  "banks": [
+    {
+      "name": "Vietcombank",
+      "official_domains": [
+        "vietcombank.com.vn"
+      ],
+      "aliases": [
+        "VCB"
+      ],
+      "sector": "banking"
+    },
+    {
+      "name": "Techcombank",
+      "official_domains": [
+        "techcombank.com.vn"
+      ],
+      "aliases": [
+        "TCB"
+      ],
+      "sector": "banking"
+    },
+    {
+      "name": "BIDV",
+      "official_domains": [
+        "bidv.com.vn"
+      ],
+      "aliases": [],
+      "sector": "banking"
+    },
+    {
+      "name": "Agribank",
+      "official_domains": [
+        "agribank.com.vn"
+      ],
+      "aliases": [],
+      "sector": "banking"
+    },
+    {
+      "name": "VietinBank",
+      "official_domains": [
+        "vietinbank.vn"
+      ],
+      "aliases": [],
+      "sector": "banking"
+    },
+    {
+      "name": "Sacombank",
+      "official_domains": [
+        "sacombank.com.vn"
+      ],
+      "aliases": [
+        "STB"
+      ],
+      "sector": "banking"
+    },
+    {
+      "name": "ACB",
+      "official_domains": [
+        "acb.com.vn"
+      ],
+      "aliases": [],
+      "sector": "banking"
+    },
+    {
+      "name": "TPBank",
+      "official_domains": [
+        "tpb.vn"
+      ],
+      "aliases": [],
+      "sector": "banking"
+    },
+    {
+      "name": "VPBank",
+      "official_domains": [
+        "vpbank.com.vn"
+      ],
+      "aliases": [],
+      "sector": "banking"
+    },
+    {
+      "name": "HDBank",
+      "official_domains": [
+        "hdbank.com.vn"
+      ],
+      "aliases": [],
+      "sector": "banking"
+    },
+    {
+      "name": "MB Bank",
+      "official_domains": [
+        "mbbank.com.vn"
+      ],
+      "aliases": [
+        "MB"
+      ],
+      "sector": "banking"
+    },
+    {
+      "name": "Shinhan Bank",
+      "official_domains": [
+        "shinhan.com.vn"
+      ],
+      "aliases": [],
+      "sector": "banking"
+    },
+    {
+      "name": "HSBC",
+      "official_domains": [
+        "hsbc.com.vn"
+      ],
+      "aliases": [],
+      "sector": "banking"
+    },
+    {
+      "name": "VIB",
+      "official_domains": [
+        "vib.com.vn"
+      ],
+      "aliases": [],
+      "sector": "banking"
+    },
+    {
+      "name": "SHB",
+      "official_domains": [
+        "shb.com.vn"
+      ],
+      "aliases": [],
+      "sector": "banking"
+    },
+    {
+      "name": "MSB",
+      "official_domains": [
+        "msb.com.vn"
+      ],
+      "aliases": [],
+      "sector": "banking"
+    },
+    {
+      "name": "Eximbank",
+      "official_domains": [
+        "eximbank.com.vn"
+      ],
+      "aliases": [
+        "EIB"
+      ],
+      "sector": "banking"
+    },
+    {
+      "name": "OCB",
+      "official_domains": [
+        "ocb.com.vn"
+      ],
+      "aliases": [],
+      "sector": "banking"
+    },
+    {
+      "name": "PVcomBank",
+      "official_domains": [
+        "pvcombank.com.vn"
+      ],
+      "aliases": [],
+      "sector": "banking"
+    },
+    {
+      "name": "Nam A Bank",
+      "official_domains": [
+        "namabank.com.vn"
+      ],
+      "aliases": [],
+      "sector": "banking"
+    },
+    {
+      "name": "SeABank",
+      "official_domains": [
+        "seabank.com.vn"
+      ],
+      "aliases": [],
+      "sector": "banking"
+    },
+    {
+      "name": "Bac A Bank",
+      "official_domains": [
+        "baca-bank.vn"
+      ],
+      "aliases": [],
+      "sector": "banking"
+    }
+  ],
+  "ecommerce": [
+    {
+      "name": "Shopee",
+      "official_domains": [
+        "shopee.vn"
+      ],
+      "aliases": [],
+      "sector": "ecommerce"
+    },
+    {
+      "name": "Lazada",
+      "official_domains": [
+        "lazada.vn"
+      ],
+      "aliases": [],
+      "sector": "ecommerce"
+    },
+    {
+      "name": "Tiki",
+      "official_domains": [
+        "tiki.vn"
+      ],
+      "aliases": [],
+      "sector": "ecommerce"
+    },
+    {
+      "name": "Sendo",
+      "official_domains": [
+        "sendo.vn"
+      ],
+      "aliases": [],
+      "sector": "ecommerce"
+    },
+    {
+      "name": "The Gioi Di Dong",
+      "official_domains": [
+        "thegioididong.com"
+      ],
+      "aliases": [
+        "TGDD"
+      ],
+      "sector": "ecommerce"
+    },
+    {
+      "name": "Dien May Xanh",
+      "official_domains": [
+        "dienmayxanh.com"
+      ],
+      "aliases": [],
+      "sector": "ecommerce"
+    },
+    {
+      "name": "FPT Shop",
+      "official_domains": [
+        "fptshop.com.vn"
+      ],
+      "aliases": [],
+      "sector": "ecommerce"
+    },
+    {
+      "name": "CellphoneS",
+      "official_domains": [
+        "cellphones.com.vn"
+      ],
+      "aliases": [],
+      "sector": "ecommerce"
+    }
+  ],
+  "fintech": [
+    {
+      "name": "MoMo",
+      "official_domains": [
+        "momo.vn"
+      ],
+      "aliases": [
+        "Vi MoMo"
+      ],
+      "sector": "fintech"
+    },
+    {
+      "name": "ZaloPay",
+      "official_domains": [
+        "zalopay.vn"
+      ],
+      "aliases": [],
+      "sector": "fintech"
+    },
+    {
+      "name": "VNPay",
+      "official_domains": [
+        "vnpay.vn"
+      ],
+      "aliases": [],
+      "sector": "fintech"
+    },
+    {
+      "name": "Moca",
+      "official_domains": [
+        "moca.vn"
+      ],
+      "aliases": [],
+      "sector": "fintech"
+    },
+    {
+      "name": "PayPal",
+      "official_domains": [
+        "paypal.com"
+      ],
+      "aliases": [],
+      "sector": "fintech"
+    },
+    {
+      "name": "ShopeePay",
+      "official_domains": [
+        "shopeepay.vn"
+      ],
+      "aliases": [],
+      "sector": "fintech"
+    }
+  ],
+  "telco": [
+    {
+      "name": "Viettel",
+      "official_domains": [
+        "viettel.vn",
+        "viettelmoney.vn"
+      ],
+      "aliases": [],
+      "sector": "telco"
+    },
+    {
+      "name": "Mobifone",
+      "official_domains": [
+        "mobifone.vn"
+      ],
+      "aliases": [],
+      "sector": "telco"
+    },
+    {
+      "name": "VinaPhone",
+      "official_domains": [
+        "vinaphone.com.vn"
+      ],
+      "aliases": [],
+      "sector": "telco"
+    },
+    {
+      "name": "VNPT",
+      "official_domains": [
+        "vnpt.vn"
+      ],
+      "aliases": [],
+      "sector": "telco"
+    }
+  ],
+  "tech": [
+    {
+      "name": "FPT",
+      "official_domains": [
+        "fpt.com.vn",
+        "fpt.vn"
+      ],
+      "aliases": [],
+      "sector": "tech"
+    },
+    {
+      "name": "VNG",
+      "official_domains": [
+        "vng.com.vn"
+      ],
+      "aliases": [],
+      "sector": "tech"
+    },
+    {
+      "name": "CMC",
+      "official_domains": [
+        "cmc.com.vn"
+      ],
+      "aliases": [],
+      "sector": "tech"
+    },
+    {
+      "name": "Samsung",
+      "official_domains": [
+        "samsung.com"
+      ],
+      "aliases": [],
+      "sector": "tech"
+    },
+    {
+      "name": "Apple",
+      "official_domains": [
+        "apple.com"
+      ],
+      "aliases": [],
+      "sector": "tech"
+    },
+    {
+      "name": "Microsoft",
+      "official_domains": [
+        "microsoft.com"
+      ],
+      "aliases": [],
+      "sector": "tech"
+    },
+    {
+      "name": "Google",
+      "official_domains": [
+        "google.com"
+      ],
+      "aliases": [],
+      "sector": "tech"
+    }
+  ],
+  "clothing": [
+    {
+      "name": "Nike",
+      "official_domains": [
+        "nike.com"
+      ],
+      "aliases": [],
+      "sector": "clothing"
+    },
+    {
+      "name": "Adidas",
+      "official_domains": [
+        "adidas.com",
+        "adidas.vn"
+      ],
+      "aliases": [],
+      "sector": "clothing"
+    },
+    {
+      "name": "Zara",
+      "official_domains": [
+        "zara.com"
+      ],
+      "aliases": [],
+      "sector": "clothing"
+    },
+    {
+      "name": "H&M",
+      "official_domains": [
+        "hm.com"
+      ],
+      "aliases": [],
+      "sector": "clothing"
+    },
+    {
+      "name": "Uniqlo",
+      "official_domains": [
+        "uniqlo.com"
+      ],
+      "aliases": [],
+      "sector": "clothing"
+    },
+    {
+      "name": "Levi's",
+      "official_domains": [
+        "levi.com"
+      ],
+      "aliases": [],
+      "sector": "clothing"
+    },
+    {
+      "name": "Puma",
+      "official_domains": [
+        "puma.com"
+      ],
+      "aliases": [],
+      "sector": "clothing"
+    },
+    {
+      "name": "Converse",
+      "official_domains": [
+        "converse.com"
+      ],
+      "aliases": [],
+      "sector": "clothing"
+    },
+    {
+      "name": "Vans",
+      "official_domains": [
+        "vans.com"
+      ],
+      "aliases": [],
+      "sector": "clothing"
+    },
+    {
+      "name": "The North Face",
+      "official_domains": [
+        "thenorthface.com"
+      ],
+      "aliases": [
+        "TNF"
+      ],
+      "sector": "clothing"
+    },
+    {
+      "name": "Louis Vuitton",
+      "official_domains": [
+        "louisvuitton.com"
+      ],
+      "aliases": [
+        "LV"
+      ],
+      "sector": "clothing"
+    },
+    {
+      "name": "Gucci",
+      "official_domains": [
+        "gucci.com"
+      ],
+      "aliases": [],
+      "sector": "clothing"
+    },
+    {
+      "name": "Chanel",
+      "official_domains": [
+        "chanel.com"
+      ],
+      "aliases": [],
+      "sector": "clothing"
+    },
+    {
+      "name": "Dior",
+      "official_domains": [
+        "dior.com"
+      ],
+      "aliases": [],
+      "sector": "clothing"
+    }
+  ],
+  "food": [
+    {
+      "name": "Vinamilk",
+      "official_domains": [
+        "vinamilk.com.vn"
+      ],
+      "aliases": [],
+      "sector": "food"
+    },
+    {
+      "name": "Masan",
+      "official_domains": [
+        "masangroup.com"
+      ],
+      "aliases": [],
+      "sector": "food"
+    },
+    {
+      "name": "TH True Milk",
+      "official_domains": [
+        "thtruemilk.vn"
+      ],
+      "aliases": [
+        "TH"
+      ],
+      "sector": "food"
+    },
+    {
+      "name": "KFC",
+      "official_domains": [
+        "kfcvietnam.com.vn"
+      ],
+      "aliases": [],
+      "sector": "food"
+    },
+    {
+      "name": "Highlands Coffee",
+      "official_domains": [
+        "highlandscoffee.com.vn"
+      ],
+      "aliases": [],
+      "sector": "food"
+    },
+    {
+      "name": "Starbucks",
+      "official_domains": [
+        "starbucks.com",
+        "starbucks.com.vn"
+      ],
+      "aliases": [],
+      "sector": "food"
+    },
+    {
+      "name": "Phuc Long",
+      "official_domains": [
+        "phuclong.com.vn"
+      ],
+      "aliases": [],
+      "sector": "food"
+    }
+  ],
+  "airline": [
+    {
+      "name": "Vietnam Airlines",
+      "official_domains": [
+        "vietnamairlines.com"
+      ],
+      "aliases": [],
+      "sector": "airline"
+    },
+    {
+      "name": "Vietjet Air",
+      "official_domains": [
+        "vietjetair.com"
+      ],
+      "aliases": [
+        "Vietjet"
+      ],
+      "sector": "airline"
+    },
+    {
+      "name": "Bamboo Airways",
+      "official_domains": [
+        "bambooairways.com"
+      ],
+      "aliases": [],
+      "sector": "airline"
+    }
+  ],
+  "logistics": [
+    {
+      "name": "Grab",
+      "official_domains": [
+        "grab.com"
+      ],
+      "aliases": [],
+      "sector": "logistics"
+    },
+    {
+      "name": "GHN",
+      "official_domains": [
+        "ghn.vn"
+      ],
+      "aliases": [
+        "Giao Hang Nhanh"
+      ],
+      "sector": "logistics"
+    },
+    {
+      "name": "GHTK",
+      "official_domains": [
+        "ghtk.vn"
+      ],
+      "aliases": [
+        "Giao Hang Tiet Kiem"
+      ],
+      "sector": "logistics"
+    },
+    {
+      "name": "Vietnam Post",
+      "official_domains": [
+        "vnpost.vn"
+      ],
+      "aliases": [
+        "VNPost"
+      ],
+      "sector": "logistics"
+    },
+    {
+      "name": "Ahamove",
+      "official_domains": [
+        "ahamove.com"
+      ],
+      "aliases": [],
+      "sector": "logistics"
+    },
+    {
+      "name": "Be Group",
+      "official_domains": [
+        "be.com.vn"
+      ],
+      "aliases": [],
+      "sector": "logistics"
+    }
+  ],
+  "social": [
+    {
+      "name": "Facebook",
+      "official_domains": [
+        "facebook.com"
+      ],
+      "aliases": [
+        "FB"
+      ],
+      "sector": "social"
+    },
+    {
+      "name": "Zalo",
+      "official_domains": [
+        "zalo.me",
+        "zalo.vn"
+      ],
+      "aliases": [],
+      "sector": "social"
+    },
+    {
+      "name": "Instagram",
+      "official_domains": [
+        "instagram.com"
+      ],
+      "aliases": [],
+      "sector": "social"
+    },
+    {
+      "name": "TikTok",
+      "official_domains": [
+        "tiktok.com"
+      ],
+      "aliases": [],
+      "sector": "social"
+    },
+    {
+      "name": "LinkedIn",
+      "official_domains": [
+        "linkedin.com"
+      ],
+      "aliases": [],
+      "sector": "social"
+    },
+    {
+      "name": "Youtube",
+      "official_domains": [
+        "youtube.com"
+      ],
+      "aliases": [],
+      "sector": "social"
+    }
+  ],
+  "energy": [
+    {
+      "name": "Petrolimex",
+      "official_domains": [
+        "petrolimex.com.vn"
+      ],
+      "aliases": [],
+      "sector": "energy"
+    },
+    {
+      "name": "EVN",
+      "official_domains": [
+        "evn.com.vn"
+      ],
+      "aliases": [],
+      "sector": "energy"
+    }
+  ],
+  "real_estate": [
+    {
+      "name": "Vinhomes",
+      "official_domains": [
+        "vinhomes.vn"
+      ],
+      "aliases": [],
+      "sector": "real_estate"
+    },
+    {
+      "name": "Novaland",
+      "official_domains": [
+        "novaland.com.vn"
+      ],
+      "aliases": [],
+      "sector": "real_estate"
+    },
+    {
+      "name": "Vingroup",
+      "official_domains": [
+        "vingroup.net"
+      ],
+      "aliases": [],
+      "sector": "real_estate"
+    },
+    {
+      "name": "Sun Group",
+      "official_domains": [
+        "sungroup.com"
+      ],
+      "aliases": [],
+      "sector": "real_estate"
+    }
+  ],
+  "gaming": [
+    {
+      "name": "Garena",
+      "official_domains": [
+        "garena.vn"
+      ],
+      "aliases": [],
+      "sector": "gaming"
+    },
+    {
+      "name": "Steam",
+      "official_domains": [
+        "steampowered.com"
+      ],
+      "aliases": [],
+      "sector": "gaming"
+    },
+    {
+      "name": "Riot Games",
+      "official_domains": [
+        "riotgames.com"
+      ],
+      "aliases": [],
+      "sector": "gaming"
+    }
+  ]
+}

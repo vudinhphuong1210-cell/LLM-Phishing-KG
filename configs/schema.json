@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Vietnamese phishing dataset record",
+  "type": "object",
+  "required": ["record_id", "url", "domain", "label", "source", "observed_at"],
+  "properties": {
+    "record_id": {"type": "string"},
+    "url": {"type": "string"},
+    "final_url": {"type": ["string", "null"]},
+    "domain": {"type": "string"},
+    "label": {"type": "integer", "enum": [-1, 0, 1]},
+    "source": {"type": "string"},
+    "source_ref": {"type": ["string", "null"]},
+    "html_path": {"type": ["string", "null"]},
+    "screenshot_path": {"type": ["string", "null"]},
+    "observed_at": {"type": "string"},
+    "evidence": {"type": "array", "items": {"type": "string"}}
+  }
+}
