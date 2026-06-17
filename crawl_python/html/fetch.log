@@ -961,3 +961,165 @@
 2026-06-12 10:24:22,417 [INFO] [white] Done: 225/812 fetched (587 failed)
 2026-06-12 10:24:22,417 [INFO]   Saved → D:\phishing\llm-phishing-KG\crawl_python\html\raw\whitelist_20260612_095057.jsonl
 2026-06-12 10:24:22,417 [INFO] Done.
+2026-06-17 15:35:19,454 [INFO] [black] Start fetching 5 domains...
+2026-06-17 15:35:22,778 [INFO]   Wayback OK: 113-bca.online (564 bytes)
+2026-06-17 15:35:24,879 [INFO]   Wayback OK: 128.199.92.146 (564 bytes)
+2026-06-17 15:35:27,537 [INFO]   [black] 5/5 (0 OK, 0.6 dom/s)
+2026-06-17 15:35:27,538 [INFO] [black] Done: 0/5 fetched (5 failed)
+2026-06-17 15:35:27,538 [INFO]   Saved → E:\Shinny\LLM-Phishing-KG\crawl_python\html\raw\blacklist_20260617_153519.jsonl
+2026-06-17 15:35:27,538 [INFO] Done.
+2026-06-17 15:39:19,281 [INFO] [black] Start fetching 10 domains...
+2026-06-17 15:39:21,107 [INFO]   Wayback OK: 113-bca.online (564 bytes)
+2026-06-17 15:39:21,638 [INFO]   Wayback OK: 128.199.92.146 (564 bytes)
+2026-06-17 15:39:23,774 [INFO]   Wayback OK: 159.65.1.104 (564 bytes)
+2026-06-17 15:39:27,747 [INFO]   [black] 10/10 (0 OK, 1.2 dom/s)
+2026-06-17 15:39:27,747 [INFO] [black] Done: 0/10 fetched (10 failed)
+2026-06-17 15:39:27,747 [INFO]   Saved → E:\Shinny\LLM-Phishing-KG\crawl_python\html\raw\blacklist_20260617_153919.jsonl
+2026-06-17 15:39:27,747 [INFO] Done.
+2026-06-17 15:54:27,572 [INFO] [black] Start fetching 10 domains...
+2026-06-17 15:54:31,290 [INFO]   Wayback OK: 128.199.92.146 (564 bytes)
+2026-06-17 15:54:33,318 [INFO]   Wayback OK: 113-bca.online (564 bytes)
+2026-06-17 15:54:34,273 [INFO]   Wayback OK: 167.71.219.88 (564 bytes)
+2026-06-17 15:54:34,494 [INFO]   Wayback OK: 159.65.1.104 (564 bytes)
+2026-06-17 15:54:34,500 [INFO]   [black] 10/10 (0 OK, 1.4 dom/s)
+2026-06-17 15:54:34,501 [INFO] [black] Done: 0/10 fetched (10 failed)
+2026-06-17 15:54:34,501 [INFO]   Saved → E:\Shinny\LLM-Phishing-KG\crawl_python\html\raw\blacklist_20260617_155427.jsonl
+2026-06-17 15:54:34,501 [INFO] Done.
+2026-06-17 15:55:53,414 [INFO] [black] Start fetching 10 domains...
+2026-06-17 15:55:55,560 [INFO]   Wayback OK: 113-bca.online (564 bytes)
+2026-06-17 15:55:56,304 [INFO]   Wayback OK: 128.199.92.146 (564 bytes)
+2026-06-17 15:55:58,093 [INFO]   Wayback OK: 159.65.1.104 (564 bytes)
+2026-06-17 15:55:58,115 [INFO]   Wayback OK: 167.71.219.88 (564 bytes)
+2026-06-17 15:55:58,117 [INFO]   [black] 10/10 (0 OK, 2.1 dom/s)
+2026-06-17 15:55:58,118 [INFO] [black] Done: 0/10 fetched (10 failed)
+2026-06-17 15:55:58,118 [INFO]   Saved → E:\Shinny\LLM-Phishing-KG\crawl_python\html\raw\blacklist_20260617_155553.jsonl
+2026-06-17 15:55:58,118 [INFO] Done.
+2026-06-17 15:58:45,410 [INFO] [black] Start fetching 10 domains...
+2026-06-17 15:58:47,209 [INFO]   Wayback OK: 128.199.92.146 (564 bytes)
+2026-06-17 15:58:47,917 [INFO]   Wayback OK: 113-bca.online (564 bytes)
+2026-06-17 15:58:49,535 [INFO]   Wayback OK: 159.65.1.104 (564 bytes)
+2026-06-17 15:58:49,899 [INFO]   Wayback OK: 167.71.219.88 (564 bytes)
+2026-06-17 15:58:49,902 [INFO]   [black] 10/10 (0 OK, 2.2 dom/s)
+2026-06-17 15:58:49,902 [INFO] [black] Done: 0/10 fetched (10 failed)
+2026-06-17 15:58:49,902 [INFO]   Saved → E:\Shinny\LLM-Phishing-KG\crawl_python\html\raw\blacklist_20260617_155845.jsonl
+2026-06-17 15:58:49,902 [INFO] Done.
+2026-06-17 15:59:25,362 [INFO] [black] Start fetching 10 domains...
+2026-06-17 15:59:27,097 [INFO]   Wayback OK: 128.199.92.146 (564 bytes)
+2026-06-17 15:59:27,542 [INFO]   Wayback OK: 113-bca.online (564 bytes)
+2026-06-17 15:59:29,171 [INFO]   Wayback OK: 167.71.219.88 (564 bytes)
+2026-06-17 15:59:30,743 [INFO]   Wayback OK: 159.65.1.104 (564 bytes)
+2026-06-17 15:59:30,746 [INFO]   [black] 10/10 (0 OK, 1.9 dom/s)
+2026-06-17 15:59:30,747 [INFO] [black] Done: 0/10 fetched (10 failed)
+2026-06-17 15:59:30,747 [INFO]   Saved → E:\Shinny\LLM-Phishing-KG\crawl_python\html\raw\blacklist_20260617_155925.jsonl
+2026-06-17 15:59:30,747 [INFO] Done.
+2026-06-17 16:12:13,183 [INFO] [black] Start fetching 10 domains...
+2026-06-17 16:12:18,694 [INFO]   Wayback OK: 159.65.1.104 (564 bytes)
+2026-06-17 16:12:19,953 [INFO]   Wayback OK: 128.199.92.146 (564 bytes)
+2026-06-17 16:12:25,568 [INFO]   [black] 10/10 (0 OK, 0.8 dom/s)
+2026-06-17 16:12:25,569 [INFO] [black] Done: 0/10 fetched (10 failed)
+2026-06-17 16:12:25,569 [INFO]   Saved → E:\Shinny\LLM-Phishing-KG\crawl_python\html\raw\blacklist_20260617_161213.jsonl
+2026-06-17 16:12:25,569 [INFO] Done.
+2026-06-17 16:22:21,098 [INFO] [black] Start fetching 10 domains...
+2026-06-17 16:22:26,500 [INFO]   Wayback OK: 128.199.92.146 (564 bytes)
+2026-06-17 16:22:29,518 [INFO]   Wayback OK: 167.71.219.88 (564 bytes)
+2026-06-17 16:22:33,840 [INFO]   Wayback OK: 159.65.1.104 (564 bytes)
+2026-06-17 16:22:33,842 [INFO]   [black] 10/10 (0 OK, 0.8 dom/s)
+2026-06-17 16:22:33,843 [INFO] [black] Done: 0/10 fetched (10 failed)
+2026-06-17 16:22:33,843 [INFO]   Saved → E:\Shinny\LLM-Phishing-KG\crawl_python\html\raw\blacklist_20260617_162221.jsonl
+2026-06-17 16:22:33,843 [INFO] Done.
+2026-06-17 16:24:08,160 [INFO] [black] Start fetching 10 domains...
+2026-06-17 16:24:09,836 [INFO]   Wayback OK: 128.199.92.146 (564 bytes)
+2026-06-17 16:24:12,075 [INFO]   Wayback OK: 159.65.1.104 (564 bytes)
+2026-06-17 16:24:12,320 [INFO]   Wayback OK: 167.71.219.88 (564 bytes)
+2026-06-17 16:24:12,322 [INFO]   [black] 10/10 (0 OK, 2.4 dom/s)
+2026-06-17 16:24:12,322 [INFO] [black] Done: 0/10 fetched (10 failed)
+2026-06-17 16:24:12,324 [INFO]   Saved → E:\Shinny\LLM-Phishing-KG\crawl_python\html\raw\blacklist_20260617_162408.jsonl
+2026-06-17 16:24:12,324 [INFO] Done.
+2026-06-17 16:39:40,489 [INFO] [black] Start fetching 10 domains...
+2026-06-17 16:39:43,636 [INFO]   Wayback OK: 128.199.92.146 (564 bytes)
+2026-06-17 16:39:44,928 [INFO]   Wayback OK: 113-bca.online (564 bytes)
+2026-06-17 16:39:46,104 [INFO]   Wayback OK: 159.65.1.104 (564 bytes)
+2026-06-17 16:39:46,193 [INFO]   Wayback OK: 167.71.219.88 (564 bytes)
+2026-06-17 16:39:48,521 [INFO]   [black] 10/10 (0 OK, 1.2 dom/s)
+2026-06-17 16:39:48,522 [INFO] [black] Done: 0/10 fetched (10 failed)
+2026-06-17 16:39:48,522 [INFO]   Saved → E:\Shinny\LLM-Phishing-KG\crawl_python\html\raw\blacklist_20260617_163940.jsonl
+2026-06-17 16:39:48,523 [INFO] Done.
+2026-06-17 16:43:07,847 [INFO] [black] Start fetching 10 domains...
+2026-06-17 16:43:09,619 [INFO]   Wayback OK: 128.199.92.146 (564 bytes)
+2026-06-17 16:43:09,919 [INFO]   Wayback OK: 113-bca.online (564 bytes)
+2026-06-17 16:43:11,175 [INFO]   Wayback OK: 159.65.1.104 (564 bytes)
+2026-06-17 16:43:11,412 [INFO]   Wayback OK: 167.71.219.88 (564 bytes)
+2026-06-17 16:43:11,748 [INFO]   [black] 10/10 (0 OK, 2.6 dom/s)
+2026-06-17 16:43:11,749 [INFO] [black] Done: 0/10 fetched (10 failed)
+2026-06-17 16:43:11,749 [INFO]   Saved → E:\Shinny\LLM-Phishing-KG\crawl_python\html\raw\blacklist_20260617_164307.jsonl
+2026-06-17 16:43:11,749 [INFO] Done.
+2026-06-17 16:44:49,131 [INFO] [black] Start fetching 10 domains...
+2026-06-17 16:44:51,628 [INFO]   Wayback OK: 113-bca.online (564 bytes)
+2026-06-17 16:44:53,063 [INFO]   Wayback OK: 128.199.92.146 (564 bytes)
+2026-06-17 16:44:54,727 [INFO]   Wayback OK: 159.65.1.104 (564 bytes)
+2026-06-17 16:44:54,804 [INFO]   Wayback OK: 167.71.219.88 (564 bytes)
+2026-06-17 16:44:55,674 [INFO]   [black] 10/10 (0 OK, 1.5 dom/s)
+2026-06-17 16:44:55,674 [INFO] [black] Done: 0/10 fetched (10 failed)
+2026-06-17 16:44:55,674 [INFO]   Saved → E:\Shinny\LLM-Phishing-KG\crawl_python\html\raw\blacklist_20260617_164449.jsonl
+2026-06-17 16:44:55,675 [INFO] Done.
+2026-06-17 16:51:35,714 [INFO] [black] Start fetching 10 domains...
+2026-06-17 16:51:37,959 [INFO]   Wayback OK: 128.199.92.146 (564 bytes)
+2026-06-17 16:51:38,900 [INFO]   Wayback OK: 113-bca.online (564 bytes)
+2026-06-17 16:51:40,000 [INFO]   Wayback OK: 159.65.1.104 (564 bytes)
+2026-06-17 16:51:47,128 [INFO]   Wayback OK: 167.71.219.88 (564 bytes)
+2026-06-17 16:51:47,130 [INFO]   [black] 10/10 (0 OK, 0.9 dom/s)
+2026-06-17 16:51:47,131 [INFO] [black] Done: 0/10 fetched (10 failed)
+2026-06-17 16:51:47,131 [INFO]   Saved → E:\Shinny\LLM-Phishing-KG\crawl_python\html\raw\blacklist_20260617_165135.jsonl
+2026-06-17 16:51:47,131 [INFO] Done.
+2026-06-17 16:54:08,384 [INFO] [black] Start fetching 10 domains...
+2026-06-17 16:54:10,402 [INFO]   Wayback OK: 113-bca.online (564 bytes)
+2026-06-17 16:54:11,642 [INFO]   Wayback OK: 128.199.92.146 (564 bytes)
+2026-06-17 16:54:13,631 [INFO]   Wayback OK: 159.65.1.104 (564 bytes)
+2026-06-17 16:54:13,928 [INFO]   Wayback OK: 167.71.219.88 (564 bytes)
+2026-06-17 16:54:13,931 [INFO]   [black] 10/10 (0 OK, 1.8 dom/s)
+2026-06-17 16:54:13,932 [INFO] [black] Done: 0/10 fetched (10 failed)
+2026-06-17 16:54:13,932 [INFO]   Saved → E:\Shinny\LLM-Phishing-KG\crawl_python\html\raw\blacklist_20260617_165408.jsonl
+2026-06-17 16:54:13,933 [INFO] Done.
+2026-06-17 16:55:33,040 [INFO] [black] Start fetching 10 domains...
+2026-06-17 16:55:34,731 [INFO]   Wayback OK: 113-bca.online (564 bytes)
+2026-06-17 16:55:38,012 [INFO]   Wayback OK: 159.65.1.104 (564 bytes)
+2026-06-17 16:55:38,488 [INFO]   Wayback OK: 167.71.219.88 (564 bytes)
+2026-06-17 16:55:52,711 [INFO]   [black] 10/10 (0 OK, 0.5 dom/s)
+2026-06-17 16:55:52,712 [INFO] [black] Done: 0/10 fetched (10 failed)
+2026-06-17 16:55:52,712 [INFO]   Saved → E:\Shinny\LLM-Phishing-KG\crawl_python\html\raw\blacklist_20260617_165533.jsonl
+2026-06-17 16:55:52,712 [INFO] Done.
+2026-06-17 17:07:08,790 [INFO] [black] Start fetching 10 domains...
+2026-06-17 17:07:11,114 [INFO]   Wayback OK: 128.199.92.146 (564 bytes)
+2026-06-17 17:07:11,537 [INFO]   Wayback OK: 113-bca.online (564 bytes)
+2026-06-17 17:07:14,109 [INFO]   Wayback OK: 159.65.1.104 (564 bytes)
+2026-06-17 17:07:14,813 [INFO]   Wayback OK: 167.71.219.88 (564 bytes)
+2026-06-17 17:07:15,456 [INFO]   [black] 10/10 (0 OK, 1.5 dom/s)
+2026-06-17 17:07:15,457 [INFO] [black] Done: 0/10 fetched (10 failed)
+2026-06-17 17:07:15,458 [INFO]   Saved → E:\Shinny\LLM-Phishing-KG\crawl_python\html\raw\blacklist_20260617_170708.jsonl
+2026-06-17 17:07:15,458 [INFO] Done.
+2026-06-17 17:13:43,528 [INFO] [black] Start fetching 10 domains...
+2026-06-17 17:13:46,436 [INFO]   Wayback OK: 113-bca.online (564 bytes)
+2026-06-17 17:13:49,925 [INFO]   Wayback OK: 159.65.1.104 (564 bytes)
+2026-06-17 17:13:51,673 [INFO]   Wayback OK: 167.71.219.88 (564 bytes)
+2026-06-17 17:13:51,676 [INFO]   [black] 10/10 (0 OK, 1.2 dom/s)
+2026-06-17 17:13:51,676 [INFO] [black] Done: 0/10 fetched (10 failed)
+2026-06-17 17:13:51,677 [INFO]   Saved → E:\Shinny\LLM-Phishing-KG\crawl_python\html\raw\blacklist_20260617_171343.jsonl
+2026-06-17 17:13:51,677 [INFO] Done.
+2026-06-17 17:25:49,961 [INFO] [black] Start fetching 10 domains...
+2026-06-17 17:25:52,171 [INFO]   Wayback OK: 113-bca.online (564 bytes)
+2026-06-17 17:25:52,241 [INFO]   Wayback OK: 128.199.92.146 (564 bytes)
+2026-06-17 17:25:54,370 [INFO]   Wayback OK: 159.65.1.104 (564 bytes)
+2026-06-17 17:25:54,981 [INFO]   Wayback OK: 167.71.219.88 (564 bytes)
+2026-06-17 17:25:54,987 [INFO]   [black] 10/10 (0 OK, 2.0 dom/s)
+2026-06-17 17:25:54,988 [INFO] [black] Done: 0/10 fetched (10 failed)
+2026-06-17 17:25:54,988 [INFO]   Saved → E:\Shinny\LLM-Phishing-KG\crawl_python\html\raw\blacklist_20260617_172549.jsonl
+2026-06-17 17:25:54,989 [INFO] Done.
+2026-06-17 17:46:41,585 [INFO] [black] Start fetching 10 domains...
+2026-06-17 17:46:43,624 [INFO]   Wayback OK: 128.199.92.146 (564 bytes)
+2026-06-17 17:46:44,078 [INFO]   Wayback OK: 113-bca.online (564 bytes)
+2026-06-17 17:46:45,769 [INFO]   Wayback OK: 159.65.1.104 (564 bytes)
+2026-06-17 17:46:47,010 [INFO]   Wayback OK: 167.71.219.88 (564 bytes)
+2026-06-17 17:46:47,913 [INFO]   [black] 10/10 (0 OK, 1.6 dom/s)
+2026-06-17 17:46:47,914 [INFO] [black] Done: 0/10 fetched (10 failed)
+2026-06-17 17:46:47,914 [INFO]   Saved → E:\Shinny\LLM-Phishing-KG\crawl_python\html\raw\blacklist_20260617_174641.jsonl
+2026-06-17 17:46:47,914 [INFO] Done.
