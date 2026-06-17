@@ -9,6 +9,7 @@ import hashlib
 import json
 import re
 import sys
+import unicodedata
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
@@ -110,38 +111,199 @@ def load_brands() -> list[dict]:
     return brands
 
 
-def brand_tokens(brand: dict) -> set[str]:
+def remove_vietnamese_accents(text: str) -> str:
+    """Removes Vietnamese accents while keeping characters in ASCII format."""
+    if not text:
+        return ""
+    # Chuẩn hóa Unicode sang dạng NFC để đảm bảo nhất quán các ký tự ghép dấu
+    text = unicodedata.normalize('NFC', text)
+    
+    mapping = {
+        'à': 'a', 'á': 'a', 'ả': 'a', 'ã': 'a', 'ạ': 'a',
+        'ă': 'a', 'ằ': 'a', 'ắ': 'a', 'ẳ': 'a', 'ẵ': 'a', 'ặ': 'a',
+        'â': 'a', 'ầ': 'a', 'ấ': 'a', 'ẩ': 'a', 'ẫ': 'a', 'ậ': 'a',
+        'đ': 'd',
+        'è': 'e', 'é': 'e', 'ẻ': 'e', 'ẽ': 'e', 'ẹ': 'e',
+        'ê': 'e', 'ề': 'e', 'ế': 'e', 'ể': 'e', 'ễ': 'e', 'ệ': 'e',
+        'ì': 'i', 'í': 'i', 'ỉ': 'i', 'ĩ': 'i', 'ị': 'i',
+        'ò': 'o', 'ó': 'o', 'ỏ': 'o', 'õ': 'o', 'ọ': 'o',
+        'ô': 'o', 'ồ': 'o', 'ố': 'o', 'ổ': 'o', 'ỗ': 'o', 'ộ': 'o',
+        'ơ': 'o', 'ờ': 'o', 'ớ': 'o', 'ở': 'o', 'ỡ': 'o', 'ợ': 'o',
+        'ù': 'u', 'ú': 'u', 'ủ': 'u', 'ũ': 'u', 'ụ': 'u',
+        'ư': 'u', 'ừ': 'u', 'ứ': 'u', 'ử': 'u', 'ữ': 'u', 'ự': 'u',
+        'ỳ': 'y', 'ý': 'y', 'ỷ': 'y', 'ỹ': 'y', 'ỵ': 'y',
+        'À': 'A', 'Á': 'A', 'Ả': 'A', 'Ã': 'A', 'Ạ': 'A',
+        'Ă': 'A', 'Ằ': 'A', 'Ắ': 'A', 'Ẳ': 'A', 'Ẵ': 'A', 'Ặ': 'A',
+        'Â': 'A', 'Ầ': 'A', 'Ấ': 'A', 'Ẩ': 'A', 'Ẫ': 'A', 'Ậ': 'A',
+        'Đ': 'D',
+        'È': 'E', 'É': 'E', 'Ẻ': 'E', 'Ẽ': 'E', 'Ẹ': 'E',
+        'Ê': 'E', 'Ề': 'E', 'Ế': 'E', 'Ể': 'E', 'Ễ': 'E', 'Ệ': 'E',
+        'Ì': 'I', 'Í': 'I', 'Ỉ': 'I', 'Ĩ': 'I', 'Ị': 'I',
+        'Ò': 'O', 'Ó': 'O', 'Ỏ': 'O', 'Õ': 'O', 'Ọ': 'O',
+        'Ô': 'O', 'Ồ': 'O', 'Ố': 'O', 'Ổ': 'O', 'Ỗ': 'O', 'Ộ': 'O',
+        'Ơ': 'O', 'Ờ': 'O', 'Ớ': 'O', 'Ở': 'O', 'Ỡ': 'O', 'Ợ': 'O',
+        'Ù': 'U', 'Ú': 'U', 'Ủ': 'U', 'Ũ': 'U', 'Ụ': 'U',
+        'Ư': 'U', 'Ừ': 'U', 'Ứ': 'U', 'Ử': 'U', 'Ữ': 'U', 'Ự': 'U',
+        'Ý': 'Y', 'Ỳ': 'Y', 'Ỷ': 'Y', 'Ỹ': 'Y', 'Ỵ': 'Y'
+    }
+    table = str.maketrans(mapping)
+    return text.translate(table)
+
+
+def clean_text_for_matching(text: str) -> str:
+    """Chuẩn hóa văn bản trang web: bỏ dấu, viết thường, giữ khoảng cách để bảo toàn ranh giới từ."""
+    if not text:
+        return ""
+    text = text.lower()
+    text = remove_vietnamese_accents(text)
+    # Thay thế các ký tự không phải chữ cái/chữ số bằng khoảng trắng
+    text = re.sub(r"[^a-z0-9\s]", " ", text)
+    # Thu gọn khoảng trắng thừa thành 1 khoảng trắng duy nhất
+    text = re.sub(r"\s+", " ", text)
+    return text.strip()
+
+
+def domain_brand_tokens(brand: dict) -> set[str]:
+    """Tạo token cho tên miền: Chuỗi liên tục không chứa khoảng trắng hoặc ký tự đặc biệt."""
     tokens = {brand.get("name", "")}
     tokens.update(brand.get("aliases", []) or [])
     for domain in brand.get("official_domains", []) or []:
         tokens.add(normalize_domain(domain).split(".")[0])
     cleaned = set()
     for token in tokens:
-        token = re.sub(r"[^a-z0-9]", "", token.lower())
+        token = remove_vietnamese_accents(token.lower())
+        token = re.sub(r"[^a-z0-9]", "", token)
         if len(token) >= 3:
             cleaned.add(token)
     return cleaned
 
 
-def match_brands(domain: str, text: str, brands: list[dict]) -> list[dict]:
-    domain_text = re.sub(r"[^a-z0-9]", "", domain.lower())
-    page_text = re.sub(r"[^a-z0-9]", "", (text or "").lower())
+def text_brand_tokens(brand: dict) -> set[str]:
+    """Tạo token cho nội dung web: Loại bỏ dấu nhưng giữ nguyên khoảng trắng để so khớp từ ghép."""
+    tokens = {brand.get("name", "")}
+    tokens.update(brand.get("aliases", []) or [])
+    cleaned = set()
+    for token in tokens:
+        token = remove_vietnamese_accents(token.lower())
+        token = re.sub(r"[^a-z0-9\s]", " ", token)
+        token = re.sub(r"\s+", " ", token).strip()
+        if len(token) >= 3:
+            cleaned.add(token)
+    return cleaned
+
+
+class BrandMatcher:
+    """Efficient brand matching using Aho-Corasick automaton with word boundaries."""
+    def __init__(self, brands: list[dict]):
+        self.brands = brands
+        self.has_ac = False
+        self.domain_token_to_brands = {}
+        self.text_token_to_brands = {}
+        
+        for idx, brand in enumerate(brands):
+            for token in domain_brand_tokens(brand):
+                self.domain_token_to_brands.setdefault(token, []).append(idx)
+            for token in text_brand_tokens(brand):
+                self.text_token_to_brands.setdefault(token, []).append(idx)
+                
+        try:
+            import ahocorasick
+            
+            # Automaton cho tên miền
+            self.domain_automaton = ahocorasick.Automaton()
+            for token in self.domain_token_to_brands:
+                self.domain_automaton.add_word(token, token)
+            self.domain_automaton.make_automaton()
+            
+            # Automaton cho nội dung text
+            self.text_automaton = ahocorasick.Automaton()
+            for token in self.text_token_to_brands:
+                self.text_automaton.add_word(token, token)
+            self.text_automaton.make_automaton()
+            
+            self.has_ac = True
+        except ImportError:
+            pass
+            
+    def match(self, domain: str, text: str) -> list[dict]:
+        if not self.has_ac:
+            return match_brands_fallback(domain, text, self.brands)
+            
+        clean_domain = re.sub(r"[^a-z0-9]", "", remove_vietnamese_accents(domain.lower()))
+        clean_text = clean_text_for_matching(text)
+        
+        brand_evidences = {}
+        
+        # 1. So khớp tên miền (không cần kiểm tra ranh giới từ vì phishing hay chèn brand vào giữa domain)
+        for end_index, token in self.domain_automaton.iter(clean_domain):
+            for idx in self.domain_token_to_brands.get(token, []):
+                brand_evidences.setdefault(idx, set()).add(f"domain contains brand token '{token}'")
+                
+        # 2. So khớp văn bản trang (bắt buộc kiểm tra ranh giới từ để tránh nhận diện sai)
+        for end_index, token in self.text_automaton.iter(clean_text):
+            start_index = end_index - len(token) + 1
+            
+            # Kiểm tra ký tự trước và sau từ khớp để xác định ranh giới từ (word boundary)
+            is_left_boundary = (start_index == 0) or (not clean_text[start_index - 1].isalnum())
+            is_right_boundary = (end_index == len(clean_text) - 1) or (not clean_text[end_index + 1].isalnum())
+            
+            if is_left_boundary and is_right_boundary:
+                for idx in self.text_token_to_brands.get(token, []):
+                    brand_evidences.setdefault(idx, set()).add(f"text contains brand token '{token}'")
+                    
+        matches = []
+        for idx, evidences in brand_evidences.items():
+            brand = self.brands[idx]
+            matches.append({
+                "brand": brand.get("name"),
+                "sector": brand.get("sector"),
+                "category": brand.get("category"),
+                "evidence": sorted(list(evidences)),
+            })
+        return matches
+
+
+def match_brands_fallback(domain: str, text: str, brands: list[dict]) -> list[dict]:
+    """Fallback linear matching when pyahocorasick is not available."""
+    clean_domain = re.sub(r"[^a-z0-9]", "", remove_vietnamese_accents(domain.lower()))
+    clean_text = clean_text_for_matching(text)
     matches = []
     for brand in brands:
         evidence = []
-        for token in brand_tokens(brand):
-            if token in domain_text:
+        # So khớp domain
+        for token in domain_brand_tokens(brand):
+            if token in clean_domain:
                 evidence.append(f"domain contains brand token '{token}'")
-            elif token in page_text:
-                evidence.append(f"text contains brand token '{token}'")
+        # So khớp văn bản nội dung với ranh giới từ
+        for token in text_brand_tokens(brand):
+            start = 0
+            while True:
+                pos = clean_text.find(token, start)
+                if pos == -1:
+                    break
+                end = pos + len(token) - 1
+                is_left_boundary = (pos == 0) or (not clean_text[pos - 1].isalnum())
+                is_right_boundary = (end == len(clean_text) - 1) or (not clean_text[end + 1].isalnum())
+                
+                if is_left_boundary and is_right_boundary:
+                    evidence.append(f"text contains brand token '{token}'")
+                    break
+                start = pos + 1
+                
         if evidence:
             matches.append({
                 "brand": brand.get("name"),
                 "sector": brand.get("sector"),
                 "category": brand.get("category"),
-                "evidence": sorted(set(evidence)),
+                "evidence": sorted(list(set(evidence))),
             })
     return matches
+
+
+def match_brands(domain: str, text: str, brands: list[dict]) -> list[dict]:
+    """Backward compatible wrapper for match_brands."""
+    matcher = BrandMatcher(brands)
+    return matcher.match(domain, text)
 
 
 def record_id_for(domain: str, label: int) -> str:
@@ -183,9 +345,23 @@ def init_workspace(_: argparse.Namespace) -> dict:
     return {"workspace": str(PROJECT_DIR)}
 
 
+def check_domain_has_content(conn, domain: str) -> bool:
+    """Check if the domain has extracted page content in SQLite."""
+    cursor = conn.cursor()
+    cursor.execute("SELECT 1 FROM processed_pages WHERE domain = ? AND text IS NOT NULL AND text != ''", (domain,))
+    return cursor.fetchone() is not None
+
+
 def create_seed(args: argparse.Namespace) -> dict:
     brands = load_brands()
-    content_index = build_content_index()
+    matcher = BrandMatcher(brands)
+    
+    db_path = DATA_DIR / "dedup_cache.db"
+    sync_processed_pages_to_db(db_path)
+    
+    import sqlite3
+    conn = sqlite3.connect(db_path)
+    
     blacklist = []
     seen = set()
     for value in read_lines(Path(args.blacklist)):
@@ -196,8 +372,8 @@ def create_seed(args: argparse.Namespace) -> dict:
 
     scored_blacklist = []
     for domain in blacklist:
-        matches = match_brands(domain, "", brands)
-        has_content = domain in content_index
+        matches = matcher.match(domain, "")
+        has_content = check_domain_has_content(conn, domain)
         if matches and has_content:
             score = 0
         elif matches:
@@ -278,26 +454,185 @@ def create_seed(args: argparse.Namespace) -> dict:
             f"Records: {len(records)}",
             f"Phishing records: {stats.get('1', 0)}",
             f"Legitimate records: {stats.get('0', 0)}",
-            f"Phishing records with local extracted text: {sum(1 for rec in records if rec['label'] == 1 and rec['domain'] in content_index)}",
+            f"Phishing records with local extracted text: {sum(1 for rec in records if rec['label'] == 1 and check_domain_has_content(conn, rec['domain']))}",
             f"Output JSONL: {out_jsonl}",
             f"Output CSV: {out_csv}",
         ],
     )
+    conn.close()
     return {"records": len(records), "phishing": stats.get("1", 0), "legitimate": stats.get("0", 0)}
 
 
-def build_content_index() -> dict[str, dict]:
-    index = {}
+def sync_processed_pages_to_db(db_path: Path) -> None:
+    """Synchronizes processed page details from JSONL files to SQLite processed_pages table.
+    Uses synced_files table to skip files that haven't changed, making it extremely fast.
+    """
     if not CRAWL_PROCESSED_DIR.exists():
-        return index
-    for path in sorted(CRAWL_PROCESSED_DIR.glob("*.jsonl")):
-        for rec in load_jsonl(path):
-            domain = normalize_domain(rec.get("url") or rec.get("domain") or "")
-            if domain and domain not in index and rec.get("text"):
-                copied = dict(rec)
-                copied["_source_file"] = str(path)
-                index[domain] = copied
-    return index
+        return
+        
+    db_path.parent.mkdir(parents=True, exist_ok=True)
+    import sqlite3
+    conn = sqlite3.connect(db_path)
+    try:
+        # Bật journal_mode WAL để tránh block ghi dữ liệu
+        conn.execute("PRAGMA journal_mode=WAL;")
+        cursor = conn.cursor()
+        
+        # Tạo bảng processed_pages lưu trữ thông tin có cấu trúc
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS processed_pages (
+                domain TEXT PRIMARY KEY,
+                title TEXT,
+                meta_description TEXT,
+                forms_count INTEGER,
+                has_password_field INTEGER,
+                external_links TEXT,
+                links_to_domains TEXT,
+                method TEXT,
+                fetched_at TEXT,
+                source_file TEXT,
+                text TEXT,
+                screenshot_path TEXT
+            )
+        """)
+        # Migration: ensure screenshot_path column exists
+        try:
+            cursor.execute("ALTER TABLE processed_pages ADD COLUMN screenshot_path TEXT")
+        except sqlite3.OperationalError:
+            pass
+        
+        # Kiểm tra tính sẵn sàng của FTS5
+        fts5_available = True
+        try:
+            cursor.execute("CREATE VIRTUAL TABLE IF NOT EXISTS temp_fts USING fts5(val);")
+            cursor.execute("DROP TABLE temp_fts;")
+        except sqlite3.OperationalError:
+            fts5_available = False
+            
+        if fts5_available:
+            cursor.execute("""
+                CREATE VIRTUAL TABLE IF NOT EXISTS page_index USING fts5(
+                    domain, 
+                    content
+                )
+            """)
+            
+        # Tạo bảng tracking file đã đồng bộ để tối ưu hiệu năng chạy lại
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS synced_files (
+                filepath TEXT PRIMARY KEY,
+                file_size INTEGER,
+                mtime REAL
+            )
+        """)
+        conn.commit()
+        
+        # Đồng bộ hóa từng file JSONL
+        for path in sorted(CRAWL_PROCESSED_DIR.glob("*.jsonl")):
+            filepath_str = str(path.resolve())
+            stat = path.stat()
+            # Bỏ qua các file rỗng (0 bytes) do lỗi cào hoặc file rác
+            if stat.st_size == 0:
+                continue
+                
+            # Kiểm tra xem file đã từng được đồng bộ chưa và có thay đổi gì không
+            cursor.execute("SELECT file_size, mtime FROM synced_files WHERE filepath = ?", (filepath_str,))
+            row = cursor.fetchone()
+            if row and row[0] == stat.st_size and row[1] == stat.st_mtime:
+                # Không thay đổi gì, bỏ qua file này
+                continue
+                
+            print(f"  [sync] Syncing processed file to SQLite: {path.name}")
+            
+            # Đọc và đồng bộ dữ liệu của file này
+            records_to_insert = []
+            fts_records_to_insert = []
+            
+            for rec in load_jsonl(path):
+                domain = normalize_domain(rec.get("url") or rec.get("domain") or "")
+                if not domain:
+                    continue
+                    
+                ext_links = json.dumps(rec.get("external_links", []))
+                link_doms = json.dumps(rec.get("links_to_domains", []))
+                
+                records_to_insert.append((
+                    domain,
+                    rec.get("title"),
+                    rec.get("meta_description"),
+                    rec.get("forms_count", 0),
+                    1 if rec.get("has_password_field") else 0,
+                    ext_links,
+                    link_doms,
+                    rec.get("method"),
+                    rec.get("fetched_at"),
+                    str(path.name),
+                    rec.get("text", ""),
+                    rec.get("screenshot_path")
+                ))
+                
+                if fts5_available:
+                    fts_records_to_insert.append((domain, rec.get("text", "")))
+            
+            # Chèn/ghi đè dữ liệu vào SQLite theo lô để tối ưu I/O
+            if records_to_insert:
+                cursor.executemany("""
+                    INSERT OR REPLACE INTO processed_pages (
+                        domain, title, meta_description, forms_count, has_password_field, 
+                        external_links, links_to_domains, method, fetched_at, source_file, text, screenshot_path
+                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """, records_to_insert)
+                
+                if fts5_available:
+                    # Xóa FTS cũ của domain này trước khi ghi đè
+                    domains_to_delete = [(r[0],) for r in fts_records_to_insert]
+                    cursor.executemany("DELETE FROM page_index WHERE domain = ?", domains_to_delete)
+                    cursor.executemany("INSERT INTO page_index (domain, content) VALUES (?, ?)", fts_records_to_insert)
+                    
+            # Ghi nhận trạng thái file đã đồng bộ
+            cursor.execute("""
+                INSERT OR REPLACE INTO synced_files (filepath, file_size, mtime) 
+                VALUES (?, ?, ?)
+            """, (filepath_str, stat.st_size, stat.st_mtime))
+            conn.commit()
+            
+    finally:
+        conn.close()
+
+
+def get_processed_page_from_db(conn, domain: str) -> dict:
+    """Retrieve processed page features from SQLite processed_pages table."""
+    cursor = conn.cursor()
+    cursor.execute("""
+        SELECT title, meta_description, forms_count, has_password_field, 
+               external_links, links_to_domains, method, fetched_at, source_file, text, screenshot_path
+        FROM processed_pages WHERE domain = ?
+    """, (domain,))
+    row = cursor.fetchone()
+    if not row:
+        return {}
+    try:
+        ext_links = json.loads(row[4]) if row[4] else []
+    except Exception:
+        ext_links = []
+    try:
+        link_doms = json.loads(row[5]) if row[5] else []
+    except Exception:
+        link_doms = []
+        
+    return {
+        "title": row[0],
+        "meta_description": row[1],
+        "forms_count": row[2],
+        "has_password_field": bool(row[3]),
+        "external_links": ext_links,
+        "links_to_domains": link_doms,
+        "method": row[6],
+        "fetched_at": row[7],
+        "_source_file": row[8],
+        "text": row[9],
+        "screenshot_path": row[10]
+    }
 
 
 def processed_text_features(content: dict) -> dict:
@@ -312,6 +647,7 @@ def processed_text_features(content: dict) -> dict:
         "links_to_domains": links_to_domains,
         "method": content.get("method"),
         "fetched_at": content.get("fetched_at"),
+        "screenshot_path": content.get("screenshot_path"),
     }
 
 
@@ -322,15 +658,21 @@ def suspicious_tokens(domain: str, url: str) -> list[str]:
 
 def extract_features(args: argparse.Namespace) -> dict:
     brands = load_brands()
+    matcher = BrandMatcher(brands)
     records = load_jsonl(Path(args.seed))
-    content_index = build_content_index()
+    
+    db_path = DATA_DIR / "dedup_cache.db"
+    sync_processed_pages_to_db(db_path)
+    
+    import sqlite3
+    conn = sqlite3.connect(db_path)
 
     out_path = FEATURE_DIR / "seed_features.jsonl"
     missing_text = 0
     with out_path.open("w", encoding="utf-8") as f:
         for rec in records:
             domain = rec["domain"]
-            content = content_index.get(domain, {})
+            content = get_processed_page_from_db(conn, domain)
             text = content.get("text") or ""
             if not text:
                 missing_text += 1
@@ -345,7 +687,7 @@ def extract_features(args: argparse.Namespace) -> dict:
                 "subdomain_count": max(len(domain.split(".")) - 2, 0),
                 "tld": domain.split(".")[-1] if "." in domain else "",
                 "suspicious_tokens": suspicious_tokens(domain, rec["url"]),
-                "brand_matches": match_brands(domain, " ".join([text, content.get("title") or ""]), brands),
+                "brand_matches": matcher.match(domain, " ".join([text, content.get("title") or ""])),
                 "text_length": len(text),
                 "text": text,
                 "content_source_file": content.get("_source_file"),
@@ -361,16 +703,25 @@ def extract_features(args: argparse.Namespace) -> dict:
             f"Output: {out_path}",
             f"Records missing processed text evidence: {missing_text}",
             "URL/domain features are available for every seed record.",
-            "Content features are read only from crawl_python/html/processed/*_text_*.jsonl.",
+            "Content features are read only from SQLite database backing processed pages.",
         ],
     )
+    conn.close()
     return {"records": len(records), "missing_text": missing_text}
 
 
 def run_all(args: argparse.Namespace) -> None:
-    init_workspace(args)
-    create_seed(args)
-    extract_features(argparse.Namespace(seed=str(RAW_DATA_DIR / "seed_dataset.jsonl")))
+    print("Initializing workspace...")
+    init_res = init_workspace(args)
+    print(f"Workspace Init: {json.dumps(init_res, ensure_ascii=False)}")
+    
+    print("\nCreating seed dataset...")
+    seed_res = create_seed(args)
+    print(f"Seed Dataset Creation Result: {json.dumps(seed_res, ensure_ascii=False)}")
+    
+    print("\nExtracting features from seed dataset...")
+    feat_res = extract_features(argparse.Namespace(seed=str(RAW_DATA_DIR / "seed_dataset.jsonl")))
+    print(f"Feature Extraction Result: {json.dumps(feat_res, ensure_ascii=False)}")
 
 
 def main() -> int:

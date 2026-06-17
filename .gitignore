@@ -1,0 +1,26 @@
+# Rust / Tauri build artifacts
+src-tauri/target/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Data artifacts (crawled HTML files - too large for git)
+crawl_python/html/raw/*.jsonl
+crawl_python/html/processed/*.jsonl
+crawl_python/html/screenshots/
+
+# SQLite database
+data/dedup_cache.db
+
+# Configs with secrets
+configs/scheduler_config.json
+
+# Temp files
+temp_test.txt
+*.lock
+
+# OS files
+Thumbs.db
+.DS_Store

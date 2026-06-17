@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """
 Step 2: Extract clean text from raw HTML (JSONL files).
 
@@ -166,6 +166,7 @@ def extract_one(record: dict) -> dict:
         "links_to_domains": [],
         "method": record.get("method"),
         "fetched_at": record.get("fetched_at"),
+        "screenshot_path": record.get("screenshot_path"),
         "error": None,
     }
 
@@ -173,8 +174,10 @@ def extract_one(record: dict) -> dict:
         result["error"] = "no html content"
         return result
 
-    # Fix mojibake trước khi parse
-    html = fix_mojibake(html)
+    # Fix mojibake trước khi parse và theo dõi cờ
+    fixed_html = fix_mojibake(html)
+    result["_mojibake_fixed"] = (fixed_html != html)
+    html = fixed_html
 
     try:
         soup = BeautifulSoup(html, "lxml")
@@ -244,6 +247,16 @@ def extract_one(record: dict) -> dict:
     return result
 
 
+def worker_task(line_str):
+    """Worker task at module level to make it pickleable on Windows."""
+    try:
+        record = json.loads(line_str)
+        res = extract_one(record)
+        return res, None
+    except Exception as ex:
+        return None, ex
+
+
 # ═══════════════════════════════════════════════════
 #  Find input files
 # ═══════════════════════════════════════════════════
@@ -305,10 +318,20 @@ def main():
     for label, in_path in in_files:
         log.info(f"[{label}] Processing: {in_path}")
 
+        # Đọc toàn bộ các dòng hợp lệ từ file đầu vào
+        records = []
         with open(in_path, "r", encoding="utf-8") as f:
-            total = sum(1 for _ in f)
+            for line in f:
+                line = line.strip()
+                if line:
+                    records.append(line)
+                    
+        total = len(records)
+        if args.limit:
+            records = records[:args.limit]
+            total = len(records)
 
-        log.info(f"  Records: {total}")
+        log.info(f"  Records to process: {total}")
 
         date_str = datetime.now().strftime("%Y%m%d_%H%M%S")
         out_name = f"{label}list_text_{date_str}.jsonl"
@@ -318,46 +341,43 @@ def main():
         errors = 0
         mojibake_fixed = 0
 
-        with (
-            open(in_path, "r", encoding="utf-8") as fin,
-            open(out_path, "w", encoding="utf-8") as fout,
-        ):
-            for i, line in enumerate(fin):
-                if args.limit and i >= args.limit:
-                    break
 
-                line = line.strip()
-                if not line:
-                    continue
 
-                try:
-                    record = json.loads(line)
-                except json.JSONDecodeError as e:
-                    log.warning(f"  Line {i}: JSON decode error — {e}")
-                    errors += 1
-                    continue
+        from concurrent.futures import ProcessPoolExecutor, as_completed
+        # Dùng ProcessPoolExecutor vì BS4 parsing là CPU-bound (GIL bottleneck)
+        # Sử dụng tối đa số CPU cores hiện có
+        with open(out_path, "w", encoding="utf-8") as fout:
+            num_workers = max(1, os.cpu_count() - 1) if os.cpu_count() else 1
+            log.info(f"  Starting ProcessPoolExecutor with {num_workers} workers to prevent RAM exhaustion.")
+            with ProcessPoolExecutor(max_workers=num_workers) as executor:
+                futures = {executor.submit(worker_task, line): i for i, line in enumerate(records)}
+                
+                # as_completed không đảm bảo thứ tự ban đầu, nhưng tối ưu thông lượng tốt nhất
+                for future in as_completed(futures):
+                    line_idx = futures[future]
+                    try:
+                        result, err = future.result()
+                        if err is not None:
+                            log.warning(f"  Line {line_idx}: processing error — {err}")
+                            errors += 1
+                            continue
+                            
+                        if result.get("error"):
+                            errors += 1
+                        if result.get("_mojibake_fixed"):
+                            mojibake_fixed += 1
+                            
+                        fout.write(json.dumps(result, ensure_ascii=False) + "\n")
+                        processed += 1
+                    except Exception as e:
+                        log.warning(f"  Line {line_idx}: unexpected exception — {e}")
+                        errors += 1
 
-                # Track mojibake fix
-                html_before = record.get("html")
-                if html_before:
-                    html_after = fix_mojibake(html_before)
-                    if html_after != html_before:
-                        record["html"] = html_after
-                        mojibake_fixed += 1
-
-                result = extract_one(record)
-                fout.write(json.dumps(result, ensure_ascii=False) + "\n")
-                processed += 1
-
-                if result.get("error"):
-                    errors += 1
-
-                if (i + 1) % 100 == 0 or (i + 1) == total:
-                    log.info(
-                        f"  [{label}] {i+1}/{total} "
-                        f"({processed} OK, {errors} errors, "
-                        f"{mojibake_fixed} mojibake)"
-                    )
+                    if processed % 100 == 0 or processed == total:
+                        log.info(
+                            f"  [{label}] {processed}/{total} processed "
+                            f"({errors} errors, {mojibake_fixed} mojibake)"
+                        )
 
         log.info(
             f"[{label}] Done: {processed} processed, "

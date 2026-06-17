@@ -1,0 +1,1724 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LLM-Phishing-KG Intelligence Dashboard</title>
+  <!-- Google Fonts Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <style>
+    :root {
+      --bg-main: #0b0f19;
+      --bg-card: #131b2e;
+      --bg-card-hover: #1e2942;
+      --bg-input: #1b253b;
+      --primary: #06b6d4;
+      --primary-glow: rgba(6, 182, 212, 0.15);
+      --success: #10b981;
+      --success-glow: rgba(16, 185, 129, 0.15);
+      --danger: #ef4444;
+      --danger-glow: rgba(239, 68, 68, 0.15);
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --border: #22304d;
+      --border-focus: #3b82f6;
+      --radius: 12px;
+      --font-main: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      overflow-y: scroll;
+      overflow-x: hidden;
+      height: 100%;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      font-family: var(--font-main);
+      overflow-y: auto;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--bg-main);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--text-muted);
+    }
+
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    /* Top Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 32px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .pulse {
+      width: 12px;
+      height: 12px;
+      background-color: var(--success);
+      border-radius: 50%;
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+      animation: pulse-ring 1.8s infinite;
+    }
+
+    @keyframes pulse-ring {
+      0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+      }
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+      }
+      100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+      }
+    }
+
+    .logo-text {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      background: linear-gradient(135deg, var(--text-main), var(--primary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .header-tagline {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .btn {
+      background-color: var(--primary);
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      border-radius: var(--radius);
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+      font-family: var(--font-main);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px var(--primary-glow);
+      filter: brightness(1.1);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
+
+    .btn-secondary {
+      background-color: var(--bg-card);
+      color: var(--text-main);
+      border: 1px solid var(--border);
+    }
+    
+    .btn-secondary:hover {
+      background-color: var(--bg-card-hover);
+      box-shadow: none;
+    }
+
+    /* Grid layout */
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+
+    .metric-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 24px;
+      border-radius: var(--radius);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .metric-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--primary);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .metric-title {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .metric-value {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .metric-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* Status Pill and Colors */
+    .phish-pill {
+      background-color: var(--danger-glow);
+      color: var(--danger);
+      border: 1px solid var(--danger);
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .legit-pill {
+      background-color: var(--success-glow);
+      color: var(--success);
+      border: 1px solid var(--success);
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    /* Dashboard Layout Splits */
+    .dashboard-split {
+      display: grid;
+      grid-template-columns: 1fr 350px;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    @media (max-width: 1024px) {
+      .dashboard-split {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .panel {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+
+    .panel-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-left: 4px solid var(--primary);
+      padding-left: 12px;
+    }
+
+    /* Live Pipeline execution status log */
+    .pipeline-console {
+      background-color: #060913;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: #38bdf8;
+      max-height: 240px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      margin-top: 12px;
+      line-height: 1.5;
+    }
+
+    /* Domain Database explorer */
+    .explorer-layout {
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      gap: 24px;
+    }
+
+    @media (max-width: 900px) {
+      .explorer-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .search-filter-box {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .search-input-wrapper {
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      background-color: var(--bg-input);
+      border: 1px solid var(--border);
+      padding: 12px 16px;
+      border-radius: var(--radius);
+      color: var(--text-main);
+      font-size: 14px;
+      font-family: var(--font-main);
+      transition: all 0.2s ease;
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px var(--primary-glow);
+    }
+
+    .filter-tabs {
+      display: flex;
+      gap: 8px;
+    }
+
+    .tab-btn {
+      flex: 1;
+      background-color: var(--bg-input);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 8px;
+      border-radius: 8px;
+      font-size: 12px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .tab-btn.active {
+      background-color: var(--primary);
+      color: #000;
+      border-color: var(--primary);
+      font-weight: 600;
+    }
+
+    .record-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-height: 600px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+
+    .record-item {
+      background-color: var(--bg-input);
+      border: 1px solid var(--border);
+      padding: 16px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .record-item:hover {
+      background-color: var(--bg-card-hover);
+      border-color: var(--primary);
+    }
+
+    .record-item.active {
+      background-color: var(--bg-card-hover);
+      border-color: var(--primary);
+      box-shadow: inset 3px 0 0 var(--primary);
+    }
+
+    .record-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .record-domain {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--text-main);
+      word-break: break-all;
+    }
+
+    .record-title {
+      font-size: 12px;
+      color: var(--text-muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .record-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .brand-match-badge {
+      background-color: rgba(6, 182, 212, 0.1);
+      color: var(--primary);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    /* Details Drawer/Panel */
+    .details-panel {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      min-height: 600px;
+    }
+
+    .details-empty {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      color: var(--text-muted);
+      gap: 16px;
+      text-align: center;
+    }
+
+    .details-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 16px;
+    }
+
+    .details-title-section {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .details-domain {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--text-main);
+      word-break: break-all;
+    }
+
+    .detail-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .detail-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .detail-val {
+      font-size: 14px;
+      color: var(--text-main);
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      background-color: var(--bg-input);
+      padding: 16px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+
+    /* Brand Target Section */
+    .brand-target-box {
+      border: 1px solid var(--primary);
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.05), rgba(6, 182, 212, 0.01));
+      padding: 16px;
+      border-radius: var(--radius);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .brand-evidence-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .brand-evidence-item {
+      font-size: 12px;
+      background-color: rgba(255,255,255,0.03);
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .brand-evidence-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--primary);
+    }
+
+    /* Raw Content Panel */
+    .text-content-box {
+      background-color: #060913;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--text-main);
+      max-height: 300px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      line-height: 1.6;
+    }
+
+    /* Modal for Pipeline Running */
+    .loader {
+      border: 3px solid rgba(255,255,255,0.1);
+      border-top: 3px solid var(--primary);
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      animation: spin 1s linear infinite;
+      display: inline-block;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Toast notification styling */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background-color: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 12px 24px;
+      color: var(--text-main);
+      font-size: 13px;
+      font-weight: 500;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      z-index: 10000;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    .toast-success {
+      border-color: var(--success);
+      border-left: 4px solid var(--success);
+    }
+    .toast-error {
+      border-color: var(--danger);
+      border-left: 4px solid var(--danger);
+    }
+
+    /* Method badges */
+    .method-badge {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border: 1px solid transparent;
+    }
+    .direct-badge {
+      background-color: var(--success-glow);
+      color: var(--success);
+      border-color: var(--success);
+    }
+    .wayback-badge {
+      background-color: rgba(59, 130, 246, 0.15);
+      color: #3b82f6;
+      border-color: #3b82f6;
+    }
+    /* Progress Step card animations and states */
+    .progress-step-card.active {
+      border-color: var(--primary) !important;
+      background: linear-gradient(135deg, var(--bg-card), rgba(6, 182, 212, 0.05)) !important;
+      box-shadow: 0 0 10px var(--primary-glow);
+    }
+    .progress-step-card.completed {
+      border-color: var(--success) !important;
+      background: linear-gradient(135deg, var(--bg-card), rgba(16, 185, 129, 0.03)) !important;
+    }
+    .progress-step-card.error {
+      border-color: var(--danger) !important;
+      background: linear-gradient(135deg, var(--bg-card), rgba(239, 68, 68, 0.03)) !important;
+    }
+    
+    .step-icon-circle.active {
+      border-color: var(--primary) !important;
+      background-color: var(--primary) !important;
+      color: #000 !important;
+      box-shadow: 0 0 8px var(--primary-glow);
+      animation: pulse-border 1.5s infinite;
+    }
+    .step-icon-circle.completed {
+      border-color: var(--success) !important;
+      background-color: var(--success) !important;
+      color: #000 !important;
+    }
+    .step-icon-circle.error {
+      border-color: var(--danger) !important;
+      background-color: var(--danger) !important;
+      color: #fff !important;
+    }
+    
+    @keyframes pulse-border {
+      0% {
+        box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.4);
+      }
+      70% {
+        box-shadow: 0 0 0 6px rgba(6, 182, 212, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(6, 182, 212, 0);
+      }
+    }
+    .success-badge {
+      background-color: rgba(16, 185, 129, 0.1) !important;
+      color: var(--success) !important;
+      border-color: var(--success) !important;
+    }
+    .danger-badge {
+      background-color: rgba(239, 68, 68, 0.1) !important;
+      color: var(--danger) !important;
+      border-color: var(--danger) !important;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div class="logo-container">
+        <div class="pulse"></div>
+        <div>
+          <div class="logo-text">LLM-PHISHING-KG</div>
+          <div class="header-tagline">Hệ thống phân tích & Trích xuất đặc trưng lừa đảo trực tuyến</div>
+        </div>
+      </div>
+      <div>
+        <button class="btn btn-secondary" onclick="fetchStats(); fetchRecords();">
+          Tải lại dữ liệu
+        </button>
+      </div>
+    </header>
+
+    <!-- Metrics Grid -->
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-title">Tổng Tên miền cào thô (SQLite)</div>
+        <div class="metric-value" id="stat-total-crawled">0</div>
+        <div class="metric-sub">Lọc trùng lặp & Dữ liệu rác</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-title">Phân vùng SQLite Blacklist / Whitelist</div>
+        <div class="metric-value" style="font-size: 20px; margin-top: 10px; font-weight: 700;">
+          <span style="color: var(--danger);" id="stat-db-black">0</span> / 
+          <span style="color: var(--success);" id="stat-db-white">0</span>
+        </div>
+        <div class="metric-sub">Tài nguyên làm mốc đối sánh chéo</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-title">Tập Seed Dataset (Vùng Đặc trưng)</div>
+        <div class="metric-value" id="stat-seed-total">0</div>
+        <div class="metric-sub">
+          <span style="color: var(--danger);" id="stat-seed-black">0</span> Phishing | 
+          <span style="color: var(--success);" id="stat-seed-white">0</span> Whitelist
+        </div>
+      </div>
+      <div class="metric-card" style="border-color: var(--primary-glow);">
+        <div class="metric-title">Trích xuất nội dung văn bản</div>
+        <div class="metric-value" id="stat-seed-text">0</div>
+        <div class="metric-sub">Thành công bóc tách HTML & khử nhiễu</div>
+      </div>
+    </div>
+
+    <!-- Split Section: Pipeline Run & Analytics Charts -->
+    <div class="dashboard-split">
+      <!-- Chart Analytics -->
+      <div class="panel">
+        <div class="panel-title">Mục tiêu Thương hiệu bị Giả mạo thịnh hành</div>
+        <div style="height: 250px; position: relative; display: flex; justify-content: center; align-items: center;">
+          <canvas id="chart-brands"></canvas>
+          <div id="chart-empty-state" style="position: absolute; display: none; color: var(--text-muted);">
+            Chưa có dữ liệu thống kê thương hiệu
+          </div>
+        </div>
+      </div>
+
+      <!-- Sync Controller Panel -->
+      <div class="panel">
+        <div class="panel-title">Điều khiển Pipeline</div>
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.5;">
+            Trình đồng bộ hóa SQLite FTS5 và trích xuất đặc trưng Aho-Corasick.
+          </p>
+          
+          <button class="btn" id="btn-run-pipeline" onclick="triggerPipeline()" style="width: 100%; justify-content: center;">
+            Khởi chạy Đồng bộ & Trích xuất
+          </button>
+          
+          <!-- Scheduler Control Section -->
+          <div style="border-top: 1px solid var(--border); padding-top: 14px; margin-top: 4px;">
+            <div style="font-size: 12px; font-weight: 700; color: var(--text-main); margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center;">
+              <span>Lịch trình quét tự động</span>
+              <span id="scheduler-timer" style="color: var(--primary); font-family: var(--font-mono); font-weight: normal; font-size: 11px;"></span>
+            </div>
+            
+            <div style="display: flex; gap: 8px; align-items: center;">
+              <select id="schedule-select" style="flex: 1; background-color: var(--bg-input); border: 1px solid var(--border); color: var(--text-main); padding: 8px 12px; border-radius: var(--radius); font-size: 13px; outline: none; cursor: pointer;">
+                <option value="0">Tắt tự động (Chạy tay)</option>
+                <option value="1">Mỗi 1 giờ</option>
+                <option value="4">Mỗi 4 giờ</option>
+                <option value="12">Mỗi 12 giờ</option>
+                <option value="24">Mỗi 24 giờ</option>
+              </select>
+              
+              <button class="btn btn-secondary" onclick="updateScheduleConfig()" style="padding: 8px 16px; font-size: 13px; border-radius: var(--radius);">
+                Lưu
+              </button>
+            </div>
+            
+            <div id="scheduler-status" style="font-size: 11px; color: var(--text-muted); margin-top: 6px;">
+              Đang tải lịch trình...
+            </div>
+          </div>
+          
+          <div id="pipeline-status-text" style="font-size: 12px; color: var(--text-muted); display: flex; align-items: center; gap: 8px; border-top: 1px solid var(--border); padding-top: 10px;">
+            Trạng thái: Trực tuyến (Sẵn sàng)
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Dedicated Pipeline Progress visualizer (Full Width Row) -->
+    <div class="panel" id="pipeline-progress-panel" style="margin-bottom: 24px; border-color: var(--border);">
+      <div class="panel-title" style="margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center;">
+        <span>Tiến trình đồng bộ & Trích xuất (Live Pipeline Progress)</span>
+        <span id="pipeline-overall-badge" class="method-badge unknown-badge" style="font-size: 11px; padding: 4px 10px;">Đang dừng (Sẵn sàng)</span>
+      </div>
+      
+      <!-- Progress Bar Container -->
+      <div style="background-color: var(--bg-input); height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 20px; border: 1px solid var(--border);">
+        <div id="pipeline-progress-bar" style="width: 0%; height: 100%; background: linear-gradient(90deg, var(--primary), var(--success)); transition: width 0.4s ease;"></div>
+      </div>
+      
+      <!-- Progress Steps Grid -->
+      <div id="pipeline-steps-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px;">
+        <!-- Step 1 -->
+        <div class="progress-step-card" id="step-card-1" style="background-color: var(--bg-input); border: 1px solid var(--border); padding: 14px; border-radius: var(--radius); display: flex; align-items: center; gap: 12px; transition: all 0.3s ease;">
+          <div class="step-icon-circle" id="step-icon-1" style="width: 32px; height: 32px; border-radius: 50%; background-color: var(--bg-main); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: var(--text-muted); transition: all 0.3s ease;">1</div>
+          <div style="display: flex; flex-direction: column;">
+            <span style="font-size: 12px; font-weight: 700; color: var(--text-main);">Thu thập tên miền</span>
+            <span style="font-size: 10px; color: var(--text-muted);" id="step-sub-1">crawl.py</span>
+          </div>
+        </div>
+        <!-- Step 2 -->
+        <div class="progress-step-card" id="step-card-2" style="background-color: var(--bg-input); border: 1px solid var(--border); padding: 14px; border-radius: var(--radius); display: flex; align-items: center; gap: 12px; transition: all 0.3s ease;">
+          <div class="step-icon-circle" id="step-icon-2" style="width: 32px; height: 32px; border-radius: 50%; background-color: var(--bg-main); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: var(--text-muted); transition: all 0.3s ease;">2</div>
+          <div style="display: flex; flex-direction: column;">
+            <span style="font-size: 12px; font-weight: 700; color: var(--text-main);">Đồng bộ SQLite</span>
+            <span style="font-size: 10px; color: var(--text-muted);" id="step-sub-2">clean_lists.py</span>
+          </div>
+        </div>
+        <!-- Step 3 -->
+        <div class="progress-step-card" id="step-card-3" style="background-color: var(--bg-input); border: 1px solid var(--border); padding: 14px; border-radius: var(--radius); display: flex; align-items: center; gap: 12px; transition: all 0.3s ease;">
+          <div class="step-icon-circle" id="step-icon-3" style="width: 32px; height: 32px; border-radius: 50%; background-color: var(--bg-main); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: var(--text-muted); transition: all 0.3s ease;">3</div>
+          <div style="display: flex; flex-direction: column;">
+            <span style="font-size: 12px; font-weight: 700; color: var(--text-main);">Quét & tải HTML</span>
+            <span style="font-size: 10px; color: var(--text-muted);" id="step-sub-3">fetch_html.py</span>
+          </div>
+        </div>
+        <!-- Step 4 -->
+        <div class="progress-step-card" id="step-card-4" style="background-color: var(--bg-input); border: 1px solid var(--border); padding: 14px; border-radius: var(--radius); display: flex; align-items: center; gap: 12px; transition: all 0.3s ease;">
+          <div class="step-icon-circle" id="step-icon-4" style="width: 32px; height: 32px; border-radius: 50%; background-color: var(--bg-main); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: var(--text-muted); transition: all 0.3s ease;">4</div>
+          <div style="display: flex; flex-direction: column;">
+            <span style="font-size: 12px; font-weight: 700; color: var(--text-main);">Lọc nội dung rác</span>
+            <span style="font-size: 10px; color: var(--text-muted);" id="step-sub-4">clean_blacklist.py</span>
+          </div>
+        </div>
+        <!-- Step 5 -->
+        <div class="progress-step-card" id="step-card-5" style="background-color: var(--bg-input); border: 1px solid var(--border); padding: 14px; border-radius: var(--radius); display: flex; align-items: center; gap: 12px; transition: all 0.3s ease;">
+          <div class="step-icon-circle" id="step-icon-5" style="width: 32px; height: 32px; border-radius: 50%; background-color: var(--bg-main); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: var(--text-muted); transition: all 0.3s ease;">5</div>
+          <div style="display: flex; flex-direction: column;">
+            <span style="font-size: 12px; font-weight: 700; color: var(--text-main);">Bóc tách văn bản</span>
+            <span style="font-size: 10px; color: var(--text-muted);" id="step-sub-5">extract_text.py</span>
+          </div>
+        </div>
+        <!-- Step 6 -->
+        <div class="progress-step-card" id="step-card-6" style="background-color: var(--bg-input); border: 1px solid var(--border); padding: 14px; border-radius: var(--radius); display: flex; align-items: center; gap: 12px; transition: all 0.3s ease;">
+          <div class="step-icon-circle" id="step-icon-6" style="width: 32px; height: 32px; border-radius: 50%; background-color: var(--bg-main); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: var(--text-muted); transition: all 0.3s ease;">6</div>
+          <div style="display: flex; flex-direction: column;">
+            <span style="font-size: 12px; font-weight: 700; color: var(--text-main);">Trích đặc trưng</span>
+            <span style="font-size: 10px; color: var(--text-muted);" id="step-sub-6">phishing_mvp_pipeline.py</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dedicated Pipeline Console Panel (Full Width Row - Styled as a Terminal) -->
+    <div class="panel" id="console-panel" style="margin-bottom: 24px; border-color: var(--border);">
+      <div class="panel-title" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 12px;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background-color: var(--primary); box-shadow: 0 0 6px var(--primary);"></span>
+          <div style="display: flex; background-color: var(--bg-main); padding: 2px; border-radius: 6px; border: 1px solid var(--border);">
+            <button class="btn btn-secondary" id="btn-console-pipeline" onclick="switchConsoleTab('pipeline')" style="padding: 4px 12px; font-size: 11px; border: none; border-radius: 4px; background: var(--bg-card); color: var(--text-main); cursor: pointer; transition: all 0.2s;">
+              🐚 Logs Crawler (Tiến trình cào)
+            </button>
+            <button class="btn btn-secondary" id="btn-console-server" onclick="switchConsoleTab('server')" style="padding: 4px 12px; font-size: 11px; border: none; border-radius: 4px; background: transparent; color: var(--text-muted); cursor: pointer; transition: all 0.2s;">
+              🖥️ Logs Server (Hệ thống Flask)
+            </button>
+          </div>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <button class="btn btn-secondary" onclick="toggleAutoScroll()" id="btn-autoscroll" style="padding: 4px 10px; font-size: 11px; display: inline-flex; align-items: center; gap: 4px;">
+            <span>🟢 Auto-Scroll On</span>
+          </button>
+          <button class="btn btn-secondary" onclick="clearActiveConsole()" style="padding: 4px 10px; font-size: 11px;">
+            Xóa Terminal
+          </button>
+        </div>
+      </div>
+      <div class="pipeline-console" id="pipeline-console" style="margin-top: 0; max-height: 400px; height: 350px; border-radius: 6px; box-shadow: inset 0 0 20px rgba(0,0,0,0.8);"></div>
+    </div>
+
+    <!-- Main Section: Explorer -->
+    <div class="panel" style="margin-bottom: 24px;">
+      <div class="panel-title">Khám phá Danh sách Tập dữ liệu đặc trưng (Seed Features)</div>
+      
+      <div class="explorer-layout">
+        <!-- Explorer Left Sidebar (Lists) -->
+        <div>
+          <div class="search-filter-box">
+            <div class="search-input-wrapper">
+              <input type="text" class="search-input" id="search-box" placeholder="Tìm kiếm domain, tiêu đề..." oninput="filterRecords()">
+            </div>
+            <div class="filter-tabs">
+              <button class="tab-btn active" id="btn-tab-all" onclick="setLabelFilter('all')">Tất cả</button>
+              <button class="tab-btn" id="btn-tab-phishing" onclick="setLabelFilter('phishing')">Phishing</button>
+              <button class="tab-btn" id="btn-tab-legitimate" onclick="setLabelFilter('legitimate')">Legitimate</button>
+            </div>
+          </div>
+
+          <div class="record-list" id="record-list-container">
+            <!-- Dynamic Records -->
+          </div>
+        </div>
+
+        <!-- Explorer Right Viewport (Details) -->
+        <div class="details-panel" id="details-viewport">
+          <div class="details-empty">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+            </svg>
+            <div>Chọn một tên miền ở cột danh sách để xem thông tin thuộc tính đặc trưng và văn bản bóc tách chi tiết</div>
+          </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // Global error handler to catch and display any webview errors on screen
+    window.addEventListener('error', (event) => {
+      const errorDiv = document.createElement('div');
+      errorDiv.style.position = 'fixed';
+      errorDiv.style.top = '0';
+      errorDiv.style.left = '0';
+      errorDiv.style.width = '100%';
+      errorDiv.style.background = '#ef4444';
+      errorDiv.style.color = '#fff';
+      errorDiv.style.padding = '12px';
+      errorDiv.style.zIndex = '999999';
+      errorDiv.style.fontSize = '12px';
+      errorDiv.style.fontFamily = 'monospace';
+      errorDiv.style.boxShadow = '0 4px 12px rgba(0,0,0,0.5)';
+      errorDiv.innerText = `JS Error: ${event.message} at ${event.filename}:${event.lineno}:${event.colno}`;
+      document.body.appendChild(errorDiv);
+    });
+
+    let allRecords = [];
+    let activeRecord = null;
+    let labelFilter = 'all';
+    let brandChart = null;
+    let nextRunTime = null;
+
+    let autoScroll = true;
+    let pollInterval = 2500;
+    let pollTimeoutId = null;
+    let lastProcessedStep = 0;
+    let currentConsoleTab = 'pipeline';
+
+    function switchConsoleTab(tab) {
+      currentConsoleTab = tab;
+      const btnPipeline = document.getElementById('btn-console-pipeline');
+      const btnServer = document.getElementById('btn-console-server');
+      
+      if (tab === 'pipeline') {
+        btnPipeline.style.background = 'var(--bg-card)';
+        btnPipeline.style.color = 'var(--text-main)';
+        btnServer.style.background = 'transparent';
+        btnServer.style.color = 'var(--text-muted)';
+        checkPipelineStatus();
+      } else {
+        btnServer.style.background = 'var(--bg-card)';
+        btnServer.style.color = 'var(--text-main)';
+        btnPipeline.style.background = 'transparent';
+        btnPipeline.style.color = 'var(--text-muted)';
+        fetchServerLogs();
+      }
+    }
+
+    function fetchServerLogs() {
+      fetch('/api/server-logs')
+        .then(res => res.json())
+        .then(data => {
+          if (currentConsoleTab === 'server') {
+            const consoleBox = document.getElementById('pipeline-console');
+            consoleBox.textContent = data.logs;
+            if (autoScroll) {
+              consoleBox.scrollTop = consoleBox.scrollHeight;
+            }
+          }
+          if (pollTimeoutId) clearTimeout(pollTimeoutId);
+          pollTimeoutId = setTimeout(() => {
+            checkPipelineStatus();
+          }, 2000);
+        })
+        .catch(err => {
+          console.error("Error fetching server logs:", err);
+          if (pollTimeoutId) clearTimeout(pollTimeoutId);
+          pollTimeoutId = setTimeout(() => {
+            checkPipelineStatus();
+          }, 5000);
+        });
+    }
+
+    function clearActiveConsole() {
+      const consoleBox = document.getElementById('pipeline-console');
+      consoleBox.textContent = '';
+      if (currentConsoleTab === 'server') {
+        fetch('/api/clear-server-logs', { method: 'POST' })
+          .then(res => res.json())
+          .then(() => {
+            showNotification('Đã xóa log hệ thống.', 'success');
+          });
+      }
+    }
+
+    function toggleAutoScroll() {
+      autoScroll = !autoScroll;
+      const btn = document.getElementById('btn-autoscroll');
+      if (autoScroll) {
+        btn.innerHTML = '<span>🟢 Auto-Scroll On</span>';
+        btn.style.color = '';
+        btn.style.borderColor = '';
+        btn.style.backgroundColor = '';
+      } else {
+        btn.innerHTML = '<span>🔴 Auto-Scroll Off</span>';
+        btn.style.color = 'var(--danger)';
+        btn.style.borderColor = 'var(--danger)';
+        btn.style.backgroundColor = 'rgba(239, 68, 68, 0.05)';
+      }
+    }
+
+    function scheduleNextPoll() {
+      if (pollTimeoutId) clearTimeout(pollTimeoutId);
+      pollTimeoutId = setTimeout(() => {
+        checkPipelineStatus();
+      }, pollInterval);
+    }
+
+    // Trigger on load
+    window.addEventListener('DOMContentLoaded', () => {
+      const statusText = document.getElementById('pipeline-status-text');
+      const hasTauri = typeof window !== 'undefined' && !!window.__TAURI__;
+      
+      if (hasTauri && window.__TAURI__.event) {
+        statusText.innerHTML = '● Trạng thái: <span style="color: var(--success);">Đã kết nối Tauri Core (Sẵn sàng)</span>';
+        
+        // Lắng nghe sự kiện logs từ Tauri
+        window.__TAURI__.event.listen('pipeline-log', (event) => {
+          const consoleBox = document.getElementById('pipeline-console');
+          const consolePanel = document.getElementById('console-panel');
+          if (consolePanel) consolePanel.style.display = 'block';
+          consoleBox.textContent += event.payload;
+          if (autoScroll) {
+            consoleBox.scrollTop = consoleBox.scrollHeight;
+          }
+        });
+      } else if (hasTauri) {
+        statusText.innerHTML = '● Trạng thái: <span style="color: var(--warning);">Kết nối Tauri Core (Thiếu Event API)</span>';
+      } else {
+        statusText.innerHTML = '● Trạng thái: <span style="color: var(--warning);">Chế độ Web (Đang kết nối API Python...)</span>';
+        checkPipelineStatus();
+      }
+
+      fetchStats();
+      fetchRecords();
+      
+      // Initialize scheduler info & timers
+      fetchSchedulerInfo();
+      setInterval(fetchSchedulerInfo, 10000);
+      setInterval(updateTimerDisplay, 1000);
+    });
+
+    function fetchStats() {
+      const hasTauri = typeof window !== 'undefined' && !!window.__TAURI__;
+      const statusText = document.getElementById('pipeline-status-text');
+
+      if (hasTauri && window.__TAURI__.tauri) {
+        window.__TAURI__.tauri.invoke('get_stats')
+          .then(data => {
+            updateStatsUI(data);
+          })
+          .catch(err => {
+            console.error("Tauri stats error:", err);
+            statusText.innerHTML = `● Lỗi tải Stats: <span style="color: var(--danger);">${err}</span>`;
+          });
+      } else {
+        fetch('/api/stats')
+          .then(res => res.json())
+          .then(data => {
+            updateStatsUI(data);
+          })
+          .catch(err => {
+            statusText.innerHTML = `● Lỗi kết nối API Web: <span style="color: var(--danger);">${err.message}</span>`;
+          });
+      }
+    }
+
+    function updateStatsUI(data) {
+      // Update database counts
+      document.getElementById('stat-total-crawled').textContent = 
+        (data.database.raw_html || 0).toLocaleString();
+      document.getElementById('stat-db-black').textContent = 
+        (data.database.blacklist || 0).toLocaleString();
+      document.getElementById('stat-db-white').textContent = 
+        (data.database.whitelist || 0).toLocaleString();
+      
+      // Update features counts
+      document.getElementById('stat-seed-total').textContent = 
+        (data.features.total || 0).toLocaleString();
+      document.getElementById('stat-seed-black').textContent = 
+        (data.features.phishing || 0).toLocaleString();
+      document.getElementById('stat-seed-white').textContent = 
+        (data.features.legitimate || 0).toLocaleString();
+      document.getElementById('stat-seed-text').textContent = 
+        (data.features.with_text || 0).toLocaleString();
+
+      // Render Brands distribution chart
+      renderChart(data.brands);
+    }
+
+    function fetchRecords() {
+      const hasTauri = typeof window !== 'undefined' && !!window.__TAURI__;
+      const statusText = document.getElementById('pipeline-status-text');
+
+      if (hasTauri && window.__TAURI__.tauri) {
+        window.__TAURI__.tauri.invoke('get_records', { labelFilter: labelFilter, searchQuery: '' })
+          .then(data => {
+            allRecords = data;
+            filterRecords();
+          })
+          .catch(err => {
+            console.error("Tauri records error:", err);
+            statusText.innerHTML = `● Lỗi tải danh sách: <span style="color: var(--danger);">${err}</span>`;
+          });
+      } else {
+        const url = `/api/records?label=${labelFilter}`;
+        fetch(url)
+          .then(res => res.json())
+          .then(data => {
+            allRecords = data;
+            filterRecords();
+          })
+          .catch(err => {
+            statusText.innerHTML = `● Lỗi kết nối API Web: <span style="color: var(--danger);">${err.message}</span>`;
+          });
+      }
+    }
+
+    function setLabelFilter(filterVal) {
+      labelFilter = filterVal;
+      
+      // Update tab UI
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      if (filterVal === 'all') document.getElementById('btn-tab-all').classList.add('active');
+      if (filterVal === 'phishing') document.getElementById('btn-tab-phishing').classList.add('active');
+      if (filterVal === 'legitimate') document.getElementById('btn-tab-legitimate').classList.add('active');
+      
+      fetchRecords();
+    }
+
+    function filterRecords() {
+      const query = document.getElementById('search-box').value.toLowerCase();
+      const container = document.getElementById('record-list-container');
+      container.innerHTML = '';
+
+      const filtered = allRecords.filter(rec => {
+        const d = rec.domain.toLowerCase();
+        const t = (rec.title || '').toLowerCase();
+        return d.includes(query) || t.includes(query);
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = '<div style="color: var(--text-muted); font-size: 13px; text-align: center; padding: 20px;">Không tìm thấy kết quả</div>';
+        return;
+      }
+
+      filtered.forEach(rec => {
+        const item = document.createElement('div');
+        item.className = 'record-item';
+        if (activeRecord && activeRecord.record_id === rec.record_id) {
+          item.classList.add('active');
+        }
+
+        const brandsBadges = rec.brand_matches && rec.brand_matches.length > 0
+          ? rec.brand_matches.map(b => `<span class="brand-match-badge">${b.brand}</span>`).join(' ')
+          : '';
+
+        const badgeHtml = rec.label === 1 
+          ? `<span class="phish-pill">Phishing</span>` 
+          : `<span class="legit-pill">Legitimate</span>`;
+
+        item.innerHTML = `
+          <div class="record-header">
+            <span class="record-domain">${rec.domain}</span>
+            ${badgeHtml}
+          </div>
+          <div class="record-title">${rec.title || 'Chưa trích xuất tiêu đề / trang lỗi'}</div>
+          <div class="record-footer">
+            <span style="font-family: var(--font-mono); font-size:10px;">ID: ${rec.record_id}</span>
+            <div style="display:flex; gap: 4px; align-items:center;">
+              ${brandsBadges}
+            </div>
+          </div>
+        `;
+
+        item.onclick = () => selectRecord(rec, item);
+        container.appendChild(item);
+      });
+    }
+
+    function selectRecord(rec, element) {
+      // Highlight element in left menu
+      document.querySelectorAll('.record-item').forEach(i => i.classList.remove('active'));
+      element.classList.add('active');
+      
+      activeRecord = rec;
+      renderDetails(rec);
+    }
+
+    function renderDetails(rec) {
+      const vp = document.getElementById('details-viewport');
+      
+      const badgeHtml = rec.label === 1 
+        ? `<span class="phish-pill" style="font-size: 13px; padding: 6px 12px;">Phishing / Scam</span>` 
+        : `<span class="legit-pill" style="font-size: 13px; padding: 6px 12px;">Chính thống (Official Whitelist)</span>`;
+
+      // Method badge (Direct vs Wayback)
+      let methodBadge = '';
+      if (rec.method === 'wayback') {
+        methodBadge = `<span class="method-badge wayback-badge">Wayback Machine</span>`;
+      } else if (rec.method === 'direct') {
+        methodBadge = `<span class="method-badge direct-badge">Direct Fetch</span>`;
+      } else if (rec.method) {
+        methodBadge = `<span class="method-badge unknown-badge">${rec.method}</span>`;
+      }
+
+      // Brand target box mapping
+      let targetBoxHtml = '';
+      if (rec.brand_matches && rec.brand_matches.length > 0) {
+        targetBoxHtml = `
+          <div class="brand-target-box">
+            <div class="detail-label" style="color: var(--primary); font-weight: 700; font-size: 12px;">Cảnh báo giả mạo thương hiệu:</div>
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+              ${rec.brand_matches.map(b => `
+                <div style="border-bottom: 1px dashed rgba(255,255,255,0.05); padding-bottom: 8px;">
+                  <div style="font-weight: 700; font-size:14px; color: var(--text-main); margin-bottom: 4px;">
+                    🎯 Thương hiệu: ${b.brand} <span style="font-size: 11px; font-weight: normal; color: var(--text-muted);">(${b.category} - ${b.sector})</span>
+                  </div>
+                  <div class="brand-evidence-list">
+                    ${b.evidence.map(e => `
+                      <div class="brand-evidence-item">
+                        <div class="brand-evidence-dot"></div>
+                        <span>${e}</span>
+                      </div>
+                    `).join('')}
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `;
+      } else if (rec.label === 1) {
+        targetBoxHtml = `
+          <div class="brand-target-box" style="border-color: var(--text-muted); background: none;">
+            <div class="detail-label">Thương hiệu giả mạo:</div>
+            <div style="font-size: 13px; color: var(--text-muted);">Không phát hiện từ khóa khớp thương hiệu chính thống trong brand_catalog (Có thể là phishing giả mạo nền tảng khác).</div>
+          </div>
+        `;
+      }
+
+      // Screenshot rendering
+      let screenshotHtml = '';
+      if (rec.screenshot_path) {
+        screenshotHtml = `
+          <div class="detail-group" style="margin-top: 16px;">
+            <div class="detail-label" style="display: flex; justify-content: space-between; align-items: center;">
+              <span>Ảnh chụp màn hình thực tế (Trực quan hóa)</span>
+              <span class="method-badge direct-badge">Quét trực tiếp Playwright</span>
+            </div>
+            <div style="border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background-color: #060913; margin-top: 6px; position: relative;">
+              <img src="${rec.screenshot_path}" alt="Screenshot của ${rec.domain}" style="width: 100%; height: auto; max-height: 400px; display: block; object-fit: contain; cursor: zoom-in;" onclick="openFullscreenScreenshot('${rec.screenshot_path}')" />
+            </div>
+          </div>
+        `;
+      } else {
+        screenshotHtml = `
+          <div class="detail-group" style="margin-top: 16px;">
+            <div class="detail-label">Ảnh chụp màn hình thực tế</div>
+            <div style="border: 1px dashed var(--border); border-radius: var(--radius); padding: 30px; text-align: center; color: var(--text-muted); font-size: 13px; margin-top: 6px; background-color: #060913;">
+              📷 Không có ảnh chụp màn hình trực tiếp (Tên miền ngoại tuyến hoặc cào qua Wayback Machine)
+            </div>
+          </div>
+        `;
+      }
+
+      // Trong Tauri, ta dùng text_preview hoặc text tùy thuộc vào độ dài
+      const displayedText = rec.text_preview || rec.text || 'Nội dung trống.';
+
+      vp.innerHTML = `
+        <div class="details-header">
+          <div class="details-title-section">
+            <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+              <span class="details-domain">${rec.domain}</span>
+              ${methodBadge}
+            </div>
+            <div style="font-size:12px; color:var(--text-muted); font-family: var(--font-mono); margin-top:2px;">Record ID: ${rec.record_id}</div>
+          </div>
+          ${badgeHtml}
+        </div>
+
+        ${targetBoxHtml}
+
+        <div class="detail-grid">
+          <div class="detail-group">
+            <div class="detail-label">Tiêu đề HTML</div>
+            <div class="detail-val" style="font-weight: 600;">${rec.title || 'N/A (Lỗi cào hoặc không có tiêu đề)'}</div>
+          </div>
+          <div class="detail-group">
+            <div class="detail-label">Thẻ mô tả (Meta Description)</div>
+            <div class="detail-val" style="font-style: italic;">${rec.meta_description || 'Không có mô tả metadata'}</div>
+          </div>
+        </div>
+
+        <div class="detail-grid" style="grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));">
+          <div class="detail-group">
+            <div class="detail-label">Số Form nhập liệu</div>
+            <div class="detail-val">${rec.forms_count || 0} form</div>
+          </div>
+          <div class="detail-group">
+            <div class="detail-label">Trường Mật khẩu</div>
+            <div class="detail-val">${rec.has_password_field ? '🔴 CÓ TRƯỜNG PASSWORD' : '🟢 Không phát hiện'}</div>
+          </div>
+          <div class="detail-group">
+            <div class="detail-label">Độ dài tên miền</div>
+            <div class="detail-val">${rec.domain_length || rec.domain.length} ký tự</div>
+          </div>
+          <div class="detail-group">
+            <div class="detail-label">Số URL liên kết ngoài</div>
+            <div class="detail-val">${rec.external_link_count || 0} liên kết</div>
+          </div>
+        </div>
+
+        ${screenshotHtml}
+
+        <div class="detail-group" style="margin-top: 16px;">
+          <div class="detail-label">Văn bản bóc tách từ HTML (${(rec.text_length || 0).toLocaleString()} ký tự)</div>
+          <div class="text-content-box">${displayedText}</div>
+        </div>
+
+        <div style="font-size: 11px; color: var(--text-muted); display:flex; justify-content: space-between; border-top:1px solid var(--border); padding-top:12px; margin-top: 16px;">
+          <span>Nguồn thu thập: ${rec.source}</span>
+          <span>Thời gian quét: ${rec.observed_at || rec.fetched_at || 'N/A'}</span>
+        </div>
+      `;
+    }
+
+    function renderChart(brandsData) {
+      const ctx = document.getElementById('chart-brands').getContext('2d');
+      const emptyState = document.getElementById('chart-empty-state');
+      
+      if (typeof Chart === 'undefined') {
+        console.warn("Chart.js is not loaded.");
+        document.getElementById('chart-brands').style.display = 'none';
+        emptyState.style.display = 'block';
+        emptyState.innerHTML = '<span style="color:var(--text-muted); font-size:12px;">Biểu đồ tạm ẩn (Không tải được Chart.js)</span>';
+        return;
+      }
+
+      const brands = Object.keys(brandsData);
+      const counts = Object.values(brandsData);
+
+      if (brands.length === 0) {
+        document.getElementById('chart-brands').style.display = 'none';
+        emptyState.style.display = 'block';
+        return;
+      }
+
+      document.getElementById('chart-brands').style.display = 'block';
+      emptyState.style.display = 'none';
+
+      // Sort by targeted count descending
+      const list = brands.map((b, i) => ({ name: b, count: counts[i] }))
+                         .sort((a,b) => b.count - a.count)
+                         .slice(0, 7);
+
+      if (brandChart) {
+        brandChart.destroy();
+      }
+
+      brandChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: list.map(x => x.name),
+          datasets: [{
+            label: 'Số tên miền Phishing giả mạo',
+            data: list.map(x => x.count),
+            backgroundColor: 'rgba(6, 182, 212, 0.4)',
+            borderColor: '#06b6d4',
+            borderWidth: 1.5,
+            borderRadius: 6
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false }
+          },
+          scales: {
+            x: {
+              grid: { color: 'rgba(255,255,255,0.05)' },
+              ticks: { color: '#94a3b8', font: { family: 'Inter', size: 10 } }
+            },
+            y: {
+              grid: { color: 'rgba(255,255,255,0.05)' },
+              ticks: { color: '#94a3b8', font: { family: 'Inter' }, stepSize: 1 }
+            }
+          }
+        }
+      });
+    }
+
+    function triggerPipeline() {
+      const btn = document.getElementById('btn-run-pipeline');
+      btn.disabled = true;
+      btn.innerHTML = '<span class="loader" style="margin-right:8px;"></span> Đang chạy Pipeline...';
+
+      const consoleBox = document.getElementById('pipeline-console');
+      const consolePanel = document.getElementById('console-panel');
+      if (consolePanel) consolePanel.style.display = 'block';
+      consoleBox.textContent = '';
+
+      const hasTauri = typeof window !== 'undefined' && !!window.__TAURI__;
+
+      if (hasTauri && window.__TAURI__.tauri) {
+        window.__TAURI__.tauri.invoke('run_pipeline')
+          .then(() => {
+            fetchStats();
+            fetchRecords();
+            document.getElementById('pipeline-status-text').innerHTML = '● Trạng thái: <span style="color: var(--success);">Đã hoàn tất (Tauri Core)</span>';
+            btn.disabled = false;
+            btn.innerHTML = 'Khởi chạy Đồng bộ & Trích xuất';
+          })
+          .catch(err => {
+            consoleBox.textContent += '\nLỗi: ' + err;
+            document.getElementById('pipeline-status-text').innerHTML = '● Trạng thái: <span style="color: var(--danger);">Gặp lỗi</span>';
+            btn.disabled = false;
+            btn.innerHTML = 'Khởi chạy Đồng bộ & Trích xuất';
+          });
+      } else {
+        fetch('/api/run-pipeline', { method: 'POST' })
+          .then(res => res.json())
+          .then(data => {
+            checkPipelineStatus();
+          });
+      }
+    }
+
+    function checkPipelineStatus() {
+      fetch('/api/pipeline-status')
+        .then(res => res.json())
+        .then(data => {
+          const statusText = document.getElementById('pipeline-status-text');
+          const consoleBox = document.getElementById('pipeline-console');
+          const consolePanel = document.getElementById('console-panel');
+          const btn = document.getElementById('btn-run-pipeline');
+
+          // 1. Overall pipeline status text & badge
+          const overallBadge = document.getElementById('pipeline-overall-badge');
+          if (overallBadge) {
+            if (data.status === 'running') {
+              overallBadge.textContent = 'Đang chạy...';
+              overallBadge.className = 'method-badge direct-badge';
+            } else if (data.status === 'completed') {
+              overallBadge.textContent = 'Hoàn thành';
+              overallBadge.className = 'method-badge success-badge';
+            } else if (data.status === 'error') {
+              overallBadge.textContent = 'Gặp lỗi';
+              overallBadge.className = 'method-badge danger-badge';
+            } else {
+              overallBadge.textContent = 'Đang dừng (Sẵn sàng)';
+              overallBadge.className = 'method-badge unknown-badge';
+            }
+          }
+
+          if (data.running) {
+            statusText.innerHTML = `● Trạng thái: <span style="color: var(--primary);">Đang chạy: ${data.step_name || 'Đồng bộ hóa...'}</span>`;
+            
+            if (currentConsoleTab === 'pipeline') {
+              consoleBox.textContent = data.logs;
+              if (autoScroll) {
+                consoleBox.scrollTop = consoleBox.scrollHeight;
+              }
+            }
+            
+            btn.disabled = true;
+            btn.innerHTML = '<span class="loader" style="margin-right:8px;"></span> Đang đồng bộ hóa...';
+            pollInterval = 300; // Fast polling when running
+          } else {
+            statusText.innerHTML = '● Trạng thái: <span style="color: var(--success);">Hoàn tất (Trực tuyến)</span>';
+            btn.disabled = false;
+            btn.innerHTML = 'Khởi chạy Đồng bộ & Trích xuất';
+            
+            if (currentConsoleTab === 'pipeline' && data.logs) {
+              consoleBox.textContent = data.logs;
+              if (!btn.classList.contains('was-running') && consoleBox.scrollTop === 0) {
+                consoleBox.scrollTop = consoleBox.scrollHeight;
+              }
+            }
+            
+            pollInterval = 2500; // Muted polling when idle
+            
+            // Reload stats and records if the pipeline has just completed
+            if (btn.classList.contains('was-running')) {
+              btn.classList.remove('was-running');
+              fetchStats();
+              fetchRecords();
+            }
+          }
+
+          if (data.running) {
+            btn.classList.add('was-running');
+          }
+
+          // 2. Update steps grid status dynamically
+          const totalSteps = data.total_steps || 6;
+          const currentStep = data.current_step || 0;
+          
+          for (let i = 1; i <= totalSteps; i++) {
+            const card = document.getElementById(`step-card-${i}`);
+            const icon = document.getElementById(`step-icon-${i}`);
+            if (!card || !icon) continue;
+            
+            card.classList.remove('active', 'completed', 'error');
+            icon.classList.remove('active', 'completed', 'error');
+            
+            if (data.status === 'running') {
+              if (i < currentStep) {
+                card.classList.add('completed');
+                icon.classList.add('completed');
+                icon.innerHTML = '✓';
+              } else if (i === currentStep) {
+                card.classList.add('active');
+                icon.classList.add('active');
+                icon.innerHTML = i;
+              } else {
+                icon.innerHTML = i;
+              }
+            } else if (data.status === 'completed') {
+              card.classList.add('completed');
+              icon.classList.add('completed');
+              icon.innerHTML = '✓';
+            } else if (data.status === 'error') {
+              if (i < currentStep) {
+                card.classList.add('completed');
+                icon.classList.add('completed');
+                icon.innerHTML = '✓';
+              } else if (i === currentStep) {
+                card.classList.add('error');
+                icon.classList.add('error');
+                icon.innerHTML = '✗';
+              } else {
+                icon.innerHTML = i;
+              }
+            } else {
+              icon.innerHTML = i;
+            }
+          }
+          
+          // 3. Update progress bar width
+          const progressBar = document.getElementById('pipeline-progress-bar');
+          if (progressBar) {
+            let pct = 0;
+            if (data.status === 'completed') {
+              pct = 100;
+            } else if (data.status === 'running') {
+              pct = Math.round(((currentStep - 0.5) / totalSteps) * 100);
+            } else if (data.status === 'error') {
+              pct = Math.round(((currentStep - 1) / totalSteps) * 100);
+            }
+            progressBar.style.width = `${pct}%`;
+          }
+
+          // 4. If active step changes, refresh statistics and record list on screen
+          if (lastProcessedStep !== currentStep) {
+            lastProcessedStep = currentStep;
+            fetchStats();
+            fetchRecords();
+          }
+
+          // Schedule next poll call
+          if (currentConsoleTab === 'server') {
+            fetchServerLogs();
+          } else {
+            scheduleNextPoll();
+          }
+        })
+        .catch(err => {
+          console.error("Error polling pipeline status:", err);
+          pollInterval = 5000; // Slow down on error to avoid spamming
+          if (currentConsoleTab === 'server') {
+            if (pollTimeoutId) clearTimeout(pollTimeoutId);
+            pollTimeoutId = setTimeout(() => {
+              checkPipelineStatus();
+            }, 5000);
+          } else {
+            scheduleNextPoll();
+          }
+        });
+    }
+
+    function fetchSchedulerInfo() {
+      fetch('/api/scheduler-info')
+        .then(res => res.json())
+        .then(data => {
+          const select = document.getElementById('schedule-select');
+          const status = document.getElementById('scheduler-status');
+          
+          select.value = data.interval_hours.toString();
+          nextRunTime = data.next_run;
+          
+          if (data.interval_hours > 0) {
+            status.innerHTML = `Lần chạy cuối: <b>${data.last_run ? formatTime(data.last_run) : 'Chưa chạy'}</b>`;
+            updateTimerDisplay();
+          } else {
+            status.textContent = 'Chế độ chạy tự động đang tắt.';
+            document.getElementById('scheduler-timer').textContent = '';
+          }
+        })
+        .catch(err => {
+          console.error("Error fetching scheduler status:", err);
+        });
+    }
+
+    function formatTime(isoStr) {
+      try {
+        const d = new Date(isoStr);
+        return d.toLocaleString('vi-VN');
+      } catch (e) {
+        return isoStr;
+      }
+    }
+
+    function updateTimerDisplay() {
+      if (!nextRunTime) {
+        document.getElementById('scheduler-timer').textContent = '';
+        return;
+      }
+      
+      const now = new Date().getTime();
+      const target = new Date(nextRunTime).getTime();
+      const diff = target - now;
+      
+      const timerSpan = document.getElementById('scheduler-timer');
+      
+      if (diff <= 0) {
+        timerSpan.textContent = 'Đang quét...';
+        return;
+      }
+      
+      const hours = Math.floor(diff / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+      
+      let timeStr = '';
+      if (hours > 0) timeStr += `${hours}h `;
+      if (minutes > 0 || hours > 0) timeStr += `${minutes}m `;
+      timeStr += `${seconds}s`;
+      
+      timerSpan.textContent = `Chạy tiếp theo trong: ${timeStr}`;
+    }
+
+    function updateScheduleConfig() {
+      const select = document.getElementById('schedule-select');
+      const interval = parseInt(select.value);
+      
+      fetch('/api/scheduler-config', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ interval_hours: interval })
+      })
+        .then(res => res.json())
+        .then(data => {
+          if (data.status === 'success') {
+            fetchSchedulerInfo();
+            showNotification('Đã lưu cấu hình lịch trình quét tự động.', 'success');
+          } else {
+            showNotification('Có lỗi xảy ra: ' + data.error, 'error');
+          }
+        })
+        .catch(err => {
+          showNotification('Lỗi kết nối API: ' + err.message, 'error');
+        });
+    }
+
+    function showNotification(msg, type = 'success') {
+      let toast = document.getElementById('toast-notification');
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'toast-notification';
+        toast.className = 'toast';
+        document.body.appendChild(toast);
+      }
+      
+      toast.textContent = msg;
+      toast.className = `toast show toast-${type}`;
+      
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+
+    function openFullscreenScreenshot(src) {
+      let modal = document.getElementById('screenshot-modal');
+      if (!modal) {
+        modal = document.createElement('div');
+        modal.id = 'screenshot-modal';
+        modal.style.position = 'fixed';
+        modal.style.top = '0';
+        modal.style.left = '0';
+        modal.style.width = '100vw';
+        modal.style.height = '100vh';
+        modal.style.backgroundColor = 'rgba(0,0,0,0.9)';
+        modal.style.display = 'flex';
+        modal.style.justifyContent = 'center';
+        modal.style.alignItems = 'center';
+        modal.style.zIndex = '9999999';
+        modal.style.cursor = 'zoom-out';
+        modal.onclick = () => { modal.style.display = 'none'; };
+        
+        const img = document.createElement('img');
+        img.id = 'screenshot-modal-img';
+        img.style.maxWidth = '90%';
+        img.style.maxHeight = '90%';
+        img.style.objectFit = 'contain';
+        img.style.borderRadius = '8px';
+        img.style.boxShadow = '0 10px 40px rgba(0,0,0,0.8)';
+        modal.appendChild(img);
+        document.body.appendChild(modal);
+      }
+      
+      document.getElementById('screenshot-modal-img').src = src;
+      modal.style.display = 'flex';
+    }
+  </script>
+</body>
+</html>

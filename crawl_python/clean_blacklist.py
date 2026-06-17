@@ -35,13 +35,19 @@ from datetime import datetime
 
 from bs4 import BeautifulSoup
 
-# Fix console encoding cho Windows
-if sys.platform == "win32":
-    sys.stdout.reconfigure(encoding="utf-8")
-
 # ── Paths ──────────────────────────────────────────────────────────────
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 RAW_DIR  = os.path.join(BASE_DIR, "html", "raw")
+
+# Đảm bảo Python có thể import từ core và infrastructure
+if BASE_DIR not in sys.path:
+    sys.path.append(BASE_DIR)
+
+from infrastructure.sqlite_deduplicator import SqliteDeduplicator
+
+# Fix console encoding cho Windows
+if sys.platform == "win32":
+    sys.stdout.reconfigure(encoding="utf-8")
 
 # ── Default config ─────────────────────────────────────────────────────
 MIN_WORDS         = 200     # ngưỡng tối thiểu từ visible text
@@ -127,6 +133,7 @@ def is_too_large(html_content: str) -> bool:
 # ═══════════════════════════════════════════════════════════════════════
 def clean_file(
     in_path: str,
+    deduplicator=None,
     min_words: int = MIN_WORDS,
     dry_run: bool = False,
 ) -> dict:
@@ -144,6 +151,7 @@ def clean_file(
         "too_large":      0,   # HTML > MAX_HTML_SIZE_MB
         "too_short":      0,   # < min_words
         "parking_page":   0,   # parking/error page
+        "cross_filtered": 0,   # Lọc chéo blacklist/whitelist
     }
 
     if not os.path.exists(in_path):
@@ -158,13 +166,16 @@ def clean_file(
     else:
         out_path = base + "_cleaned" + ext
 
+    # Xác định loại kiểm tra chéo (cross check)
+    fname = os.path.basename(in_path).lower()
+    is_blacklist_file = "blacklist" in fname
+    is_whitelist_file = "whitelist" in fname
+
     log.info(f"Input  : {in_path}")
     if not dry_run:
         log.info(f"Output : {out_path}")
     else:
         log.info("Chế độ: DRY RUN (không ghi file)")
-
-    seen_urls: set[str] = set()
 
     if not dry_run:
         f_out = open(out_path, "w", encoding="utf-8", buffering=1024*1024)
@@ -172,6 +183,88 @@ def clean_file(
         f_out = None
 
     with open(in_path, "r", encoding="utf-8") as f:
+        batch_urls = []
+        batch_recs = []
+        
+        def flush_batch():
+            if not batch_urls:
+                return
+            
+            # 1. Thực hiện lọc chéo (Cross filter) trước để loại bỏ các URL thuộc tập đối nghịch
+            cross_filtered_urls = []
+            if deduplicator:
+                if is_blacklist_file:
+                    # Nếu là file blacklist, loại bỏ các URL đã có trong whitelist database
+                    whitelisted = deduplicator.get_existing_in_list(batch_urls, "whitelist")
+                    for u in batch_urls:
+                        if u in whitelisted:
+                            log.warning(f"  [cross-filter] URL {u} đã bị Whitelisted, loại khỏi blacklist!")
+                            stats["cross_filtered"] += 1
+                        else:
+                            cross_filtered_urls.append(u)
+                elif is_whitelist_file:
+                    # Nếu là file whitelist, loại bỏ các URL đã có trong blacklist database
+                    blacklisted = deduplicator.get_existing_in_list(batch_urls, "blacklist")
+                    for u in batch_urls:
+                        if u in blacklisted:
+                            log.warning(f"  [cross-filter] URL {u} đã bị Blacklisted, loại khỏi whitelist!")
+                            stats["cross_filtered"] += 1
+                        else:
+                            cross_filtered_urls.append(u)
+                else:
+                    cross_filtered_urls = batch_urls
+            else:
+                cross_filtered_urls = batch_urls
+
+            if not cross_filtered_urls:
+                batch_urls.clear()
+                batch_recs.clear()
+                return
+
+            # 2. Kiểm tra trùng lặp (Deduplication) qua SQLite
+            new_urls_list = []
+            if deduplicator:
+                new_urls_list = deduplicator.filter_and_add_batch(cross_filtered_urls, list_type="raw_html", read_only=dry_run)
+                stats["duplicate_url"] += len(cross_filtered_urls) - len(new_urls_list)
+            else:
+                new_urls_list = cross_filtered_urls
+                
+            new_urls_set = set(new_urls_list)
+            
+            # Chỉ xử lý các record có URL lọt qua bộ lọc
+            for b_url, b_rec in zip(batch_urls, batch_recs):
+                if b_url not in new_urls_set:
+                    continue
+                    
+                html = b_rec.get("html")
+                
+                # ── 3. Loại bỏ HTML quá lớn ────────────────────────────
+                if is_too_large(html):
+                    log.debug(f"  Too large: {b_url}")
+                    stats["too_large"] += 1
+                    continue
+
+                # ── 4. Loại bỏ parking/error page ──────────────────────
+                if is_parking_page(html):
+                    log.debug(f"  Parking page: {b_url}")
+                    stats["parking_page"] += 1
+                    continue
+
+                # ── 5. Loại bỏ HTML có quá ít từ ───────────────────────
+                word_count = count_visible_words(html)
+                if word_count < min_words:
+                    log.debug(f"  Too short ({word_count} words): {b_url}")
+                    stats["too_short"] += 1
+                    continue
+
+                # ── Pass: giữ lại bản ghi này ──────────────────────────
+                stats["kept"] += 1
+                if f_out is not None:
+                    f_out.write(json.dumps(b_rec, ensure_ascii=False) + "\n")
+                    
+            batch_urls.clear()
+            batch_recs.clear()
+
         for line_no, line in enumerate(f, 1):
             line = line.strip()
             if not line:
@@ -194,47 +287,26 @@ def clean_file(
             if not html:
                 stats["failed_html"] += 1
                 continue
-
-            # ── 2. Loại bỏ URL trùng lặp ───────────────────────────
-            if url in seen_urls:
-                stats["duplicate_url"] += 1
-                continue
-            seen_urls.add(url)
-
-            # ── 3. Loại bỏ HTML quá lớn ────────────────────────────
-            if is_too_large(html):
-                log.debug(f"  Too large: {url}")
-                stats["too_large"] += 1
-                continue
-
-            # ── 4. Loại bỏ parking/error page ──────────────────────
-            if is_parking_page(html):
-                log.debug(f"  Parking page: {url}")
-                stats["parking_page"] += 1
-                continue
-
-            # ── 5. Loại bỏ HTML có quá ít từ ───────────────────────
-            word_count = count_visible_words(html)
-            if word_count < min_words:
-                log.debug(f"  Too short ({word_count} words): {url}")
-                stats["too_short"] += 1
-                continue
-
-            # ── Pass: giữ lại bản ghi này ──────────────────────────
-            stats["kept"] += 1
-            if f_out is not None:
-                f_out.write(json.dumps(rec, ensure_ascii=False) + "\n")
-                # Flush định kỳ mỗi 50 records
-                if stats["kept"] % 50 == 0:
-                    f_out.flush()
-
+                
+            batch_urls.append(url)
+            batch_recs.append(rec)
+            
+            # Kích hoạt flush mỗi khi gom đủ 100 records (cân bằng RAM và Disk I/O)
+            if len(batch_urls) >= 100:
+                flush_batch()
+                
             # Progress mỗi 500 bản ghi
             if stats["total"] % 500 == 0:
+                if f_out is not None:
+                    f_out.flush()
                 log.info(
                     f"  Đã xử lý {stats['total']} | "
                     f"giữ {stats['kept']} | "
                     f"loại {stats['total'] - stats['kept']}"
                 )
+
+        # Xử lý nốt batch cuối cùng
+        flush_batch()
 
     # ── Đóng file output ───────────────────────────────────────────────
     if f_out is not None:
@@ -261,6 +333,7 @@ def print_stats(stats: dict):
     log.info(f"  Giữ lại (sạch)         : {kept:>7,}  ({pct_kept:.1f}%)")
     log.info(f"  Loại bỏ (tổng)         : {removed:>7,}")
     log.info(f"    ├─ HTML null/lỗi     : {stats['failed_html']:>7,}")
+    log.info(f"    ├─ Kiểm tra chéo (đối nghịch) : {stats.get('cross_filtered', 0):>7,}")
     log.info(f"    ├─ URL trùng lặp     : {stats['duplicate_url']:>7,}")
     log.info(f"    ├─ HTML quá lớn      : {stats['too_large']:>7,}")
     log.info(f"    ├─ Parking/Error page: {stats['parking_page']:>7,}")
@@ -320,6 +393,9 @@ def main():
 
     args = parser.parse_args()
 
+    db_path = os.path.join(BASE_DIR, "..", "data", "dedup_cache.db")
+    dedup = SqliteDeduplicator(os.path.abspath(db_path))
+
     # ── Xác định danh sách file cần xử lý ──────────────────────────
     if args.input:
         if not os.path.isabs(args.input):
@@ -351,6 +427,7 @@ def main():
 
         stats = clean_file(
             in_path=fpath,
+            deduplicator=dedup,
             min_words=args.min_words,
             dry_run=args.dry_run,
         )

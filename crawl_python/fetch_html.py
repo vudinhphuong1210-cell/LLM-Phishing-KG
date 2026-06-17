@@ -17,8 +17,10 @@ import json
 import time
 import logging
 import re
+import threading
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from playwright.sync_api import sync_playwright
 
 import requests
 import dns.resolver
@@ -216,6 +218,42 @@ def fetch_wayback(domain: str) -> tuple[str | None, int | None]:
 
 
 # ═══════════════════════════════════════════════════
+#  Automatic screenshotting
+# ═══════════════════════════════════════════════════
+screenshot_lock = threading.Lock()
+
+def take_screenshot(domain: str) -> str | None:
+    """
+    Take a screenshot of the live domain using Playwright.
+    Uses a lock to prevent concurrent browser runs (saving RAM).
+    """
+    with screenshot_lock:
+        try:
+            screenshot_dir = os.path.join(BASE_DIR, "html", "screenshots")
+            os.makedirs(screenshot_dir, exist_ok=True)
+            out_file = os.path.join(screenshot_dir, f"{domain}.png")
+
+            with sync_playwright() as p:
+                browser = p.chromium.launch(headless=True)
+                page = browser.new_page()
+                page.set_viewport_size({"width": 1280, "height": 720})
+
+                try:
+                    page.goto(f"https://{domain}", timeout=15000, wait_until="load")
+                except Exception:
+                    page.goto(f"http://{domain}", timeout=15000, wait_until="load")
+
+                page.wait_for_timeout(1000)
+                page.screenshot(path=out_file)
+                browser.close()
+                log.info(f"  Screenshot OK: {domain} -> html/screenshots/{domain}.png")
+                return f"/screenshots/{domain}.png"
+        except Exception as e:
+            log.debug(f"  Screenshot failed for {domain}: {e}")
+            return None
+
+
+# ═══════════════════════════════════════════════════
 #  Helper: Word count check
 # ═══════════════════════════════════════════════════
 def count_words(html_content: str) -> int:
@@ -266,6 +304,7 @@ def fetch_one(domain: str, min_words: int = MIN_WORDS) -> dict:
         "fetched_at": datetime.utcnow().isoformat(),
         "method": None,
         "status_code": None,
+        "screenshot_path": None,
         "error": None,
     }
 
@@ -311,6 +350,10 @@ def fetch_one(domain: str, min_words: int = MIN_WORDS) -> dict:
             except Exception as e:
                 log.debug(f"  HTTP err {domain}: {e}")
                 continue
+
+    # ── Take screenshot if direct fetch succeeded ──
+    if result["method"] == "direct":
+        result["screenshot_path"] = take_screenshot(domain)
 
     # ── Wayback fallback ──
     if result["html"] is None:

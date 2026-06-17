@@ -1,7 +1,7 @@
 # Workspace setup
 
-Generated at: 2026-06-12T03:32:56+00:00
+Generated at: 2026-06-17T10:47:01+00:00
 
-- Project root: D:\phishing\llm-phishing-KG
+- Project root: E:\Shinny\LLM-Phishing-KG
 - Created/verified data/raw, data/html, data/screenshots, data/features, data/processed, reports, configs.
 - Crawler policy: snapshot only; no form submission, no credential entry, no login bypass.

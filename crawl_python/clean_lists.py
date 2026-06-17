@@ -15,6 +15,13 @@ import shutil
 import sys
 import argparse
 
+# Đảm bảo Python có thể import từ core và infrastructure
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+if BASE_DIR not in sys.path:
+    sys.path.append(BASE_DIR)
+
+from infrastructure.sqlite_deduplicator import SqliteDeduplicator
+
 # Fix console encoding for Windows
 if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8")  # type: ignore
@@ -124,7 +131,7 @@ def clean_domain(domain: str, is_blacklist: bool = True) -> str | None:
         
     return domain
 
-def clean_file(filepath: str, is_blacklist: bool):
+def clean_file(filepath: str, is_blacklist: bool, deduplicator=None):
     if not os.path.exists(filepath):
         print(f"Bỏ qua: File không tồn tại tại {filepath}")
         return
@@ -137,17 +144,36 @@ def clean_file(filepath: str, is_blacklist: bool):
         lines = f.readlines()
         
     original_count = len(lines)
-    cleaned_domains = set()
+    cleaned_candidates = []
     ignored_count = 0
+    duplicate_count = 0
+    list_type = 'blacklist' if is_blacklist else 'whitelist'
     
     for line in lines:
         cleaned = clean_domain(line, is_blacklist)
         if cleaned:
-            cleaned_domains.add(cleaned)
+            cleaned_candidates.append(cleaned)
         else:
             ignored_count += 1
             
-    sorted_domains = sorted(list(cleaned_domains))
+    if deduplicator:
+        # Nếu là blacklist, cross-check để không dính các tên miền trong whitelist
+        if is_blacklist:
+            safe_candidates = []
+            for u in cleaned_candidates:
+                if not deduplicator.is_in_whitelist(u):
+                    safe_candidates.append(u)
+            ignored_count += len(cleaned_candidates) - len(safe_candidates)
+            cleaned_candidates = safe_candidates
+            
+        # Lọc trùng lặp xuyên file bằng Batching (Nhanh gấp hàng trăm lần so với duyệt từng dòng)
+        new_urls = deduplicator.filter_and_add_batch(cleaned_candidates, list_type)
+        duplicate_count = len(cleaned_candidates) - len(new_urls)
+        cleaned_domains = cleaned_candidates
+    else:
+        cleaned_domains = list(set(cleaned_candidates))
+        
+    sorted_domains = sorted(cleaned_domains)
     
     with open(filepath, "w", encoding="utf-8") as f:
         for d in sorted_domains:
@@ -157,7 +183,7 @@ def clean_file(filepath: str, is_blacklist: bool):
     print(f"\n=== KẾT QUẢ LỌC {label} ===")
     print(f"Số lượng domain ban đầu   : {original_count}")
     print(f"Số lượng bị loại bỏ (lỗi) : {ignored_count}")
-    print(f"Số lượng trùng lặp bị gộp : {original_count - ignored_count - len(sorted_domains)}")
+    print(f"Số lượng trùng lặp chéo file: {duplicate_count}")
     print(f"Số lượng domain sạch còn lại: {len(sorted_domains)}")
     print(f"Đã cập nhật đè lên file   : {filepath}\n")
 
@@ -171,10 +197,13 @@ def main():
     )
     args = parser.parse_args()
     
+    db_path = os.path.join(DATA_DIR, "dedup_cache.db")
+    dedup = SqliteDeduplicator(db_path)
+    
     if args.source in ("black", "both"):
-        clean_file(BLACK_FILE, is_blacklist=True)
+        clean_file(BLACK_FILE, is_blacklist=True, deduplicator=dedup)
     if args.source in ("white", "both"):
-        clean_file(WHITE_FILE, is_blacklist=False)
+        clean_file(WHITE_FILE, is_blacklist=False, deduplicator=dedup)
 
 if __name__ == "__main__":
     main()

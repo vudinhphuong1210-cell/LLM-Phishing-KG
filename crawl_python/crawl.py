@@ -138,6 +138,47 @@ def safe_get(url: str, check_dns: bool = True, **kwargs) -> requests.Response | 
 # ============================================================
 # Crawler: tinnhiemmang.vn
 # ============================================================
+def _crawl_tinnhiem_concurrent(base_url: str, total_pages: int, parser_func, max_workers: int = 10, batch_size: int = 50, delay: float = 1.5) -> set:
+    """Helper to crawl tinnhiemmang.vn pages concurrently in rate-limited batches."""
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+    domains = set()
+    pages_to_crawl = list(range(2, total_pages + 1))
+    
+    for i in range(0, len(pages_to_crawl), batch_size):
+        batch = pages_to_crawl[i:i + batch_size]
+        print(f"  Crawling pages {batch[0]} to {batch[-1]} concurrently...")
+        
+        batch_domains = set()
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            # Set check_dns=False to avoid resolving DNS of tinnhiemmang.vn for every page request
+            futures = {
+                executor.submit(safe_get, f"{base_url}?page={page}", check_dns=False): page
+                for page in batch
+            }
+            for future in as_completed(futures):
+                page = futures[future]
+                try:
+                    resp = future.result()
+                    if resp is not None:
+                        page_domains = parser_func(resp.text)
+                        if page_domains:
+                            batch_domains |= page_domains
+                except Exception as e:
+                    print(f"    Error on page {page}: {e}")
+        
+        if not batch_domains:
+            print(f"  Batch yielded 0 domains. Stopping crawl early.")
+            break
+            
+        domains |= batch_domains
+        print(f"  Crawled batch {i//batch_size + 1} - Total: {len(domains)} domains")
+        
+        if i + batch_size < len(pages_to_crawl):
+            time.sleep(delay)
+            
+    return domains
+
+
 def crawl_tinnhiem_blacklist(max_pages: int = None) -> set:
     """
     Scam list from /website-lua-dao
@@ -159,23 +200,13 @@ def crawl_tinnhiem_blacklist(max_pages: int = None) -> set:
     print(f"  Total pages: {total_pages}")
 
     domains |= _parse_tinnhiem_black_items(resp.text)
-
-    for page in range(2, total_pages + 1):
-        url = f"{base}?page={page}"
-        resp = safe_get(url)
-        if resp is None:
-            print(f"  [skip] page {page}: unreachable")
-            # Short delay even on skip to not hammer the server
-            time.sleep(DELAY)
-            continue
-        page_domains = _parse_tinnhiem_black_items(resp.text)
-        if not page_domains:
-            print(f"  Page {page} has no data, stopping.")
-            break
-        domains |= page_domains
-        if page % 50 == 0 or page == total_pages:
-            print(f"  Crawled {page}/{total_pages} pages - {len(domains)} domains")
-        time.sleep(DELAY)
+    
+    if total_pages > 1:
+        domains |= _crawl_tinnhiem_concurrent(
+            base_url=base,
+            total_pages=total_pages,
+            parser_func=_parse_tinnhiem_black_items
+        )
 
     print(f"  => Total: {len(domains)} scam domains from tinnhiemmang.vn")
     return domains
@@ -220,19 +251,12 @@ def crawl_tinnhiem_whitelist(max_pages: int = None) -> set:
 
     domains |= _parse_tinnhiem_white_items(resp.text)
 
-    for page in range(2, total_pages + 1):
-        url = f"{base}?page={page}"
-        resp = safe_get(url)
-        if resp is None:
-            time.sleep(DELAY)
-            continue
-        page_domains = _parse_tinnhiem_white_items(resp.text)
-        if not page_domains:
-            break
-        domains |= page_domains
-        if page % 50 == 0 or page == total_pages:
-            print(f"  Crawled {page}/{total_pages} pages - {len(domains)} domains")
-        time.sleep(DELAY)
+    if total_pages > 1:
+        domains |= _crawl_tinnhiem_concurrent(
+            base_url=base,
+            total_pages=total_pages,
+            parser_func=_parse_tinnhiem_white_items
+        )
 
     print(f"  => Total: {len(domains)} trusted domains from tinnhiemmang.vn")
     return domains

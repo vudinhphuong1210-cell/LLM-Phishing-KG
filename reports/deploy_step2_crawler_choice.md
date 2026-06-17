@@ -1,6 +1,6 @@
 # Crawler choice
 
-Generated at: 2026-06-12T03:32:56+00:00
+Generated at: 2026-06-17T10:47:01+00:00
 
 - Primary crawler: crawl_python/fetch_html.py followed by crawl_python/extract_text.py.
 - Fallback crawlers: Firecrawl or Playwright are disabled by default and should be used only for snapshot evidence.
